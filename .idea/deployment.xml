@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="EHU Student Server">
+    <serverData>
+      <paths name="EHU Student Server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/cis3122" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/application/config/config.php" />
+            <excludedPath local="true" path="$PROJECT_DIR$/application/config/database.php" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
