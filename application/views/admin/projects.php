@@ -1,6 +1,6 @@
 <h1>This is the admin projects page</h1>
 
-<a href="<?=base_url('admin/addProject')?>">&plus; Add New</a>
+<a href="<?=base_url('admin/projects/addProject')?>">&plus; Add New</a>
 
 <div class="adminProjectsTable">
     <table >

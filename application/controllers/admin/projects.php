@@ -19,4 +19,10 @@ class Projects extends CI_Controller
         $this->load->view('admin/projects', $data);
         $this->load->view('admin/incs/footer');
     }
+
+    public function addProject() {
+        $this->load->view('admin/incs/header');
+        $this->load->view('admin/addProject');
+        $this->load->view('admin/incs/footer');
+    }
 }

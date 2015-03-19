@@ -2,14 +2,24 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open(); ?>
+<?php echo form_open();
 
-<label for="title">Title</label>
-<input type="input" name="title" /><br />
+    $input = array(
+    'name' => 'project_title'
+    );
 
-<label for="text">Text</label>
-<textarea name="text"></textarea><br />
+    echo form_label('Title', 'project_title').'<p>'.form_input($input).'</p>';
 
-<input type="submit" name="submit" value="Add new project" />
+    $input = array(
+    'name' => 'abstract'
+    );
 
-<?php echo form_close(); ?>
+    echo form_label('Abstract', 'abstract').'<p>'.form_input($input).'</p>';
+
+    $button = array(
+    'name' => 'add_project',
+    'value' => 'Add New Project'
+    );
+    echo form_submit($button);
+
+echo form_close(); ?>
