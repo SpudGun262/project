@@ -13,4 +13,8 @@ class Projects_model extends CI_Model
         $query = $this->db->get('project');
         return $query;
     }
+
+    public function add_project() {
+
+    }
 }

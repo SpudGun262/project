@@ -1,22 +1,16 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Projects extends CI_Controller
-{
+class AddProject extends CI_Controller {
 
-
-    //constructor
-    function __construct()
-    {
+    public function __construct() {
         parent::__construct();
-        $this->load->library('auth');
-        $this->auth->checkLogin();
         $this->load->model('projects_model');
     }
 
     public function index() {
         $data['projects'] =  $this->projects_model->get_projects()->result_array();
         $this->load->view('admin/incs/header');
-        $this->load->view('admin/projects', $data);
+        $this->load->view('admin/addProject', $data);
         $this->load->view('admin/incs/footer');
     }
 }
