@@ -1,6 +1,6 @@
 <?php
 
-class Dashboard extends CI_Controller
+class Projects extends CI_Controller
 {
 
 
@@ -8,8 +8,8 @@ class Dashboard extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->library('auth');
-        $this->auth->checkLogin();
+//        $this->load->library('auth');
+//        $this->auth->checkLogin();
     }
 
     public function index() {
