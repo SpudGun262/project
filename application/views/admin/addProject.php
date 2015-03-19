@@ -2,7 +2,7 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open() ?>
+<?php echo form_open(); ?>
 
 <label for="title">Title</label>
 <input type="input" name="title" /><br />
@@ -12,4 +12,4 @@
 
 <input type="submit" name="submit" value="Add new project" />
 
-</form>
+<?php echo form_close(); ?>

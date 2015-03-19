@@ -12,6 +12,12 @@
                Course
             </td>
             <td>
+                File Name
+            </td>
+            <td>
+                Added By
+            </td>
+            <td>
                 Data Added
             </td>
         </tr>
@@ -20,6 +26,12 @@
             echo '<tr>';
                 echo '<td>' . $project['title'] . '</td>';
                 echo '<td>' . $project['name'] . '</td>';
+                if ($project['file_name']){
+                    echo '<td>' . $project['file_name'] . '</td>';
+                } else {
+                    echo '<td>NULL</td>';
+                }
+                echo '<td>' . $project['first_name'] . ' ' . $project['last_name'] . '</td>';
                 //reorder date to English standard (http://php.net/strtotime, http://php.net/manual/en/function.date.php)
                 ////uses HTML5 time tag (http://html5doctor.com/the-time-element/)
                 echo '<td><time datetime="' . $project['date_added'] . '">' . date('d-m-Y', strtotime($project['date_added'])) . '</time></td>';
