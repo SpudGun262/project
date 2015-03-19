@@ -1,6 +1,6 @@
 <h1>This is the add project page</h1>
 
-<?php echo validation_errors(); ?>
+<?php echo validation_errors('<div class="error">', '</div>'); ?>
 
 <?php echo form_open();
 
