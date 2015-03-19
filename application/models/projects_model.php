@@ -11,21 +11,9 @@ class Projects_model extends CI_Model
 
     public function get_projects() {
         $this->db->select('*');
-        $this->db->from('projects');
-        $query = $this->db->get();
-        return $query->result;
-
-
-
-//        $query = $this->db->get('project');
-//        return $query;
-
-//        $this->db->select('*');
-//        $this->db->from('links');
-//        $this->db->join('redirects', 'redirects.url_string = links.alias');
-//        $query = $this->db->get();
-//
-//        return $query->result;
+        $this->db->from('project');
+        $this->db->join('course', 'course.course_id = project.course_id');
+        return $this->db->get();
     }
 
     public function add_project() {

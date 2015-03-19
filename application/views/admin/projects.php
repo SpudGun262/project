@@ -6,7 +6,7 @@
     <?php
     foreach ($projects as $project) {
         echo '<p>' . $project['title'] . '</p>';
-        echo '<p>' . $project['course'] . '</p>';
+        echo '<p>' . $project['name'] . '</p>';
         //reorder date to English standard (http://php.net/strtotime, http://php.net/manual/en/function.date.php)
         ////uses HTML5 time tag (http://html5doctor.com/the-time-element/)
         echo '<time datetime="' . $project['date_added'] . '">' . date('d-m-Y', strtotime($project['date_added'])) . '</time>';
