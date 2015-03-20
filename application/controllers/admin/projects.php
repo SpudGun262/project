@@ -11,6 +11,7 @@ class Projects extends CI_Controller
         $this->load->library('auth');
         $this->auth->checkLogin();
         $this->load->model('projects_model');
+        $this->load->model('courses_model');
         $this->load->library('form_validation');
     }
 
@@ -42,12 +43,12 @@ class Projects extends CI_Controller
             $this->load->view('admin/projects', $data);
             $this->load->view('admin/incs/footer');
 
-        //if the form fails vaildation then...
+        //if the form fails validation then...
         } else {
 
             //gather the data from the database again and load the projects view
             //Any validation errors will be displayed on the page. This is done by validation_errors() method in the addProject view
-            $data['projects'] =  $this->projects_model->get_projects()->result_array();
+            $data['courses'] =  $this->courses_model->get_courses()->result_array();
             $this->load->view('admin/incs/header');
             $this->load->view('admin/addProject', $data);
             $this->load->view('admin/incs/footer');

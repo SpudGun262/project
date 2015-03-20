@@ -25,10 +25,10 @@ echo form_open();
     echo form_label('Abstract', 'abstract').form_input($input);
 
     //echo a HTML select box
-    echo '<select>';
+    echo '<select name="course">';
         //for each of the projects, echo the available courses as a option
-        foreach ($projects as $project) {
-            echo '<option value="' . $project['course_id'] . '">' . $project['name'] . '</option>';
+        foreach ($courses as $course) {
+            echo '<option value="' . $course['course_id'] . '">' . $course['name'] . '</option>';
         }
     //Close the select box
     echo '</select>';
