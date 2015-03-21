@@ -7,7 +7,7 @@ class Projects_model extends CI_Model
     {
         parent::__construct();
         $this->load->database();
-        $this->load->helper('date');
+        $this->load->helper('form', 'url', 'date');
     }
 
     public function get_projects() {
@@ -63,6 +63,7 @@ class Projects_model extends CI_Model
         //The id of the last insert. This is so it can be used in the file upload
         $insert_id = $this->db->insert_id();
 
+        //TODO: Currently broken. No file is being detected on upload.
         //File upload conditions
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|pdf';

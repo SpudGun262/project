@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/addProject.php" afterPath="$PROJECT_DIR$/application/views/admin/addProject.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/projects.php" afterPath="$PROJECT_DIR$/application/controllers/admin/projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/projects.php" afterPath="$PROJECT_DIR$/application/views/admin/projects.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/projects_model.php" afterPath="$PROJECT_DIR$/application/models/projects_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -79,11 +76,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="projects.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.24" vertical-offset="208" max-vertical-offset="1140">
-              <caret line="31" column="104" selection-start-line="31" selection-start-column="104" selection-end-line="31" selection-end-column="104" />
+            <state vertical-scroll-proportion="0.3257143" vertical-offset="0" max-vertical-offset="1159">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -129,13 +126,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects_model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projects_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60914284" vertical-offset="873" max-vertical-offset="1748">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state vertical-scroll-proportion="-22.08" vertical-offset="892" max-vertical-offset="1767">
+              <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
               <folding>
-                <marker date="1426961257331" expanded="true" signature="1308:1859" placeholder="SELECT proje..project..." />
+                <marker date="1426961808363" expanded="true" signature="1323:1874" placeholder="SELECT proje..project..." />
               </folding>
             </state>
           </provider>
@@ -238,8 +235,8 @@
         <option value="$PROJECT_DIR$/application/views/admin/projects.php" />
         <option value="$PROJECT_DIR$/application/views/admin/upload_form.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addProject.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/projects.php" />
         <option value="$PROJECT_DIR$/application/models/projects_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/projects.php" />
       </list>
     </option>
   </component>
@@ -605,7 +602,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426952091111</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Tried to implement file upload. Currently not functioning">
+      <created>1426961288351</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1426961288351</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -694,7 +697,8 @@
     <MESSAGE value="Added header and footer includes to the user login pages" />
     <MESSAGE value="Removed need to username" />
     <MESSAGE value="Included header and footer in admin login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Included header and footer in admin login" />
+    <MESSAGE value="Tried to implement file upload. Currently not functioning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to implement file upload. Currently not functioning" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1064,26 +1068,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.0" vertical-offset="0" max-vertical-offset="893">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/addProject.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="437">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.24" vertical-offset="208" max-vertical-offset="1140">
-          <caret line="31" column="104" selection-start-line="31" selection-start-column="104" selection-end-line="31" selection-end-column="104" />
           <folding />
         </state>
       </provider>
@@ -1104,13 +1092,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.0" vertical-offset="0" max-vertical-offset="893">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60914284" vertical-offset="873" max-vertical-offset="1748">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state vertical-scroll-proportion="-22.08" vertical-offset="892" max-vertical-offset="1767">
+          <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
           <folding>
-            <marker date="1426961257331" expanded="true" signature="1308:1859" placeholder="SELECT proje..project..." />
+            <marker date="1426961808363" expanded="true" signature="1323:1874" placeholder="SELECT proje..project..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3257143" vertical-offset="0" max-vertical-offset="1159">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

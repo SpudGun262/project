@@ -13,6 +13,7 @@ class Projects extends CI_Controller
         $this->load->model('projects_model');
         $this->load->model('courses_model');
         $this->load->library('form_validation');
+        $this->load->helper('form', 'url');
     }
 
     public function index() {
