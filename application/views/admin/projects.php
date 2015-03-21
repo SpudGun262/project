@@ -1,6 +1,5 @@
 <h1>This is the admin projects page</h1>
 
-
 <!--When clicked run the addProject method in the projects controller-->
 <a href="<?=base_url('admin/projects/addProject')?>">&plus; Add New</a>
 
@@ -22,6 +21,9 @@
             <td>
                 Data Added
             </td>
+            <td>
+                Edit
+            </td>
         </tr>
         <?php
         //for each of the projects, echo them as a single project inside a HTML table
@@ -33,7 +35,7 @@
                 echo '<td>' . $project['name'] . '</td>';
                 //if the project has a file associated with it then echo the name of the file
                 if ($project['file_name']){
-                    echo '<td>' . $project['file_name'] . '</td>';
+                    echo '<td><a href="' . $project['location'] . '">' . $project['file_name'] . '</a></td>';
                 //if the project does not have a file associated with it then echo NULL
                 } else {
                     echo '<td>NULL</td>';
