@@ -52,7 +52,7 @@ class Login extends CI_Controller {
         $this->form_validation->set_rules('first_name', 'Name', 'trim|required');
         $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
         $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email|callback_check_if_email_exists');
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|callback_check_if_username_exists');
+//        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|callback_check_if_username_exists');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
         $this->form_validation->set_rules('password_confirm', 'Password Confirmation', 'trim|required|matches[password]');
 
@@ -83,21 +83,21 @@ class Login extends CI_Controller {
         }
     }
 
-    function check_if_username_exists($requested_username)
-    {
-        $this->load->model('membership_model');
-
-        $username_available = $this->membership_model->check_if_username_exists($requested_username);
-
-        if($username_available)
-        {
-            return TRUE;
-        }
-        else
-        {
-            return FALSE;
-        }
-    }
+//    function check_if_username_exists($requested_username)
+//    {
+//        $this->load->model('membership_model');
+//
+//        $username_available = $this->membership_model->check_if_username_exists($requested_username);
+//
+//        if($username_available)
+//        {
+//            return TRUE;
+//        }
+//        else
+//        {
+//            return FALSE;
+//        }
+//    }
 
     function check_if_email_exists($requested_email)
     {
