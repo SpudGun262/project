@@ -9,7 +9,9 @@ class Login extends CI_Controller {
 
     function index()
     {
+        $this->load->view('incs/header');
         $this->load->view('user/login_form');
+        $this->load->view('incs/footer');
     }
 
     function validate_credentials()
@@ -28,13 +30,17 @@ class Login extends CI_Controller {
         }
         else
         {
+            $this->load->view('incs/header');
             $this->load->view('user/dashboard');
+            $this->load->view('incs/footer');
         }
     }
 
     function signup()
     {
+        $this->load->view('incs/header');
         $this->load->view('user/signup_form');
+        $this->load->view('incs/footer');
     }
 
     function create_member()
@@ -52,7 +58,9 @@ class Login extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE) //didn't validate
         {
+            $this->load->view('incs/header');
             $this->load->view('user/signup_form');
+            $this->load->view('incs/footer');
         }
         else
         {
@@ -62,11 +70,15 @@ class Login extends CI_Controller {
             {
                 $data['account_created'] = 'Your account has been created.';
 
+                $this->load->view('incs/header');
                 $this->load->view('user/login_form', $data);
+                $this->load->view('incs/footer');
             }
             else
             {
-                $this->load->view('signup_form');
+                $this->load->view('incs/header');
+                $this->load->view('user/signup_form');
+                $this->load->view('incs/footer');
             }
         }
     }

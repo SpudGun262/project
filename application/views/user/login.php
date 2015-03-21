@@ -1,5 +1,3 @@
-<h1>Login</h1>
-
 <div id="login_form">
     <?php if(isset($account_created)) { ?>
         <h3><?= $account_created; ?></h3>

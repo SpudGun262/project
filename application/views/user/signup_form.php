@@ -1,6 +1,6 @@
 <div id="register_form">
     <h1>Create a Account</h1>
-    <?= validation_errors('<p class="error">'); ?>
+    <?= validation_errors('<div class="error">', '</div>'); ?>
     <?php
         echo form_open('login/create_member');
         echo form_input('first_name', set_value('first_name'), 'placeholder="First Name"');
