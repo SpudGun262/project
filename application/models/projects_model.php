@@ -58,8 +58,30 @@ class Projects_model extends CI_Model
             'tutor_id' => '1',
             'course_id' => $this->input->post('course')
         );
-
         $this->db->insert('project', $data);
 
+        //The id of the last insert. This is so it can be used in the file upload
+        $insert_id = $this->db->insert_id();
+
+        //File upload conditions
+        $config['upload_path'] = './uploads/';
+        $config['allowed_types'] = 'gif|jpg|png|pdf';
+        $config['max_size']	= '100';
+        $config['max_width']  = '0';
+        $config['max_height']  = '0';
+        $config['remove_spaces'] = TRUE;
+        $config['overwrite'] = TRUE;
+        $this->load->library('upload', $config);
+
+        //Return the location of the uploaded file so it can be added to the database
+        $upload = $this->upload->data();
+
+                //insert new file data into database
+        $data = array(
+            'file_name' => $upload['file_name'],
+            'project_id' => $insert_id,
+            'location' => $upload['full_path']
+        );
+        $this->db->insert('file', $data);
     }
 }

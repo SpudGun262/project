@@ -16,9 +16,6 @@
                 File Name
             </td>
             <td>
-                Added By
-            </td>
-            <td>
                 Data Added
             </td>
             <td>
@@ -35,13 +32,13 @@
                 echo '<td>' . $project['name'] . '</td>';
                 //if the project has a file associated with it then echo the name of the file
                 if ($project['file_name']){
-                    echo '<td><a href="' . $project['location'] . '">' . $project['file_name'] . '</a></td>';
+                    echo '<td><a href="' . $project['location'] . '" target="_blank">' . $project['file_name'] . '</a></td>';
                 //if the project does not have a file associated with it then echo NULL
                 } else {
                     echo '<td>NULL</td>';
                 }
                 //echo the first and last name of the tutor who uploaded the project
-                echo '<td>' . $project['first_name'] . ' ' . $project['last_name'] . '</td>';
+//                echo '<td>' . $project['first_name'] . ' ' . $project['last_name'] . '</td>';
                 //reorder date to English standard (http://php.net/strtotime, http://php.net/manual/en/function.date.php)
                 ////uses HTML5 time tag (http://html5doctor.com/the-time-element/)
                 echo '<td><time datetime="' . $project['date_added'] . '">' . date('d-m-Y', strtotime($project['date_added'])) . '</time></td>';

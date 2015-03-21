@@ -37,11 +37,8 @@ class Projects extends CI_Controller
             //run the add_project method in the projects_model
             $this->projects_model->add_project();
 
-            //gather the data from the database again and load the projects view
-            $data['projects'] =  $this->projects_model->get_projects()->result_array();
-            $this->load->view('admin/incs/header');
-            $this->load->view('admin/projects', $data);
-            $this->load->view('admin/incs/footer');
+            //redirect back to the projects page
+            redirect('admin/projects');
 
         //if the form fails validation then...
         } else {

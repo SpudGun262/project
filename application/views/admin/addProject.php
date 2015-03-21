@@ -8,7 +8,7 @@
 <?php
 
 //open the HTML form
-echo form_open();
+echo form_open_multipart('admin/projects/addProject');
 
     //values for the project title input box
     $input = array(
@@ -32,6 +32,14 @@ echo form_open();
         }
     //Close the select box
     echo '</select>';
+
+    //TODO: Broken! Will not detect uploaded file
+    //Add a file
+    $input = array(
+        'type' => 'file',
+        'name' => 'file'
+    );
+    echo form_label('Upload a file', 'file').form_upload($input);
 
     //values for the submit button
     $button = array(
