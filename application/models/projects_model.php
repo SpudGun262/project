@@ -63,7 +63,7 @@ class Projects_model extends CI_Model
         //The id of the last insert. This is so it can be used in the file upload
         $insert_id = $this->db->insert_id();
 
-        //TODO: Currently broken. No file is being detected on upload.
+        //TODO: Currently broken. No file is not being detected on upload.
         //File upload conditions
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|pdf';
@@ -75,14 +75,21 @@ class Projects_model extends CI_Model
         $this->load->library('upload', $config);
 
         //Return the location of the uploaded file so it can be added to the database
-        $upload = $this->upload->data();
+//        $upload = $this->upload->data();
 
-                //insert new file data into database
-        $data = array(
-            'file_name' => $upload['file_name'],
-            'project_id' => $insert_id,
-            'location' => $upload['full_path']
-        );
-        $this->db->insert('file', $data);
+        if ($this->upload->do_upload())
+        {
+
+            $data = array('upload_data' => $this->upload->data());
+
+            //insert new file data into database
+            $data = array(
+                'file_name' => $upload_data['file_name'],
+                'project_id' => $insert_id,
+                'location' => $upload_data['full_path']
+            );
+            $this->db->insert('file', $data);
+
+        }
     }
 }
