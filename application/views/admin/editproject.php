@@ -1,20 +1,26 @@
-<?=$projectResult['title'];?>
+<?=$projectResult['course_id'];?>
 
 <?php
+echo validation_errors('<div class="error">', '</div>');
 
+if(!$file && $this->input->post()) {
+    echo $this->upload->display_errors('<div class="error">', '</div>');
+}
 //open the HTML form
-echo form_open_multipart('admin/projects/addProject');
+echo form_open_multipart();
 
 //values for the project title input box
 $input = array(
-    'name' => 'project_title'
+    'name' => 'project_title',
+    'value' => $projectResult['title']
 );
 //echo a HTML label and input
 echo form_label('Title', 'project_title').form_input($input);
 
 //values for the abstract input box
 $input = array(
-    'name' => 'abstract'
+    'name' => 'abstract',
+    'value' => $projectResult['abstract']
 );
 //echo a HTML label and input
 echo form_label('Abstract', 'abstract').form_input($input);
@@ -23,7 +29,13 @@ echo form_label('Abstract', 'abstract').form_input($input);
 echo '<select name="course">';
 //for each of the projects, echo the available courses as a option
 foreach ($courses as $course) {
-    echo '<option value="' . $course['course_id'] . '">' . $course['name'] . '</option>';
+    echo '<option value="' . $course['course_id'] . '"';
+
+    if($course['course_id'] == $projectResult['course_id']) {
+        echo ' selected="selected"';
+    }
+
+    echo '>' . $course['name'] . '</option>';
 }
 //Close the select box
 echo '</select>';

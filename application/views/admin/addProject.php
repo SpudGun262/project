@@ -3,6 +3,9 @@
 <?php
     //echo the validation errors if there is any
     echo validation_errors('<div class="error">', '</div>');
+    if(!$file && $this->input->post()) {
+        echo $this->upload->display_errors('<div class="error">', '</div>');
+    }
 ?>
 
 <?php

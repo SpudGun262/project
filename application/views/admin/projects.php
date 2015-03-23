@@ -1,5 +1,9 @@
 <h1>This is the admin projects page</h1>
 
+<?=
+//TODO: Style flash data
+$this->session->flashdata('error');?>
+
 <!--When clicked run the addProject method in the projects controller-->
 <a href="<?=base_url('admin/projects/addProject')?>">&plus; Add New</a>
 
