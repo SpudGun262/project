@@ -37,9 +37,9 @@ echo form_open_multipart('admin/projects/addProject');
     //Add a file
     $input = array(
         'type' => 'file',
-        'name' => 'file'
+        'name' => 'userfile'
     );
-    echo form_label('Upload a file', 'file').form_upload($input);
+    echo form_label('Upload a file', 'userfile').form_upload($input);
 
     //values for the submit button
     $button = array(

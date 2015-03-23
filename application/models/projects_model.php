@@ -8,6 +8,7 @@ class Projects_model extends CI_Model
         parent::__construct();
         $this->load->database();
         $this->load->helper('form', 'url', 'date');
+
     }
 
     public function get_projects() {
@@ -77,19 +78,33 @@ class Projects_model extends CI_Model
         //Return the location of the uploaded file so it can be added to the database
 //        $upload = $this->upload->data();
 
-        if ($this->upload->do_upload())
+        if ( ! $this->upload->do_upload())
         {
 
-            $data = array('upload_data' => $this->upload->data());
+            $error = array('error' => $this->upload->display_errors());
+
+            $this->load->view('admin/upload_form', $error);
+
+        } else {
+//            $data = array('upload_data' => $this->upload->data());
+
+            $upload_data = $this->upload->data();
+
+//            $this->load->view('test', $data);
 
             //insert new file data into database
-            $data = array(
+            $data2 = array(
                 'file_name' => $upload_data['file_name'],
                 'project_id' => $insert_id,
-                'location' => $upload_data['full_path']
+                'location' => upload_url().$upload_data['file_name']
             );
-            $this->db->insert('file', $data);
+            $this->db->insert('file', $data2);
+
 
         }
+    }
+
+    public function updateProject() {
+
     }
 }

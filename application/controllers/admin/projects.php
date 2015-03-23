@@ -53,4 +53,10 @@ class Projects extends CI_Controller
 
         }
     }
+
+    public function editProject($project_id) {
+        $this->load->view('admin/incs/header');
+        $this->load->view('admin/editProject');
+        $this->load->view('admin/incs/footer');
+    }
 }

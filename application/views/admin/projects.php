@@ -6,21 +6,11 @@
 <div class="adminProjectsTable">
     <table >
         <tr>
-            <td>
-                Project Title
-            </td>
-            <td>
-               Course
-            </td>
-            <td>
-                File Name
-            </td>
-            <td>
-                Data Added
-            </td>
-            <td>
-                Edit
-            </td>
+            <td>Project Title</td>
+            <td>Course</td>
+            <td>File Name</td>
+            <td>Data Added</td>
+            <td>Edit</td>
         </tr>
         <?php
         //for each of the projects, echo them as a single project inside a HTML table
@@ -43,7 +33,7 @@
                 ////uses HTML5 time tag (http://html5doctor.com/the-time-element/)
                 echo '<td><time datetime="' . $project['date_added'] . '">' . date('d-m-Y', strtotime($project['date_added'])) . '</time></td>';
                 //echo an edit button
-                echo '<td><a href="' . base_url('admin/editProject') . '">Edit</a></td>';
+                echo '<td><a href="' . base_url('admin/projects/editProject') .'/' . $project['project_id'] . '">Edit</a></td>';
             echo '</tr>';
         }
         ?>
