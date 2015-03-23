@@ -33,7 +33,6 @@ echo form_open_multipart('admin/projects/addProject');
     //Close the select box
     echo '</select>';
 
-    //TODO: Broken! Will not detect uploaded file
     //Add a file
     $input = array(
         'type' => 'file',

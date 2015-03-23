@@ -55,8 +55,14 @@ class Projects extends CI_Controller
     }
 
     public function editProject($project_id) {
+
+        $projectResult = $this->projects_model->getProject($project_id);
+        if(!$projectResult){
+            show_error('Project does not exist.');
+        }
+        $data['projectResult'] = $projectResult->row_array();
         $this->load->view('admin/incs/header');
-        $this->load->view('admin/editProject');
+        $this->load->view('admin/editProject', $data);
         $this->load->view('admin/incs/footer');
     }
 }
