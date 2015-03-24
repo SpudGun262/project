@@ -12,6 +12,7 @@ class Proposals extends CI_Controller
         $this->auth->checkLogin();
         $this->load->model('projects_model');
         $this->load->model('courses_model');
+        $this->load->model('proposals_model');
         $this->load->library('form_validation');
         $this->load->helper('form', 'url');
     }
