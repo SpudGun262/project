@@ -135,10 +135,16 @@ class Projects extends CI_Controller
         $projectResult = $this->projects_model->getProject($project_id);
         if(!$projectResult){
             //TODO: use flashdata and redirect back to projects root
-            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this project does not exist <a href="#" class="close">&chi;</a></div>');
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this project does not exist <a href="#" class="close">&times;</a></div>');
             redirect('admin/projects');
         }
         $data['projectResult'] = $projectResult->row_array();
+
+        $this->projects_model->deleteProject($project_id);
+
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted ' . $project_id . ' <a href="#" class="close">&times;</a></div>');
+
+        redirect('admin/projects');
 
     }
 }

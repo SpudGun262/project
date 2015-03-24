@@ -4,6 +4,8 @@
 //TODO: Style flash data
 $this->session->flashdata('error', '<div class="error">', '</div>');?>
 
+<?=$this->session->flashdata('notice', '<div class="notice">', '</div>');?>
+
 <div class="adminProjectsTable column">
 
     <!--When clicked run the addProject method in the projects controller-->

@@ -96,4 +96,13 @@ class Projects_model extends CI_Model
         }
     }
 
+    public function deleteProject($project_id) {
+
+        $this->db->where('project.project_id', $project_id);
+        $this->db->delete('project');
+
+        //TODO: Add delete file functionality
+//        delete_files(upload_url().)
+    }
+
 }
