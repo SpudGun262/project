@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/projects.php" afterPath="$PROJECT_DIR$/application/controllers/admin/projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -571,7 +570,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427232416789</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Removed completed TODO">
+      <created>1427232820226</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1427232820226</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -640,7 +645,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Updated admin header and footer and included them in necessary files" />
     <MESSAGE value="Created an add project page within the admin section, with controller and view" />
     <MESSAGE value="Trying to do a SQL join inside the projects_model" />
     <MESSAGE value="Successfully implemented an SQL join in the project_model" />
@@ -665,7 +669,8 @@
     <MESSAGE value="Added user feedback to the delete function" />
     <MESSAGE value="Fixed error with feedback not displaying correct project title" />
     <MESSAGE value="Attempting to implement a undo feature. It doesn't work and I'm not sure how to do it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempting to implement a undo feature. It doesn't work and I'm not sure how to do it" />
+    <MESSAGE value="Removed completed TODO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed completed TODO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
