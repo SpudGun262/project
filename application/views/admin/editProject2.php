@@ -1,5 +1,3 @@
-<?=$projectResult['course_id'];?>
-
 <?php
 echo validation_errors('<div class="error">', '</div>');
 
