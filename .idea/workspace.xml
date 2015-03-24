@@ -78,7 +78,7 @@
       <file leaf-file-name="projects.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60914284" vertical-offset="2260" max-vertical-offset="3173">
+            <state vertical-scroll-proportion="0.6742857" vertical-offset="2203" max-vertical-offset="3173">
               <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
               <folding />
             </state>
@@ -118,35 +118,9 @@
       <file leaf-file-name="projects_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.88" vertical-offset="1272" max-vertical-offset="2147">
-              <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+            <state vertical-scroll-proportion="32.64" vertical-offset="1272" max-vertical-offset="2147">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="delete.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/University/CIS2115 - E-Commerce/Site/admin/incs/delete.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.36" vertical-offset="664" max-vertical-offset="1539">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding>
-                <marker date="1398614326630" expanded="true" signature="965:1033" placeholder="DELETE FROM ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="undo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/University/CIS2115 - E-Commerce/Site/admin/incs/undo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.76" vertical-offset="0" max-vertical-offset="1197">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <marker date="1398614308841" expanded="true" signature="786:946" placeholder="INSERT INTO ..." />
-                <marker date="1398614308841" expanded="true" signature="1073:1166" placeholder="INSERT INTO ..." />
-                <marker date="1398614308841" expanded="true" signature="1283:1396" placeholder="INSERT INTO ..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -579,7 +553,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427220429062</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Added user feedback to the delete function">
+      <created>1427221739217</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1427221739217</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -648,7 +628,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added DocType to header and opening HTML and body tag&#10;Added closing HTML and body tag to footer" />
     <MESSAGE value="Created an admin project page" />
     <MESSAGE value="Corrected error in Projects controller" />
     <MESSAGE value="Updated admin header and footer and included them in necessary files" />
@@ -673,7 +652,8 @@
     <MESSAGE value="Improved edit and provided user feedback" />
     <MESSAGE value="Started to implement delete project functionality. Also added some style elements" />
     <MESSAGE value="Additional code added to create delete project functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Additional code added to create delete project functionality" />
+    <MESSAGE value="Added user feedback to the delete function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added user feedback to the delete function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1009,28 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/University/CIS2115 - E-Commerce/Site/admin/incs/undo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.76" vertical-offset="0" max-vertical-offset="1197">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <marker date="1398614308841" expanded="true" signature="786:946" placeholder="INSERT INTO ..." />
-            <marker date="1398614308841" expanded="true" signature="1073:1166" placeholder="INSERT INTO ..." />
-            <marker date="1398614308841" expanded="true" signature="1283:1396" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/University/CIS2115 - E-Commerce/Site/admin/incs/delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.36" vertical-offset="664" max-vertical-offset="1539">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <marker date="1398614326630" expanded="true" signature="965:1033" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/projects.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.56" vertical-offset="0" max-vertical-offset="1083">
@@ -1039,17 +997,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/University/CIS2115 - E-Commerce/Site/admin/incs/delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4342857" vertical-offset="0" max-vertical-offset="1539">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <marker date="1398614326630" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/University/CIS2115 - E-Commerce/Site/admin/incs/undo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.021714285" vertical-offset="0" max-vertical-offset="1197">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1398614308841" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1398614308841" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1398614308841" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.88" vertical-offset="1272" max-vertical-offset="2147">
-          <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+        <state vertical-scroll-proportion="32.64" vertical-offset="1272" max-vertical-offset="2147">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60914284" vertical-offset="2260" max-vertical-offset="3173">
+        <state vertical-scroll-proportion="0.6742857" vertical-offset="2203" max-vertical-offset="3173">
           <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding />
         </state>

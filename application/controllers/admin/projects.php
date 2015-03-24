@@ -142,18 +142,18 @@ class Projects extends CI_Controller
 
         $this->projects_model->deleteProject($project_id);
 
-        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted ' . $project_id . ' <a href="#" class="close">&times;</a></div>');
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted ' . $data['projectResult']['title'] . ' <a href="#" class="close">&times;</a></div>');
 
         redirect('admin/projects');
 
-//
-//        $dump = var_dump($projectResult);
+
 //        $print = print_r($projectResult);
+//        $print2 = print_r($project_id);
 //
 //
 //        $data2 = array(
-//            $dump,
-//            $print
+//            $print,
+//        $print2
 //        );
 //
 //        $this->load->view('admin/projects', $data2);
