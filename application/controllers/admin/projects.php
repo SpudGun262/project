@@ -79,7 +79,7 @@ class Projects extends CI_Controller
         $projectResult = $this->projects_model->getProject($project_id);
         if(!$projectResult){
             //TODO: use flashdata and redirect back to projects root
-            $this->session->set_flashdata('error', 'Sorry this project does not exist');
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this project does not exist</div>');
             redirect('admin/projects');
         }
         $data['projectResult'] = $projectResult->row_array();
@@ -128,5 +128,17 @@ class Projects extends CI_Controller
             $this->load->view('admin/incs/footer');
 
         }
+    }
+
+    public function deleteProject($project_id) {
+
+        $projectResult = $this->projects_model->getProject($project_id);
+        if(!$projectResult){
+            //TODO: use flashdata and redirect back to projects root
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this project does not exist <a href="#" class="close">&chi;</a></div>');
+            redirect('admin/projects');
+        }
+        $data['projectResult'] = $projectResult->row_array();
+
     }
 }
