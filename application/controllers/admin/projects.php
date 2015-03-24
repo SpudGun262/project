@@ -146,5 +146,17 @@ class Projects extends CI_Controller
 
         redirect('admin/projects');
 
+//
+//        $dump = var_dump($projectResult);
+//        $print = print_r($projectResult);
+//
+//
+//        $data2 = array(
+//            $dump,
+//            $print
+//        );
+//
+//        $this->load->view('admin/projects', $data2);
+
     }
 }
