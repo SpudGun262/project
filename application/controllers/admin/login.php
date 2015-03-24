@@ -21,7 +21,7 @@ class Login extends CI_Controller {
                 $data['error'] = 'Incorrect username and password, try again.';
             }
         }
-        $this->load->view('admin/incs/header');
+        $this->load->view('incs/header');
         $this->load->view('admin/login', $data);
         $this->load->view('admin/incs/footer');
     }
