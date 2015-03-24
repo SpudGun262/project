@@ -105,4 +105,8 @@ class Projects_model extends CI_Model
 //        delete_files(upload_url().)
     }
 
+    public function undoDeleteProject(){
+
+    }
+
 }
