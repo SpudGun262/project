@@ -94,5 +94,50 @@ class Proposals extends CI_Controller
         }
     }
 
+    public function deleteProposal($proposal_id) {
+
+        $proposalResult = $this->proposals_model->getProposal($proposal_id);
+        if(!$proposalResult){
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this proposal does not exist <a href="#" class="close">&times;</a></div>');
+            redirect('admin/proposals');
+        }
+        $data['proposalResult'] = $proposalResult->row_array();
+
+        $this->proposals_model->deleteProposal($proposal_id);
+
+
+        $id = $data['proposalResult']['proposal_id'];
+        $title = $data['proposalResult']['title'];
+        $desc = $data['proposalResult']['desc'];
+        $dateAdded = $data['proposalResult']['date_added'];
+        $tutorId = $data['proposalResult']['tutor_id'];
+        $courseId = $data['proposalResult']['course_id'];
+
+//        $data2 = array(
+//            $id,
+//            $title,
+//            $abstract,
+//            $dateAdded,
+//            $tutorId,
+//            $courseId
+//        );
+
+        //TODO: Implement a undo
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted ' . $title . ' <a href="#" class="close">&times;</a></div>');
+
+        redirect('admin/proposals');
+
+//        $print = print_r($undoData);
+//        $print2 = print_r($proposal_id);
+//
+//
+//        $data2 = array(
+//            $print
+//        );
+//
+//        $this->load->view('admin/proposals', $data2);
+
+    }
+
 
 }

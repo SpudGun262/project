@@ -10,7 +10,7 @@ class Proposals_model extends CI_Model
     }
 
     public function proposal_base() {
-        //select all from the proposal table and join the courses, files, and tutors associated with the project
+        //select all from the proposal table and join the courses, files, and tutors associated with the proposal
         $this->db->select('
         proposal.proposal_id, proposal.title, proposal.desc, proposal.date_added, proposal.tutor_id, proposal.course_id,
         course.name,
@@ -64,5 +64,12 @@ class Proposals_model extends CI_Model
         );
         $this->db->where('proposal_id', $proposal_id);
         $this->db->update('proposal', $data);
+    }
+
+    public function deleteProposal($proposal_id) {
+
+        $this->db->where('proposal.proposal_id', $proposal_id);
+        $this->db->delete('proposal');
+
     }
 }
