@@ -9,7 +9,15 @@ class Tutors_model extends CI_Model
         $this->load->database();
     }
 
+    public function tutors_base(){
+        $this->db->select('*');
+        $this->db->from('tutor');
+        $this->db->order_by('tutor.last_name', 'asc');
+
+    }
+
     public function get_tutors(){
-        return $this->db->get('tutor');
+        $this->tutors_base();
+        return $this->db->get();
     }
 }
