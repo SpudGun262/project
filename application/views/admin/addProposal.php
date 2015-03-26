@@ -24,10 +24,20 @@ $input = array(
 echo form_label('Description', 'desc').form_input($input);
 
 //echo a HTML select box
+echo form_label('Course', 'course');
 echo '<select name="course">';
 //for each of the proposals, echo the available courses as a option
 foreach ($courses as $course) {
     echo '<option value="' . $course['course_id'] . '">' . $course['name'] . '</option>';
+}
+//Close the select box
+echo '</select>';
+
+//echo HTML select box for tutors
+echo form_label('Associated Tutor', 'tutor');
+echo '<select name="tutor">';
+foreach ($tutors as $tutor){
+    echo '<option value="' . $tutor['tutor_id'] . '">' . $tutor['first_name'] . ' ' . $tutor['last_name'] . '</option>';
 }
 //Close the select box
 echo '</select>';

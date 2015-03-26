@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/addProposal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/tutors_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/addProposal.php" afterPath="$PROJECT_DIR$/application/views/admin/addProposal.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/proposals.php" afterPath="$PROJECT_DIR$/application/controllers/admin/proposals.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/proposals_model.php" afterPath="$PROJECT_DIR$/application/models/proposals_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -89,8 +91,28 @@
       <file leaf-file-name="proposals.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/proposals.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.68" vertical-offset="228" max-vertical-offset="1577">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            <state vertical-scroll-proportion="-10.64" vertical-offset="0" max-vertical-offset="1235">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="courses_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/courses_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="380">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tutors_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.12" vertical-offset="0" max-vertical-offset="380">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -109,28 +131,28 @@
       <file leaf-file-name="addProject.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/addProject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="1273">
-              <caret line="17" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="2" />
+            <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="1273">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addProposal.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addProposal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/addProposal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5657143" vertical-offset="151" max-vertical-offset="1026">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.44" vertical-offset="114" max-vertical-offset="1216">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proposals_model.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="proposals_model.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/proposals_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.44" vertical-offset="0" max-vertical-offset="665">
-              <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.608" vertical-offset="0" max-vertical-offset="969">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -139,8 +161,8 @@
       <file leaf-file-name="projects_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.04" vertical-offset="0" max-vertical-offset="2223">
-              <caret line="29" column="5" selection-start-line="13" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+            <state vertical-scroll-proportion="-28.12" vertical-offset="399" max-vertical-offset="2223">
+              <caret line="58" column="5" selection-start-line="31" selection-start-column="3" selection-end-line="58" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -164,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/projects.php" />
         <option value="$PROJECT_DIR$/application/views/about.php" />
         <option value="$PROJECT_DIR$/application/views/user/dashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/user/login.php" />
@@ -211,10 +232,11 @@
         <option value="$PROJECT_DIR$/application/controllers/admin/login.php" />
         <option value="$PROJECT_DIR$/application/views/admin/editProject.php" />
         <option value="$PROJECT_DIR$/application/views/admin/incs/header.php" />
-        <option value="$PROJECT_DIR$/application/models/proposals_model.php" />
         <option value="$PROJECT_DIR$/application/views/admin/proposals.php" />
+        <option value="$PROJECT_DIR$/application/models/tutors_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/proposals.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addProposal.php" />
+        <option value="$PROJECT_DIR$/application/models/proposals_model.php" />
       </list>
     </option>
   </component>
@@ -759,7 +781,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427300010849</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Created addProposal view">
+      <created>1427371082173</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1427371082173</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -828,7 +856,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added form validation to the add project section" />
     <MESSAGE value="Commented code" />
     <MESSAGE value="Rewrote sql query to correctly pull out only the data that is needed" />
     <MESSAGE value="Installed foundation.&#10;Modified the htaccess file to allow anb assets folder.&#10;Included a link to the file location in the admin project page .&#10;Created a helper function so assets can be called easier" />
@@ -853,21 +880,14 @@
     <MESSAGE value="Created proposals controller for the admin section as well as a admin proposals view" />
     <MESSAGE value="Fixed error in the proposals controller where the proposals model was not instantiated" />
     <MESSAGE value="Implemented get_proposals method. Got data to render to the view." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented get_proposals method. Got data to render to the view." />
+    <MESSAGE value="Created addProposal view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created addProposal view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2052" max-vertical-offset="2223">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04342857" vertical-offset="0" max-vertical-offset="875">
@@ -893,13 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7245714" vertical-offset="506" max-vertical-offset="1406">
           <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/courses_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="380">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1158,14 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.04" vertical-offset="0" max-vertical-offset="2223">
-          <caret line="29" column="5" selection-start-line="13" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/incs/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43378997" vertical-offset="0" max-vertical-offset="876">
@@ -1182,26 +1187,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/proposals_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.44" vertical-offset="0" max-vertical-offset="665">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.8" vertical-offset="986" max-vertical-offset="3458">
           <caret line="74" column="5" selection-start-line="28" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/proposals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.68" vertical-offset="228" max-vertical-offset="1577">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1214,18 +1203,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.12" vertical-offset="399" max-vertical-offset="2223">
+          <caret line="58" column="5" selection-start-line="31" selection-start-column="3" selection-end-line="58" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/addProject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="1273">
-          <caret line="17" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="2" />
+        <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="1273">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/courses_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="380">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.12" vertical-offset="0" max-vertical-offset="380">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/proposals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.64" vertical-offset="0" max-vertical-offset="1235">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/addProposal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5657143" vertical-offset="151" max-vertical-offset="1026">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="-14.44" vertical-offset="114" max-vertical-offset="1216">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/proposals_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.608" vertical-offset="0" max-vertical-offset="969">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -27,4 +27,20 @@ class Proposals_model extends CI_Model
         $this->proposal_base();
         return $this->db->get();
     }
+
+    public function add_proposal() {
+
+        //insert into the database using the post data
+        $data = array(
+            'title' => $this->input->post('proposal_title'),
+            'desc' => $this->input->post('desc'),
+            'tutor_id' => $this->input->post('tutor'),
+            'course_id' => $this->input->post('course')
+        );
+        $this->db->insert('proposal', $data);
+
+        //The id of the last insert. This is so it can be used in the file upload
+        $insert_id = $this->db->insert_id();
+
+    }
 }
