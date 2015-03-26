@@ -21,7 +21,7 @@ $input = array(
     'name' => 'desc'
 );
 //echo a HTML label and input
-echo form_label('Description', 'desc').form_input($input);
+echo form_label('Description', 'desc').form_textarea($input);
 
 //echo a HTML select box
 echo form_label('Course', 'course');

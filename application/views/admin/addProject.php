@@ -27,9 +27,10 @@ echo '<div class="columns">';
         'name' => 'abstract'
         );
         //echo a HTML label and input
-        echo form_label('Abstract', 'abstract').form_input($input);
+        echo form_label('Abstract', 'abstract').form_textarea($input);
 
         //echo a HTML select box
+        echo form_label('Course', 'course');
         echo '<select name="course">';
             //for each of the projects, echo the available courses as a option
             foreach ($courses as $course) {
