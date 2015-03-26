@@ -2,62 +2,59 @@
 
 <?php
     //echo the validation errors if there is any
-    echo validation_errors('<div class="error">', '</div>');
+    echo validation_errors('<<div data-alert class="alert-box alert radius">', '</div>');
     if(!$file && $this->input->post()) {
-        echo $this->upload->display_errors('<div class="error">', '</div>');
+        echo $this->upload->display_errors('<div data-alert class="alert-box alert radius">', '</div>');
     }
 ?>
 
-<?php
+<div class="columns">
 
-echo '<div class="columns">';
+    <form data-abide action="<?php base_url('admin/tutors/addProject') ?>" method="post" enctype="multipart/form-data">
 
-    //open the HTML form
-    echo form_open_multipart('admin/projects/addProject');
+        <div class="name-field">
+            <label>Project Title <small>required</small>
+                <!-- Regular expression allows for lowercase letter, capital letters, spaces, hyphens, underscores and numbers -->
+                <input type="text" name="project_title" value="" required pattern="[a-z\d\-_\s]+$">
+            </label>
+            <small class="error">A project title is required and can only contain lowercase letter, capital letters, spaces, hyphens, underscores and numbers.</small>
+        </div>
 
-        //values for the project title input box
-        $input = array(
-        'name' => 'project_title'
-        );
-        //echo a HTML label and input
-        echo form_label('Title', 'project_title').form_input($input);
+        <div class="name-field">
+            <label>Abstract <small>required</small>
+                <!-- No regular expression as all characters are allowed. CodeIgniter will still look to clean out any malicious code -->
+                <textarea name="abstract" value="" required></textarea>
+            </label>
+            <small class="error">An abstract is required.</small>
+        </div>
 
-        //values for the abstract input box
-        $input = array(
-        'name' => 'abstract'
-        );
-        //echo a HTML label and input
-        echo form_label('Abstract', 'abstract').form_textarea($input);
+        <div>
+            <label>Course <small>required</small>
+                <select name="course" required>
+                    <?php
+                        foreach ($courses as $course) {
+                            echo '<option value="' . $course['course_id'] . '">' . $course['name'] . '</option>';
+                        }
+                    ?>
+                </select>
+            </label>
+            <small class="error">A course is required.</small>
+        </div>
 
-        //echo a HTML select box
-        echo form_label('Course', 'course');
-        echo '<select name="course">';
-            //for each of the projects, echo the available courses as a option
-            foreach ($courses as $course) {
-                echo '<option value="' . $course['course_id'] . '">' . $course['name'] . '</option>';
-            }
-        //Close the select box
-        echo '</select>';
+        <div>
+            <label>Upload a file
+               <?php
+                    $input = array(
+                        'type' => 'file',
+                        'name' => 'userfile',
+                     );
+                    echo form_upload($input);
+                ?>
+            </label>
+        </div>
 
-        //Add a file
-        $input = array(
-            'type' => 'file',
-            'name' => 'userfile',
-        );
-        echo form_label('Upload a file', 'userfile').form_upload($input);
+        <input type="submit" name="add_project" value="Add New Project" class="button radius">
 
-        //values for the submit button
-        $button = array(
-        'name' => 'add_project',
-        'value' => 'Add New Project',
-        'class' => 'button radius'
-        );
-        //echo a submit button
-        echo form_submit($button);
+    </form>
 
-    //close the HTML form
-    echo form_close();
-
-echo '</div>';
-
-?>
+</div>
