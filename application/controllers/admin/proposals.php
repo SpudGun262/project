@@ -57,4 +57,42 @@ class Proposals extends CI_Controller
 
         }
     }
+
+    public function editProposal($proposal_id) {
+
+        $proposalResult = $this->proposals_model->getProposal($proposal_id);
+        if(!$proposalResult){
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this proposal does not exist</div>');
+            redirect('admin/proposals');
+        }
+        $data['proposalResult'] = $proposalResult->row_array();
+
+        //The form validation rules are set. The proposal title and abstract are required for the validation to pass. It must also be clear of any code
+        $this->form_validation->set_rules('proposal_title', 'Title', 'required|max_length[200]|xss_clean');
+        $this->form_validation->set_rules('desc', 'Description', 'required|xss_clean');
+
+        //if the form passes validation then...
+        if($this->form_validation->run()){
+
+            //run the add_proposal method in the proposals_model
+            $this->proposals_model->editProposal($proposal_id);
+
+            //redirect back to the proposals page
+            redirect('admin/proposals');
+
+            //if the form fails validation then...
+        } else {
+
+            //gather the data from the database again and load the proposals view
+            //Any validation errors will be displayed on the page. This is done by validation_errors() method in the addproposal view
+            $data['courses'] =  $this->courses_model->get_courses()->result_array();
+            $data['tutors'] = $this->tutors_model->get_tutors()->result_array();
+            $this->load->view('admin/incs/header');
+            $this->load->view('admin/editProposal', $data);
+            $this->load->view('admin/incs/footer');
+
+        }
+    }
+
+
 }

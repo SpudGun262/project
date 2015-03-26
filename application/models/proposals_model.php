@@ -43,4 +43,26 @@ class Proposals_model extends CI_Model
         $insert_id = $this->db->insert_id();
 
     }
+
+    public function getProposal($proposal_id) {
+        $this->proposal_base();
+        $this->db->where('proposal.proposal_id', $proposal_id);
+        $result = $this->db->get();
+        if($result->num_rows() !== 1){
+            return false;
+        }
+        return $result;
+    }
+
+    public function editProposal($proposal_id){
+        //insert into the database using the post data
+        $data = array(
+            'title' => $this->input->post('proposal_title'),
+            'desc' => $this->input->post('desc'),
+            'tutor_id' => $this->input->post('tutor'),
+            'course_id' => $this->input->post('course')
+        );
+        $this->db->where('proposal_id', $proposal_id);
+        $this->db->update('proposal', $data);
+    }
 }

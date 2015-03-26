@@ -48,7 +48,7 @@ echo form_label('Upload a file', 'userfile').form_upload($input);
 //values for the submit button
 $button = array(
     'name' => 'add_project',
-    'value' => 'Add New Project'
+    'value' => 'Edit Project'
 );
 //echo a submit button
 echo form_submit($button);
