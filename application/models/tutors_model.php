@@ -20,4 +20,18 @@ class Tutors_model extends CI_Model
         $this->tutors_base();
         return $this->db->get();
     }
+
+    public function add_tutor() {
+
+        //insert into the database using the post data
+        $data = array(
+            'first_name' => $this->input->post('first_name'),
+            'last_name' => $this->input->post('last_name'),
+            'email' => $this->input->post('email')
+        );
+        $this->db->insert('tutor', $data);
+
+        //The id of the last insert
+        $insert_id = $this->db->insert_id();
+    }
 }
