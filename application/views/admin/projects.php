@@ -44,7 +44,16 @@ $this->session->flashdata('error', '<div class="error">', '</div>');?>
                 echo '<td><time datetime="' . $project['date_added'] . '">' . date('d-m-Y', strtotime($project['date_added'])) . '</time></td>';
                 //echo an edit button
                 echo '<td><a href="' . base_url('admin/projects/editProject') .'/' . $project['project_id'] . '" class="radius button small">Edit</a></td>';
-                echo '<td><a href="' . base_url('admin/projects/deleteProject') .'/' . $project['project_id'] . '" class="alert radius button small">Delete</a></td>';
+                echo '<td><a data-reveal-id="myModal'.$project['project_id'].'" class="alert radius button small">Delete</a></td>';
+                echo '<div id="myModal'.$project['project_id'].'" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">';
+                    echo '<h2>Caution</h2>';
+                    echo '<p class="lead">You\'re about to delete a project with the title:</p>';
+                    echo '<p>' . $project['title'] . '.</p>';
+                    echo '<p class="lead">Are you sure?</p>';
+                    echo '<a href="' . base_url('admin/projects/deleteProject') .'/' . $project['project_id'] . '" class="alert radius button small">Confirm delete</a>';
+                    echo '<a class="close secondary radius button small" aria-label="Close">Cancel</a>';
+                    echo '<a class="close-reveal-modal" aria-label="Close">&#215;</a>';
+                echo '</div>';
             echo '</tr>';
         }
         ?>

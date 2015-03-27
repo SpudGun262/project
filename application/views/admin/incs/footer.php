@@ -4,6 +4,11 @@
 <script>
     $(document).foundation();
 </script>
+<script>
+    $('a.close').on('click', function() {
+        $('div.reveal-modal').foundation('reveal', 'close');
+    });
+</script>
 
 </body>
 </html>

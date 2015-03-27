@@ -23,7 +23,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
                 <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
                 <input type="text" name="last_name" value="" required pattern="[-\sa-zA-Z]+$">
             </label>
-            <small class="error">A last name is required and must not contain numbers spaces.</small>
+            <small class="error">A last name is required and must not contain numbers.</small>
         </div>
 
         <div class="email-field">
