@@ -20,5 +20,5 @@
     <li><?='<a href="' . base_url('admin/projects') . '">Projects</a>'?></li>
     <li><?='<a href="' . base_url('admin/proposals') . '">Proposals</a>'?></li>
     <li><?='<a href="' . base_url('admin/tutors') . '">Tutors</a>'?></li>
-    <li><?='<a href="' . base_url('admin/login/logout') . '"id="logout">Logout</a>'?></li>
+    <li><?='<a href="' . base_url('admin/login/logout') . '" id="logout">Logout</a>'?></li>
 </ul>

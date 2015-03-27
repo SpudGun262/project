@@ -37,14 +37,13 @@ $this->session->flashdata('error', '<div class="error">', '</div>');?>
                 } else {
                     echo '<td>NULL</td>';
                 }
-                //echo the first and last name of the tutor who uploaded the project
-//                echo '<td>' . $project['first_name'] . ' ' . $project['last_name'] . '</td>';
                 //reorder date to English standard (http://php.net/strtotime, http://php.net/manual/en/function.date.php)
                 ////uses HTML5 time tag (http://html5doctor.com/the-time-element/)
                 echo '<td><time datetime="' . $project['date_added'] . '">' . date('d-m-Y', strtotime($project['date_added'])) . '</time></td>';
                 //echo an edit button
                 echo '<td><a href="' . base_url('admin/projects/editProject') .'/' . $project['project_id'] . '" class="radius button small">Edit</a></td>';
-                echo '<td><a data-reveal-id="myModal'.$project['project_id'].'" class="alert radius button small">Delete</a></td>';
+                echo '<td><a href="' . base_url('admin/projects/deleteProject') .'/' . $project['project_id'] . '" data-reveal-id="myModal'.$project['project_id'].'" class="alert radius button small">Delete</a></td>';
+            //TODO: This is semantically incorrect. You can not start a div inside a table. Find a way to get this outside of the foreach loop while passing the necessary data over to it. This model is currently produced for every single db item as well which is generating a lot of excess code
                 echo '<div id="myModal'.$project['project_id'].'" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">';
                     echo '<h2>Caution</h2>';
                     echo '<p class="lead">You\'re about to delete a project with the title:</p>';
