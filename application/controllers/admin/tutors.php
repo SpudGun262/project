@@ -62,7 +62,7 @@ class Tutors extends CI_Controller
 
         $tutorResult = $this->tutors_model->getTutor($tutor_id);
         if(!$tutorResult){
-           $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this tutor does not exist</div>');
+           $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this tutor does not exist <a href="#" class="close">&times;</a></div>');
             redirect('admin/tutors');
         }
         $data['tutorResult'] = $tutorResult->row_array();

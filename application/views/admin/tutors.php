@@ -1,12 +1,12 @@
-<h1>This is the admin tutors page</h1>
 
-<?=
-//TODO: Style flash data
-$this->session->flashdata('error', '<div class="error">', '</div>');?>
-
-<?=$this->session->flashdata('notice', '<div class="notice">', '</div>');?>
 
 <div class="adminTutorsTable column">
+    <h1>This is the admin tutors page</h1>
+    <?=
+    //TODO: Style flash data
+    $this->session->flashdata('error');?>
+
+    <?=$this->session->flashdata('notice', '<div class="notice">', '</div>');?>
 
     <!--When clicked run the addtutor method in the tutors controller-->
     <a href="<?=base_url('admin/tutors/addTutor')?>" class="secondary button">&plus; Add New</a>
