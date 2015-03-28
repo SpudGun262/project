@@ -34,7 +34,16 @@ $this->session->flashdata('error', '<div class="error">', '</div>');?>
             //echo an edit button
             echo '<td><a href="' . base_url('admin/tutors/editTutor') .'/' . $tutor['tutor_id'] . '" class="radius button small">Edit</a></td>';
             //echo an delete button
-            echo '<td><a href="' . base_url('admin/tutors/deleteTutor') .'/' . $tutor['tutor_id'] . '" class="alert radius button small">Delete</a></td>';
+            echo '<td><a  class="alert radius button small" data-reveal-id="myModal' . $tutor['tutor_id']. '">Delete</a></td>';
+            echo '<div id="myModal'.$tutor['tutor_id'].'" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">';
+                echo '<h2>Caution</h2>';
+                echo '<p class="lead">You\'re about to delete:</p>';
+                echo '<p>' . $tutor['first_name'] . ' ' . $tutor['last_name'] . '.</p>';
+                echo '<p class="lead">Are you sure?</p>';
+                echo '<a href="' . base_url('admin/tutors/deleteTutor') .'/' . $tutor['tutor_id'] . '" class="alert radius button small">Confirm delete</a>';
+                echo '<a class="close secondary radius button small" aria-label="Close">Cancel</a>';
+                echo '<a class="close-reveal-modal" aria-label="Close">&#215;</a>';
+            echo '</div>';
             echo '</tr>';
         }
         ?>

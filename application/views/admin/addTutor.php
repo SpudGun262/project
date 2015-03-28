@@ -36,5 +36,5 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
         <input type="submit" name="add_tutor" value="Add New tutor" class="button radius">
 
     </form>
-
+    <p><a href="<?=base_url('admin/tutors')?>">Cancel</a></p>
 </div>

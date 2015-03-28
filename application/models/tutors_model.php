@@ -34,4 +34,32 @@ class Tutors_model extends CI_Model
         //The id of the last insert
         $insert_id = $this->db->insert_id();
     }
+
+    public function getTutor($tutor_id) {
+        $this->tutors_base();
+        $this->db->where('tutor.tutor_id', $tutor_id);
+        $result = $this->db->get();
+        if($result->num_rows() !== 1){
+            return false;
+        }
+        return $result;
+    }
+
+    public function editTutor($tutor_id){
+        //insert into the database using the post data
+        $data = array(
+            'first_name' => $this->input->post('first_name'),
+            'last_name' => $this->input->post('last_name'),
+            'email' => $this->input->post('email')
+        );
+        $this->db->where('tutor_id', $tutor_id);
+        $this->db->update('tutor', $data);
+    }
+
+    public function deleteTutor($tutor_id) {
+
+        $this->db->where('tutor.tutor_id', $tutor_id);
+        $this->db->delete('tutor');
+
+    }
 }

@@ -53,7 +53,8 @@ echo form_submit($button);
 
 //close the HTML form
 echo form_close();
-
-echo '</div>';
-
 ?>
+<p><a href="<?=base_url('admin/proposals')?>">Cancel</a></p>
+
+</div>
+

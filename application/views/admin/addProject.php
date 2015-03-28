@@ -57,4 +57,6 @@
 
     </form>
 
+    <p><a href="<?=base_url('admin/projects')?>">Cancel</a></p>
+
 </div>

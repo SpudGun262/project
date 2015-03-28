@@ -56,3 +56,5 @@ echo form_submit($button);
 
 //close the HTML form
 echo form_close(); ?>
+
+<p><a href="<?=base_url('admin/projects')?>">Cancel</a></p>
