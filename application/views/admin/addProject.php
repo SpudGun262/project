@@ -31,6 +31,7 @@
         <div>
             <label>Course <small>required</small>
                 <select name="course" required>
+                    <option value="">Please select a course</option>
                     <?php
                         foreach ($courses as $course) {
                             echo '<option value="' . $course['course_id'] . '">' . $course['name'] . '</option>';

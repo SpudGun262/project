@@ -34,6 +34,8 @@ class Proposals extends CI_Controller
         //The form validation rules are set. The proposal title and abstract are required for the validation to pass. It must also be clear of any code
         $this->form_validation->set_rules('proposal_title', 'Title', 'required|max_length[200]|xss_clean');
         $this->form_validation->set_rules('desc', 'Description', 'required|xss_clean');
+        $this->form_validation->set_rules('course', 'Course', 'required|xss_clean');
+        $this->form_validation->set_rules('tutor', 'Tutor', 'required|xss_clean');
 
                 //if the form passes validation then...
         if($this->form_validation->run()){
