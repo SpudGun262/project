@@ -80,7 +80,7 @@
       <file leaf-file-name="addTutor.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39085713" vertical-offset="0" max-vertical-offset="1140">
+            <state vertical-scroll-proportion="0.5989492" vertical-offset="0" max-vertical-offset="1140">
               <caret line="18" column="14" selection-start-line="12" selection-start-column="8" selection-end-line="18" selection-end-column="14" />
               <folding />
             </state>
@@ -762,7 +762,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15031983" sideWeight="0.50054055" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32864866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -795,7 +795,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Attempting to implement a undo feature. It doesn't work and I'm not sure how to do it" />
     <MESSAGE value="Removed completed TODO" />
     <MESSAGE value="Changed header displayed on the login page so it no longer shows the admin navigation before logging in" />
     <MESSAGE value="Trying to fix git error" />
@@ -820,7 +819,8 @@
     <MESSAGE value="Modified flashdata so it doesnt echo a div twice" />
     <MESSAGE value="Test hash and salt encryption" />
     <MESSAGE value="Implemented hash and salt encryption for all tutors added to the database. Any tutor added now automatically gets added to the admin table so they can login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented hash and salt encryption for all tutors added to the database. Any tutor added now automatically gets added to the admin table so they can login" />
+    <MESSAGE value="Rewrote add project and proposal forms to improve readability and added better form validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rewrote add project and proposal forms to improve readability and added better form validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1186,7 +1186,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39085713" vertical-offset="0" max-vertical-offset="1140">
+        <state vertical-scroll-proportion="0.5989492" vertical-offset="0" max-vertical-offset="1140">
           <caret line="18" column="14" selection-start-line="12" selection-start-column="8" selection-end-line="18" selection-end-column="14" />
           <folding />
         </state>
