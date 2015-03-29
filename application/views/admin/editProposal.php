@@ -1,66 +1,72 @@
 <?php
-echo validation_errors('<div class="error">', '</div>');
+    //echo the validation errors if there is any
+    echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
+?>
 
-//open the HTML form
-echo form_open_multipart();
+<div class="columns">
 
-//values for the proposal title input box
-$input = array(
-    'name' => 'proposal_title',
-    'value' => $proposalResult['title']
-);
-//echo a HTML label and input
-echo form_label('Title', 'proposal_title').form_input($input);
+    <form data-abide method="post">
 
-//values for the abstract input box
-$input = array(
-    'name' => 'desc',
-    'value' => $proposalResult['desc']
-);
-//echo a HTML label and input
-echo form_label('Description', 'desc').form_textarea($input);
+        <div class="name-field">
+            <label>Proposal Title <small>required</small>
+                <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
+                <input type="text" name="proposal_title" value="<?=$proposalResult['title']?>" placeholder="Add the proposal title" required pattern="[a-z\d\-_\s]+$">
+            </label>
+            <small class="error">A first name is required and must not contain numbers or spaces.</small>
+        </div>
 
-//echo a HTML select box
-echo form_label('Course', 'course');
-echo '<select name="course">';
-//for each of the proposals, echo the available courses as a option
-foreach ($courses as $course) {
-    echo '<option value="' . $course['course_id'] . '"';
+        <div class="name-field">
+            <label>Description <small>required</small>
+                <!-- No regular expression as all characters are allowed. CodeIgniter will still look to clean out any malicious code -->
+                <textarea name="desc" required><?=$proposalResult['desc']?></textarea>
+            </label>
+            <small class="error">A description is required.</small>
+        </div>
 
-    if($course['course_id'] == $proposalResult['course_id']) {
-        echo ' selected="selected"';
-    }
+        <div>
+            <label>Course <small>required</small>
+                <select name="course" required>
+                    <option value="">Please select a course</option>
+                    <?php
+                    foreach ($courses as $course) {
+                        echo '<option value="' . $course['course_id'] . '"';
 
-    echo '>' . $course['name'] . '</option>';
-}
-//Close the select box
-echo '</select>';
+                        if($course['course_id'] == $proposalResult['course_id']) {
+                            echo ' selected="selected"';
+                        }
 
-//echo a HTML select box
-echo form_label('Tutor', 'tutor');
-echo '<select name="tutor">';
-//for each of the proposals, echo the available courses as a option
-foreach ($tutors as $tutor) {
-    echo '<option value="' . $tutor['tutor_id'] . '"';
+                        echo '>' . $course['name'] . '</option>';
+                    }
+                    ?>
+                </select>
+            </label>
+            <small class="error">A course is required.</small>
+        </div>
 
-    if($tutor['tutor_id'] == $proposalResult['tutor_id']) {
-        echo ' selected="selected"';
-    }
+        <div>
+            <label>Tutor <small>required</small>
+                <select name="tutor" required>
+                    <option value="">Please select a tutor</option>
+                    <?php
+                    foreach ($tutors as $tutor) {
+                        echo '<option value="' . $tutor['tutor_id'] . '"';
 
-    echo '>' . $tutor['first_name'] . ' ' . $tutor['last_name'] . '</option>';
-}
-//Close the select box
-echo '</select>';
+                        if($tutor['tutor_id'] == $proposalResult['tutor_id']) {
+                            echo ' selected="selected"';
+                        }
 
-//values for the submit button
-$button = array(
-    'name' => 'add_proposal',
-    'value' => 'Edit proposal'
-);
-//echo a submit button
-echo form_submit($button);
+                        echo '>' . $tutor['first_name'] . ' ' . $tutor['last_name'] . '</option>';
+                    }
+                    ?>
+                </select>
+            </label>
+            <small class="error">A tutor is required.</small>
+        </div>
 
-//close the HTML form
-echo form_close(); ?>
+        <input type="submit" name="edit_proposal" value="Edit Proposal" class="button radius">
 
-<p><a href="<?=base_url('admin/proposals')?>">Cancel</a></p>
+    </form>
+
+    <p><a class="button radius secondary" href="<?=base_url('admin/proposals')?>">Cancel</a></p>
+
+</div>

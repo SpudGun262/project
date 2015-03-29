@@ -1,44 +1,39 @@
 <?php
-echo validation_errors('<div class="error">', '</div>');
+    //echo the validation errors if there is any
+    echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
+?>
 
-//open the HTML form
-echo form_open_multipart();
+<div class="columns">
 
-    //values for the tutor title input box
-    $input = array(
-        'name' => 'first_name',
-        'value' => $tutorResult['first_name']
-    );
-    //echo a HTML label and input
-    echo form_label('First Name', 'first_name').form_input($input);
-    
-    //values for the abstract input box
-    $input = array(
-        'name' => 'last_name',
-        'value' => $tutorResult['last_name']
-    );
-    //echo a HTML label and input
-    echo form_label('Last Name', 'last_name').form_input($input);
+    <form data-abide method="post">
 
-    //values for the abstract input box
-    $input = array(
-        'name' => 'email',
-        'value' => $tutorResult['email']
-    );
-    //echo a HTML label and input
-    echo form_label('Email', 'email').form_input($input);
-    
+        <div class="name-field">
+            <label>First Name <small>required</small>
+                <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
+                <input type="text" name="first_name" value="<?=$tutorResult['first_name']?>" placeholder="Add the tutors first name" required pattern="[-\sa-zA-Z]+$">
+            </label>
+            <small class="error">A first name is required and must not contain numbers or spaces.</small>
+        </div>
 
-    
-    //values for the submit button
-    $button = array(
-        'name' => 'edit_tutor',
-        'value' => 'Edit tutor'
-    );
-    //echo a submit button
-    echo form_submit($button);
+        <div class="name-field">
+            <label>Last Name <small>required</small>
+                <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
+                <input type="text" name="last_name" value="<?=$tutorResult['last_name']?>" placeholder="Add the tutors last name" required pattern="[-\sa-zA-Z]+$">
+            </label>
+            <small class="error">A last name is required and must not contain numbers.</small>
+        </div>
 
-//close the HTML form
-echo form_close(); ?>
+        <div class="email-field">
+            <label>Email <small>required</small>
+                <input type="email" name="email" placeholder="Add the email address of the tutor" value="<?=$tutorResult['email']?>" required>
+            </label>
+            <small class="error">An email address is required.</small>
+        </div>
 
-<p><a href="<?=base_url('admin/tutors')?>">Cancel</a></p>
+        <input type="submit" name="edit_tutor" value="Edit Tutor" class="button radius">
+
+    </form>
+
+    <p><a class="button radius secondary" href="<?=base_url('admin/tutors')?>">Cancel</a></p>
+
+</div>

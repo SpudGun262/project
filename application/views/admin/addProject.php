@@ -2,7 +2,7 @@
 
 <?php
     //echo the validation errors if there is any
-    echo validation_errors('<<div data-alert class="alert-box alert radius">', '</div>');
+    echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
     if(!$file && $this->input->post()) {
         echo $this->upload->display_errors('<div data-alert class="alert-box alert radius">', '</div>');
     }
@@ -58,6 +58,6 @@
 
     </form>
 
-    <p><a href="<?=base_url('admin/projects')?>">Cancel</a></p>
+    <p><a class="button radius secondary" href="<?=base_url('admin/projects')?>">Cancel</a></p>
 
 </div>
