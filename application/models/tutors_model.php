@@ -33,6 +33,13 @@ class Tutors_model extends CI_Model
 
         //The id of the last insert
         $insert_id = $this->db->insert_id();
+
+        $data = array(
+            'username' => $this->input->post('email') ,
+            'password' => hash('sha256', $this->input->post('password').SALT)
+        );
+
+        $this->db->insert('admin', $data);
     }
 
     public function getTutor($tutor_id) {

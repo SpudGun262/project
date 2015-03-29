@@ -30,10 +30,12 @@ class Tutors extends CI_Controller
     
     
     public function addTutor() {
-        //The form validation rules are set. The tutor first name, last name and email are required for the validation to pass. It must also be clear of any code
+        //The form validation rules are set. The tutor first name, last name and email are required for the validation to pass. It must also be clear of any code. A check is also performed which checks if a password has been set and if the 'password' and 'passwordConfirm' fields match.
         $this->form_validation->set_rules('first_name', 'First Name', 'required|max_length[200]|xss_clean');
         $this->form_validation->set_rules('last_name', 'Last Name', 'required|max_length[200]|xss_clean');
-        $this->form_validation->set_rules('email', 'Email is already taken and the', 'required|max_length[200]|xss_clean|valid_email|is_unique[tutor.email]');
+        $this->form_validation->set_rules('email', 'Email may already taken and the', 'required|max_length[200]|xss_clean|valid_email|is_unique[tutor.email]');
+        $this->form_validation->set_rules('password', 'A password is required', 'required|max_length[200]|xss_clean|matches[passwordConfirm]');
+        $this->form_validation->set_rules('passwordConfirm', 'A password is required', 'required|max_length[200]|xss_clean');
 
         
         //if the form passes validation then...
