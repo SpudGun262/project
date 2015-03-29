@@ -17,7 +17,8 @@ class Auth {
         $CI =& get_instance();
         // load database
         $CI->load->database();
-        $result = $CI->db->get_where('admin', array('username' => $username, 'password' => $password));
+        //Check the admin table and compare the password with the hash and salt that has been created
+        $result = $CI->db->get_where('admin', array('username' => $username, 'password' => hash('sha256', $password.SALT)));
 
         if($result->num_rows() > 0) {
             $auth = array(
