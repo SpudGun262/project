@@ -10,7 +10,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
 
     <div class="large-6 medium-5 columns panel">
 
-        <form data-abide action="<?php base_url('admin/tutors/addTutor') ?>" method="post">
+        <form data-abide action="<?=base_url('admin/tutors/addTutor') ?>" method="post">
 
             <div class="name-field">
                 <label>First Name <small>required</small>
