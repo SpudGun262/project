@@ -6,7 +6,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
 
 ?>
 
-<div class="columns">
+<div class="row">
 
     <form data-abide action="<?php base_url('admin/tutors/addTutor') ?>" method="post">
 
@@ -34,9 +34,10 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
         </div>
 
         <div class="password-field">
-            <label>Password <small>required</small>
+            <label>Password <small>required </small><span class="viewPassword right">View Password</span><span class="hidePassword right hide">Hide Password</span>
                 <input type="password" id="password" name="password" placeholder="Give the tutor a password so they can login" required>
             </label>
+
             <small class="error">A password is required</small>
         </div>
 
@@ -53,3 +54,18 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
     </form>
     <p><a class="button radius secondary" href="<?=base_url('admin/tutors')?>">Cancel</a></p>
 </div>
+<script>
+$( document).ready(function() {
+    $(".viewPassword").click(function () {
+        $("#password").attr("type", "text");
+        $(this).addClass("hide");
+        $(".hidePassword").removeClass("hide");
+    });
+    $(".hidePassword").click(function () {
+        $("#password").attr("type", "password");
+        $(this).addClass("hide");
+        $(".viewPassword").removeClass("hide");
+    });
+});
+
+</script>

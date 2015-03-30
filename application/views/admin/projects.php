@@ -58,3 +58,5 @@ $this->session->flashdata('error', '<div class="error">', '</div>');?>
         ?>
     </table>
 </div>
+
+<script src="<?php echo asset_url().'js/deleteModal.js'; ?>"></script>

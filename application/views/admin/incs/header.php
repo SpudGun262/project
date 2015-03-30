@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/foundation.min.css'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/normalize.css'; ?>" />
 
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.2.js"></script>
     <script src="<?php echo asset_url().'js/modernizr.js'; ?>"></script>
 </head>
 <body>

@@ -1,6 +1,6 @@
 
 
-<div class="adminTutorsTable column">
+<div class="adminTutorsTable row">
     <h1>This is the admin tutors page</h1>
     <?=
     //TODO: Style flash data
@@ -49,3 +49,5 @@
         ?>
     </table>
 </div>
+
+<script src="<?php echo asset_url().'js/deleteModal.js'; ?>"></script>
