@@ -86,7 +86,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
             <div id="helpPassword" class="hide panel">
                 <h4>Password <small>Required</small></h4>
                 <p>A tutor will use this password to login and upload projects and proposals. They will not be informed what this password is by the system. Instead, it is your responsibility to inform them of it. Once they have the password and can login, they can change it any time they like. Make sure it is secure and not easy to guess.</p>
-                <p>Oh and if you forget what you wrote, just click 'View Password'. Just remember to click it again if you don't want people around you to see! </p>
+                <p>Oh and if you forget what you wrote, just click <strong>'View Password'</strong>. Just remember to click it again if you don't want people around you to see! </p>
             </div>
 
             <div id="helpPasswordConfirm" class="hide panel">
