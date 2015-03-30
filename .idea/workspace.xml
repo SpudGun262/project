@@ -75,31 +75,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tutors.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/tutors.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.32" vertical-offset="0" max-vertical-offset="2451">
-              <caret line="32" column="286" selection-start-line="32" selection-start-column="286" selection-end-line="32" selection-end-column="286" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tutors_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.6" vertical-offset="0" max-vertical-offset="1463">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="addTutor.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63085717" vertical-offset="1443" max-vertical-offset="3572">
-              <caret line="104" column="44" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
+            <state vertical-scroll-proportion="1.456" vertical-offset="1804" max-vertical-offset="4712">
+              <caret line="162" column="44" selection-start-line="162" selection-start-column="44" selection-end-line="162" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -120,16 +100,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.8" vertical-offset="0" max-vertical-offset="285">
               <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deleteModal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/deleteModal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -445,12 +415,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00019" summary="Added form validation to the add project section">
-      <created>1426799154151</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1426799154151</updated>
-    </task>
     <task id="LOCAL-00020" summary="Commented code">
       <created>1426802501429</created>
       <option name="number" value="00020" />
@@ -739,7 +703,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427735753344</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Minor improvement to help and advice section">
+      <created>1427735957432</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1427735957432</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -808,7 +778,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Test commit" />
     <MESSAGE value="Created proposals controller for the admin section as well as a admin proposals view" />
     <MESSAGE value="Fixed error in the proposals controller where the proposals model was not instantiated" />
     <MESSAGE value="Implemented get_proposals method. Got data to render to the view." />
@@ -833,7 +802,8 @@
     <MESSAGE value="Rewrote edit project, edit proposal and edit tutor forms to improve readability and added better form validation" />
     <MESSAGE value="Added the ability to reveal and conceal a password when adding a tutor" />
     <MESSAGE value="Added a help and advice section to the add tutor form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a help and advice section to the add tutor form" />
+    <MESSAGE value="Minor improvement to help and advice section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor improvement to help and advice section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1153,14 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/deleteModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/projects.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.92" vertical-offset="397" max-vertical-offset="1311">
@@ -1209,10 +1171,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/deleteModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63085717" vertical-offset="1443" max-vertical-offset="3572">
-          <caret line="104" column="44" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
+        <state vertical-scroll-proportion="1.456" vertical-offset="1804" max-vertical-offset="4712">
+          <caret line="162" column="44" selection-start-line="162" selection-start-column="44" selection-end-line="162" selection-end-column="44" />
           <folding />
         </state>
       </provider>
