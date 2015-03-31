@@ -1,118 +1,36 @@
 <?php
 
-class Login extends CI_Controller {
+class Login extends CI_Controller
+{
 
     function __construct()
     {
         parent::__construct();
+        $this->load->library('user_auth');
     }
 
     function index()
     {
+        $this->form_validation->set_rules('email', 'email', 'trim|required|valid_email|xss_clean');
+        $this->form_validation->set_rules('password', 'password', 'trim|required|xss_clean');
+        if ($this->form_validation->run() == true) {
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+            if (!$this->user_auth->login($email, $password)) {
+                $data['error'] = 'Incorrect username and password, try again.';
+            }
+        }
         $data = $this->session->flashdata('notice');
         $this->load->view('incs/header');
-        $this->load->view('user/login_form', $data);
+        $this->load->view('user/login', $data);
         $this->load->view('incs/footer');
     }
 
-    function validate_credentials()
+    function logout()
     {
-        $this->load->model('membership_model');
-        $query = $this->membership_model->validate();
+        //flashdata message set to inform user of logout
+        $this->session->set_flashdata('logout', 'You have successfully logged out');
+        $this->user_auth->logout();
 
-        if($query)
-        {
-            $data = array(
-                'username' => $this->input->post('username'),
-                'is_logged_in' => true
-            );
-            $this->session->set_userdata($data);
-            redirect('user/dashboard');
-        }
-        else
-        {
-            $this->load->view('incs/header');
-            $this->load->view('user/dashboard');
-            $this->load->view('incs/footer');
-        }
-    }
-
-    function signup()
-    {
-        $this->load->view('incs/header');
-        $this->load->view('user/signup_form');
-        $this->load->view('incs/footer');
-    }
-
-    function create_member()
-    {
-        $this->load->library('form_validation');
-
-        //Validation Rules
-        //https://ellislab.com/codeigniter/user-guide/libraries/form_validation.html
-        $this->form_validation->set_rules('first_name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
-        $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email|callback_check_if_email_exists');
-//        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|callback_check_if_username_exists');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
-        $this->form_validation->set_rules('password_confirm', 'Password Confirmation', 'trim|required|matches[password]');
-
-        if ($this->form_validation->run() == FALSE) //didn't validate
-        {
-            $this->load->view('incs/header');
-            $this->load->view('user/signup_form');
-            $this->load->view('incs/footer');
-        }
-        else
-        {
-            $this->load->model('membership_model');
-
-            if($query = $this->membership_model->create_member())
-            {
-                $data['account_created'] = 'Your account has been created.';
-
-                $this->load->view('incs/header');
-                $this->load->view('user/login_form', $data);
-                $this->load->view('incs/footer');
-            }
-            else
-            {
-                $this->load->view('incs/header');
-                $this->load->view('user/signup_form');
-                $this->load->view('incs/footer');
-            }
-        }
-    }
-
-//    function check_if_username_exists($requested_username)
-//    {
-//        $this->load->model('membership_model');
-//
-//        $username_available = $this->membership_model->check_if_username_exists($requested_username);
-//
-//        if($username_available)
-//        {
-//            return TRUE;
-//        }
-//        else
-//        {
-//            return FALSE;
-//        }
-//    }
-
-    function check_if_email_exists($requested_email)
-    {
-        $this->load->model('membership_model');
-
-        $email_available = $this->membership_model->check_if_email_exists($requested_email);
-
-        if($email_available)
-        {
-            return TRUE;
-        }
-        else
-        {
-            return FALSE;
-        }
     }
 }
