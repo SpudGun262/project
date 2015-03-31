@@ -17,10 +17,10 @@ class Login extends CI_Controller
             $email = $this->input->post('email');
             $password = $this->input->post('password');
             if (!$this->user_auth->login($email, $password)) {
-                $data['error'] = 'Incorrect username and password, try again.';
+                $data['error'] = '<div data-alert class="alert-box alert radius">Incorrect username or password. Please try again.</div>';
             }
         }
-        $data = $this->session->flashdata('notice');
+
         $this->load->view('incs/header');
         $this->load->view('user/login', $data);
         $this->load->view('incs/footer');
