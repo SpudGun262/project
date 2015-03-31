@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\wamp\www\project\application\views\proposals.php" afterPath="$PROJECT_DIR$/application/views/user/proposals.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/incs/footer.php" afterPath="$PROJECT_DIR$/application/views/incs/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/incs/header.php" afterPath="$PROJECT_DIR$/application/views/incs/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/login.php" afterPath="$PROJECT_DIR$/application/controllers/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/login.php" afterPath="$PROJECT_DIR$/application/views/user/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/proposals.php" afterPath="$PROJECT_DIR$/application/controllers/proposals.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/proposals.php" afterPath="$PROJECT_DIR$/application/views/proposals.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/user_auth.php" afterPath="$PROJECT_DIR$/application/libraries/user_auth.php" />
+    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="Added login for standard user">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -508,12 +499,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00023" summary="Added header and footer includes to the user login pages">
-      <created>1426943503135</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1426943503135</updated>
-    </task>
     <task id="LOCAL-00024" summary="Removed need to username">
       <created>1426951408448</created>
       <option name="number" value="00024" />
@@ -802,7 +787,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427809856213</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Added login for standard user">
+      <created>1427818856696</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1427818856696</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -827,7 +818,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48056155" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -871,7 +862,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Created addProposal view" />
     <MESSAGE value="Created tutor model and implemented add proposal functionality" />
     <MESSAGE value="Created a .gitignore file" />
     <MESSAGE value="Implemented edit proposal functionality" />
@@ -896,7 +886,8 @@
     <MESSAGE value="Cleaned up jQuery code in the 'addTutor' view to make it more readable and less verbose" />
     <MESSAGE value="Added a 1 pixel border to all buttons" />
     <MESSAGE value="Started to add a user authorisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started to add a user authorisation" />
+    <MESSAGE value="Added login for standard user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added login for standard user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
