@@ -4,6 +4,8 @@ class Proposals extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->load->library('user_auth');
+        $this->user_auth->checkLogin();
         $this->load->model('proposals_model');
     }
 

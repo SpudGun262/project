@@ -9,8 +9,9 @@ class Login extends CI_Controller {
 
     function index()
     {
+        $data = $this->session->flashdata('notice');
         $this->load->view('incs/header');
-        $this->load->view('user/login_form');
+        $this->load->view('user/login_form', $data);
         $this->load->view('incs/footer');
     }
 
