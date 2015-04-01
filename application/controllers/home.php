@@ -8,9 +8,8 @@ class Home extends CI_Controller {
     }
 
     public function index() {
-        $data['tests'] =  $this->home_model->get_info()->result_array();
         $this->load->view('incs/header');
-        $this->load->view('home', $data);
+        $this->load->view('home');
         $this->load->view('incs/footer');
     }
 }

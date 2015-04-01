@@ -31,6 +31,8 @@ if(!$CI->session->userdata('user_auth')) {
 
 } else {
 
+    echo '<p>Welcome ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
+
     echo '<p><a href="' . base_url('login/logout') . '" id="logout">Logout</a></p>';
 
 }

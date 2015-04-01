@@ -25,13 +25,16 @@ class User_auth
         //Check the admin table and compare the password with the hash and salt that has been created
         $result = $CI->db->get_where('user', array('email' => $email, 'password' => hash('sha256', $password . SALT)));
 
-        if ($result->num_rows() > 0) {
-            $auth = array(
-                'email' => true
-            );
+        if ($result->num_rows() === 1) {
+
+            $auth = $result->row_array();
+
+            unset($auth['password']);
+
             $CI->session->set_userdata(array('user_auth' => $auth));
-            // redirect to dashboard
-            redirect(base_url('home'), 'location');
+
+            // redirect to home
+            redirect('home');
         } else {
             return false;
         }

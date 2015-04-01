@@ -9,3 +9,5 @@ echo $this->session->flashdata('welcome');
 
 
 echo '<h1>This is the homepage</h1>';
+
+echo 'Welcome ' . $this->session->userdata('user_auth')['first_name'];
