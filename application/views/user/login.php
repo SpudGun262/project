@@ -22,7 +22,7 @@ echo $this->session->flashdata('error');
 
         <div class="email-field">
             <label>Email <small>required</small>
-                <input id="email" type="email" name="email" value="<?php set_value('email') ?>" required>
+                <input id="email" type="email" name="email" value="<?=set_value('email');?>" required>
             </label>
             <small class="error">An email address is required.</small>
         </div>

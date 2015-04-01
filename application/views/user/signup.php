@@ -1,16 +1,11 @@
-<h1>This is the add tutor page</h1>
-
-<?php
-//echo the validation errors if there is any
-echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
-
-?>
-
 <div class="row">
+
+    <h1>Create Account</h1>
+    <?= validation_errors('<div data-alert class="alert-box alert radius">', '</div>'); ?>
 
     <div class="large-6 medium-5 columns panel">
 
-        <form data-abide action="<?=base_url('admin/tutors/addTutor') ?>" method="post">
+        <form data-abide action="<?=base_url('user/addUser') ?>" method="post">
 
             <div class="name-field">
                 <label>First Name <small>required</small>
@@ -37,7 +32,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
 
             <div class="password-field">
                 <label>Password <small>required </small><span class="viewPassword right">View Password</span><span class="hidePassword right hide">Hide Password</span>
-                    <input id="password" type="password"  name="password" placeholder="Give the tutor a password so they can login" required>
+                    <input id="password" type="password"  name="password" placeholder="Create a password" required>
                 </label>
 
                 <small class="error">A password is required</small>
@@ -51,7 +46,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
             </div>
 
 
-            <input type="submit" name="add_tutor" value="Add New tutor" class="button radius"> <a class="button radius secondary" href="<?=base_url('admin/tutors')?>">Cancel</a>
+            <input type="submit" name="add_user" value="Create Account" class="button radius"> <a class="button radius secondary" href="<?=base_url('home')?>">Cancel</a>
 
         </form>
 
@@ -61,19 +56,20 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
 
     <div class="large-6 medium-7 columns hide-for-small">
 
-            <h2>Help &amp; Advice</h2>
+        <h2>Help &amp; Advice</h2>
 
-            <div id="helpAndAdvice" class="panel callout">
-                <h4 id="helpHeader">Need some help?</h4>
-                <div id="helpText">
-                    <p>When you click one of the input boxes on the left, more information will appear here that should help you complete all the details needed. Pretty cool huh?</p>
-                </div>
+        <div id="helpAndAdvice" class="panel callout">
+            <h4 id="helpHeader">Need some help?</h4>
+            <div id="helpText">
+                <p>When you click one of the input boxes on the left, more information will appear here that should help you complete all the details needed. Pretty cool huh?</p>
             </div>
+        </div>
 
     </div>
 
 
 </div>
+
 
 <script src="<?php echo asset_url().'js/passwordReveal.js'; ?>"></script>
 
@@ -92,7 +88,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
                 '<div id="helpAndAdvice" class="panel callout">' +
                     '<h4 id="helpHeader">First Name <small>Required</small></h4>' +
                     '<div id="helpText">' +
-                        '<p>Here you should enter the tutors first name. The name can not contain any numbers or spaces.</p>' +
+                        '<p>Here you should enter your first name. The name can not contain any numbers or spaces.</p>' +
                     '</div>' +
                 '</div>'
             );
@@ -104,7 +100,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
                 '<div id="helpAndAdvice" class="panel callout">' +
                     '<h4 id="helpHeader">Last Name <small>Required</small></h4>' +
                     '<div id="helpText">' +
-                        '<p>Here you should enter the tutors last name. Unlike first name, a tutors last name can contain spaces and hyphens. Although, it still can\'t have any numbers in it.</p>' +
+                        '<p>Here you should enter your last name. Unlike first name, a last name can contain spaces and hyphens. Although, it still can\'t have any numbers in it.</p>' +
                     '</div>' +
                 '</div>'
             );
@@ -116,8 +112,8 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
                 '<div id="helpAndAdvice" class="panel callout">' +
                     '<h4 id="helpHeader">Email Address <small>Required</small></h4>' +
                     '<div id="helpText">' +
-                        '<p>This should be a tutors university email address. They usually end in <strong>\'@edgehill.ac.uk\'</strong>.</p>' +
-                        '<p>If you\'re unsure of this tutors email address, contact a member of <a href="https://www.edgehill.ac.uk/itservices/" target="_blank">IT Services</a></p>' +
+                        '<p>This should be a your university email address.</p>' +
+                        '<p>If you\'re unsure of your email address, contact a member of <a href="https://www.edgehill.ac.uk/itservices/" target="_blank">IT Services</a></p>' +
                     '</div>' +
                 '</div>'
             );
@@ -129,9 +125,8 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
                 '<div id="helpAndAdvice" class="panel callout">' +
                     '<h4 id="helpHeader">Password <small>Required</small></h4>' +
                     '<div id="helpText">' +
-                        '<p>A tutor will use this password to login and upload projects and proposals.</p>' +
-                        '<p><em><strong>Project Bazaar will not inform them what their password. Instead, it is your responsibility to inform them of it.</strong></em></p>' +
-                        '<p>Once they have the password and can login, they can change it any time they like. Make sure it is secure and not easy to guess.</p>' +
+                        '<p>You will use this password to login and view projects and proposals.</p>' +
+                        '<p>Using your password and can login and can change it any time they like. Make sure it is secure and not easy to guess.</p>' +
                         '<p>Oh and if you forget what you wrote, just click <strong>\'View Password\'</strong>. Just remember to click it again if you don\'t want people around you to see!</p>' +
                     '</div>' +
                 '</div>'
@@ -151,71 +146,5 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
         });
 
     });
-
-//TODO: Improve this, its way too much code. The section below it, that is commented out, is an attempt but it doesn't not work right. You have to click an element, click away and click again for it to work
-//$( document).ready(function() {
-//
-//   $("#firstName").focus(function(){
-//        $("#helpAndAdvice").addClass("hide");
-//        $("#helpFirstName").removeClass("hide");
-//    });
-//    $("#firstName").blur(function(){
-//        $("#helpAndAdvice").removeClass("hide");
-//        $("#helpFirstName").addClass("hide");
-//    });
-//
-//    $("#lastName").focus(function(){
-//        $("#helpAndAdvice").addClass("hide");
-//        $("#helpLastName").removeClass("hide");
-//    });
-//    $("#lastName").blur(function(){
-//        $("#helpAndAdvice").removeClass("hide");
-//        $("#helpLastName").addClass("hide");
-//    });
-//
-//    $("#email").focus(function(){
-//        $("#helpAndAdvice").addClass("hide");
-//        $("#helpEmail").removeClass("hide");
-//    });
-//    $("#email").blur(function(){
-//        $("#helpAndAdvice").removeClass("hide");
-//        $("#helpEmail").addClass("hide");
-//    });
-//
-//    $("#password").focus(function(){
-//        $("#helpAndAdvice").addClass("hide");
-//        $("#helpPassword").removeClass("hide");
-//    });
-//    $("#password").blur(function(){
-//        $("#helpAndAdvice").removeClass("hide");
-//        $("#helpPassword").addClass("hide");
-//    });
-//
-//    $("#passwordConfirm").focus(function(){
-//        $("#helpAndAdvice").addClass("hide");
-//        $("#helpPasswordConfirm").removeClass("hide");
-//    });
-//    $("#passwordConfirm").blur(function(){
-//        $("#helpAndAdvice").removeClass("hide");
-//        $("#helpPasswordConfirm").addClass("hide");
-//    });
-//});
-
-
-//$(document).on('click', 'input', function() {
-//    var inputId = this.id;
-//    $("#" + inputId).focus(function () {
-//        $("#helpAndAdvice").addClass("hide");
-//        $("#help-" + inputId).removeClass("hide");
-//    });
-//    $("#" + inputId).blur(function () {
-//        $("#helpAndAdvice").removeClass("hide");
-//        $("#help-" + inputId).addClass("hide");
-//    });
-//});
-
-
-
-
 
 </script>

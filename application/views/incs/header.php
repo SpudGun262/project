@@ -34,5 +34,6 @@ if(!$CI->session->userdata('user_auth')) {
     echo '<p><a href="' . base_url('login/logout') . '" id="logout">Logout</a></p>';
 
 }
-
 ?>
+
+<p><a href="<?=base_url('user');?>" id="sign-up">Create An Account</a></p>
