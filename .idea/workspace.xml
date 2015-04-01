@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/auth.php" afterPath="$PROJECT_DIR$/application/libraries/auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/dashboard.php" afterPath="$PROJECT_DIR$/application/views/admin/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/incs/header.php" afterPath="$PROJECT_DIR$/application/views/incs/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/home.php" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/login.php" afterPath="$PROJECT_DIR$/application/controllers/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/user_auth.php" afterPath="$PROJECT_DIR$/application/libraries/user_auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/users_model.php" afterPath="$PROJECT_DIR$/application/models/users_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -125,8 +119,8 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.12" vertical-offset="0" max-vertical-offset="342">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="70" />
+            <state vertical-scroll-proportion="-9.12" vertical-offset="0" max-vertical-offset="418">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -135,8 +129,8 @@
       <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.041530054" vertical-offset="0" max-vertical-offset="915">
-              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.020765027" vertical-offset="0" max-vertical-offset="915">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,8 +139,8 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/incs/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.08" vertical-offset="0" max-vertical-offset="874">
-              <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
+            <state vertical-scroll-proportion="-20.52" vertical-offset="0" max-vertical-offset="874">
+              <caret line="27" column="42" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -235,11 +229,11 @@
         <option value="$PROJECT_DIR$/application/views/user/signup.php" />
         <option value="$PROJECT_DIR$/application/controllers/home.php" />
         <option value="$PROJECT_DIR$/application/models/users_model.php" />
-        <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/application/controllers/login.php" />
         <option value="$PROJECT_DIR$/application/views/incs/header.php" />
         <option value="$PROJECT_DIR$/application/libraries/user_auth.php" />
         <option value="$PROJECT_DIR$/application/libraries/auth.php" />
+        <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/application/views/admin/dashboard.php" />
       </list>
     </option>
@@ -603,12 +597,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00030" summary="Removed todos and added edit functionality">
-      <created>1427117754007</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1427117754007</updated>
-    </task>
     <task id="LOCAL-00031" summary="Improved edit and provided user feedback">
       <created>1427123548886</created>
       <option name="number" value="00031" />
@@ -897,7 +885,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427893122582</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Added the ability to  store current logged in user data to the session data through the 'auth' and 'user_auth' files">
+      <created>1427912861299</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1427912861299</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -966,7 +960,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Created admin tutors view" />
     <MESSAGE value="Extracted tutor data from the database and sorted by a ascending order of last name" />
     <MESSAGE value="Implemented add tutor functionality and used Foundation for form validation" />
     <MESSAGE value="Refactored code in the addTutor view and reduced the code from 62 lines to 38. A reduction of 24 lines overall" />
@@ -991,7 +984,8 @@
     <MESSAGE value="Changed view port in headers to stop user scaling. With user scaling on, interacting with a form would cause the page  to zoom in and not display all the page anymore" />
     <MESSAGE value="Turned on CodeIgniters built in profiler. THIS MUST BE TURNED OFF FOR PRODUCTION. &#10;Added flashdata message, which informs the user of a successful newly created tutor" />
     <MESSAGE value="Implemented user sign up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented user sign up" />
+    <MESSAGE value="Added the ability to  store current logged in user data to the session data through the 'auth' and 'user_auth' files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to  store current logged in user data to the session data through the 'auth' and 'user_auth' files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1348,6 +1342,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/incs/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.52" vertical-offset="0" max-vertical-offset="874">
+          <caret line="27" column="42" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.12" vertical-offset="0" max-vertical-offset="418">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.84" vertical-offset="0" max-vertical-offset="969">
@@ -1356,26 +1366,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.12" vertical-offset="0" max-vertical-offset="342">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/incs/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.08" vertical-offset="0" max-vertical-offset="874">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041530054" vertical-offset="0" max-vertical-offset="915">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.020765027" vertical-offset="0" max-vertical-offset="915">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
