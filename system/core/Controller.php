@@ -51,6 +51,8 @@ class CI_Controller {
 		$this->load->initialize();
 		
 		log_message('debug', "Controller Class Initialized");
+        //TODO: Remove this for production
+        $this->output->enable_profiler(TRUE);
 	}
 
 	public static function &get_instance()

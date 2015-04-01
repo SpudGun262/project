@@ -22,35 +22,23 @@ echo $this->session->flashdata('error');
 
         <div class="email-field">
             <label>Email <small>required</small>
-                <input id="email" type="email" name="email" value="<?php set_value('email') ?>" >
+                <input id="email" type="email" name="email" value="<?php set_value('email') ?>" required>
             </label>
             <small class="error">An email address is required.</small>
         </div>
 
         <div class="password-field">
             <label>Password <small>required </small><span class="viewPassword right">View Password</span><span class="hidePassword right hide">Hide Password</span>
-                <input id="password" type="password"  name="password" value="" >
+                <input id="password" type="password"  name="password" value="" required>
             </label>
             <small class="error">A password is required</small>
         </div>
 
         <input type="submit" name="login" value="Login" class="button radius">
 
-    <?php
-//    echo form_open();
-//    echo validation_errors();
-//    echo form_input('email', set_value('email'), 'placeholder="Email"');
-//    echo form_password('password', '', 'placeholder="Password" class="password"');
-//    echo form_submit('submit', 'Login', 'class="radius button"');
-//    echo form_close();
-    ?>
-
     </form>
 
-
 <a href="<?=base_url()?>">Back to home page</a>
-
-
 
 </div>
 

@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct sSuccessfully allowed');
 
 class Tutors_model extends CI_Model
 {
@@ -40,6 +40,9 @@ class Tutors_model extends CI_Model
         );
 
         $this->db->insert('admin', $data);
+
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">Successfully added ' . $this->input->post('first_name') . ' ' . $this->input->post('last_name') . ' <a href="#" class="close">&times;</a></div>');
+
     }
 
     public function getTutor($tutor_id) {
