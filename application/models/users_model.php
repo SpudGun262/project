@@ -35,12 +35,20 @@ class Users_model extends CI_Model
        $this->session->set_flashdata('welcome', '<div data-alert class="alert-box secondary radius">Welcome ' . $this->input->post('first_name') . ' ' . $this->input->post('last_name') . ' your account has been successfully created. You can now <a href="' . base_url('login') . '">login</a>.<a href="#" class="close">&times;</a></div>');
     }
 
-    //TODO: Sort this function
-    public function get_user($email) {
-        $CI =& get_instance();
-        if($CI->session->userdata('user_auth')) {
+    public function get_user() {
 
+        $user_id = $this->session->userdata('user_auth')['user_id'];
+
+        $this->users_base();
+        $this->db->where('user.user_id', $user_id);
+        $result = $this->db->get();
+        if($result->num_rows() !== 1){
+            return false;
         }
+        return $result;
+
     }
+
+
 
 }

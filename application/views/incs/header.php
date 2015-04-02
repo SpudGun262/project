@@ -25,37 +25,38 @@
 </ul>
 
 <?php
-$CI =& get_instance();
-if(!$CI->session->userdata('user_auth')) {
 
-    echo '<p><a href="' . base_url('login') . '">Login</a></p>';
+    $CI =& get_instance();
+    if (!$CI->session->userdata('user_auth')) {
 
-} else {
+        echo '<p><a href="' . base_url('login') . '">Login</a></p>';
+        echo '<p><a href="' . base_url('user') . '" id="sign-up">Create An Account</a></p>';
 
-    $time = date('H:i:s');
+    } else {
 
-    echo $time;
+        $time = date('H:i:s');
 
-    if($time >= '06:00:00' && $time <= '11:59:59') {
-        echo '<p>Morning ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
+        if ($time >= '06:00:00' && $time <= '11:59:59') {
+            echo '<p>Morning ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
 
-    } elseif($time > '12:00:00' && $time <= '17:59:59') {
+        } elseif ($time > '12:00:00' && $time <= '17:59:59') {
 
-        echo '<p>Afternoon ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
+            echo '<p>Afternoon ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
 
-    } elseif($time > '18:00:00' && $time <= '23:59:59'){
+        } elseif ($time > '18:00:00' && $time <= '23:59:59') {
 
-        echo '<p>Evening ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
+            echo '<p>Evening ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
 
-    } elseif($time > '00:00:00' && $time <= '05:59:59'){
+        } elseif ($time > '00:00:00' && $time <= '05:59:59') {
 
-        echo '<p>Wow you\'re up late! Or is this early for you ' . $this->session->userdata('user_auth')['first_name'] . '?</p>';
+            echo '<p>Wow you\'re up late! Or is this early for you ' . $this->session->userdata('user_auth')['first_name'] . '?</p>';
+
+        }
+
+        echo '<p><a href="' . base_url('user/profile') . '" id="profile"><i class="fa fa-user fa-fw"></i>&nbsp;Profile</a></p>';
+        echo '<p><a href="' . base_url('login/logout') . '" id="logout"><i class="fa fa-sign-out fa-fw"></i>&nbsp;Logout</a></p>';
 
     }
 
-    echo '<p><a href="' . base_url('login/logout') . '" id="logout"><i class="fa fa-sign-out fa-fw"></i>&nbsp;Logout</a></p>';
-
-}
 ?>
 
-<p><a href="<?=base_url('user');?>" id="sign-up">Create An Account</a></p>

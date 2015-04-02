@@ -46,4 +46,36 @@ class User extends CI_Controller
 
     }
 
+    public function profile() {
+        $this->load->library('user_auth');
+        $this->user_auth->checkLogin();
+
+        $userResult = $this->users_model->get_user();
+        if(!$userResult){
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this user does not exist <a href="#" class="close">&times;</a></div>');
+            redirect('home');
+        }
+        $data['userResult'] = $userResult->row_array();
+
+        $this->load->view('incs/header');
+        $this->load->view('user/profile', $data);
+        $this->load->view('incs/footer');
+    }
+
+    public function changePassword() {
+        $this->load->library('user_auth');
+        $this->user_auth->checkLogin();
+
+        $userResult = $this->users_model->get_user();
+        if(!$userResult){
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this user does not exist <a href="#" class="close">&times;</a></div>');
+            redirect('home');
+        }
+        $data['userResult'] = $userResult->row_array();
+
+        $this->load->view('incs/header');
+        $this->load->view('user/changePassword', $data);
+        $this->load->view('incs/footer');
+    }
+
 }

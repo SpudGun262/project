@@ -9,9 +9,3 @@ echo $this->session->flashdata('welcome');
 
 
 echo '<h1>This is the homepage</h1>';
-
-//If logged in, display welcome message
-$CI =& get_instance();
-if($CI->session->userdata('user_auth')) {
-    echo 'Welcome ' . $this->session->userdata('user_auth')['first_name'];
-}
