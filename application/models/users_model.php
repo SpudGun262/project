@@ -49,6 +49,34 @@ class Users_model extends CI_Model
 
     }
 
+    public function updateUser(){
+        //update the database using the post data
+        $data = array(
+            'first_name' => $this->input->post('first_name'),
+            'last_name' => $this->input->post('last_name'),
+            'email' => $this->input->post('email')
+        );
+
+        $user_id = $this->session->userdata('user_auth')['user_id'];
+
+        $this->db->where('user_id', $user_id);
+        $this->db->update('user', $data);
+
+
+        //Reset the session date with the new updated details
+        $newUserData = array(
+            'user_id' => $user_id,
+            'first_name' => $this->input->post('first_name'),
+            'last_name' => $this->input->post('last_name'),
+            'email' => $this->input->post('email')
+        );
+        $this->session->set_userdata(array('user_auth' => $newUserData));
+
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">Successfully updated your profile.<a href="#" class="close">&times;</a></div>');
+
+
+    }
+
 
 
 }

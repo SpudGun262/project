@@ -2,9 +2,7 @@
 
 <div class="adminTutorsTable row">
     <h1>This is the admin tutors page</h1>
-    <?=
-    //TODO: Style flash data
-    $this->session->flashdata('error');?>
+    <?=$this->session->flashdata('error');?>
 
     <?=$this->session->flashdata('notice', '<div class="notice">', '</div>');?>
 

@@ -62,20 +62,25 @@ class User extends CI_Controller
         $this->load->view('incs/footer');
     }
 
-    public function changePassword() {
-        $this->load->library('user_auth');
-        $this->user_auth->checkLogin();
+    public function updateUser() {
 
-        $userResult = $this->users_model->get_user();
-        if(!$userResult){
-            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this user does not exist <a href="#" class="close">&times;</a></div>');
-            redirect('home');
+        //The form validation rules are set.
+        $this->form_validation->set_rules('first_name', 'First Name', 'required|max_length[200]|xss_clean');
+        $this->form_validation->set_rules('last_name', 'Last Name', 'required|max_length[200]|xss_clean');
+        $this->form_validation->set_rules('email', 'Email', 'required|max_length[200]|valid_email|xss_clean');
+
+        //if the form passes validation then...
+        if($this->form_validation->run()){
+
+            $this->users_model->updateUser();
+
+            redirect('user/profile');
+
+        } else {
+
+            redirect('user/profile');
         }
-        $data['userResult'] = $userResult->row_array();
-
-        $this->load->view('incs/header');
-        $this->load->view('user/changePassword', $data);
-        $this->load->view('incs/footer');
     }
+
 
 }
