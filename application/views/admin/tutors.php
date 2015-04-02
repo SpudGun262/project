@@ -17,8 +17,8 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email Address</th>
-            <th>Edit tutor</th>
-            <th>Delete tutor</th>
+            <th><i class="fa fa-pencil fa-fw"></i>Edit tutor</th>
+            <th><i class="fa fa-trash-o fa-fw"></i>Delete tutor</th>
         </tr>
         </thead>
         <?php

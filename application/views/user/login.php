@@ -28,7 +28,7 @@ echo $this->session->flashdata('error');
         </div>
 
         <div class="password-field">
-            <label>Password <small>required </small><span class="viewPassword right">View Password</span><span class="hidePassword right hide">Hide Password</span>
+            <label>Password <small>required </small><span class="viewPassword right"><i class="fa fa-eye fa-fw"></i>View Password</span><span class="hidePassword right hide"><i class="fa fa-eye-slash fa-fw"></i>Hide Password</span>
                 <input id="password" type="password"  name="password" value="" required>
             </label>
             <small class="error">A password is required</small>

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/foundation.min.css'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/normalize.css'; ?>" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.2.js"></script>
     <script src="<?php echo asset_url().'js/modernizr.js'; ?>"></script>
@@ -17,10 +18,10 @@
 <p>Header</p>
 
 <ul>
-    <li><?='<a href="' . base_url('home') . '">Home</a>'?></li>
-    <li><?='<a href="' . base_url('about') . '">About</a>'?></li>
-    <li><?='<a href="' . base_url('projects') . '">Projects</a>'?></li>
-    <li><?='<a href="' . base_url('proposals') . '">Proposals</a>'?></li>
+    <li><a href="<?=base_url('home')?>"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
+    <li><a href="<?=base_url('about')?>"><i class="fa fa-info-circle fa-fw"></i>&nbsp; About</a></li>
+    <li><a href="<?=base_url('projects')?>"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Projects</a></li>
+    <li><a href="<?=base_url('proposals')?>"><i class="fa fa-key fa-fw"></i>&nbsp; Proposals</a></li>
 </ul>
 
 <?php

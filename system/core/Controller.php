@@ -52,7 +52,9 @@ class CI_Controller {
 		
 		log_message('debug', "Controller Class Initialized");
         //TODO: Remove this for production
-        $this->output->enable_profiler(TRUE);
+        if ($_SERVER['SERVER_NAME'] == 'localhost') {
+            $this->output->enable_profiler(true);
+        }
 	}
 
 	public static function &get_instance()

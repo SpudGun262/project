@@ -36,7 +36,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
             </div>
 
             <div class="password-field">
-                <label>Password <small>required </small><span class="viewPassword right">View Password</span><span class="hidePassword right hide">Hide Password</span>
+                <label>Password <small>required </small><span class="viewPassword right"><i class="fa fa-eye fa-fw"></i>View Password</span><span class="hidePassword right hide"><i class="fa fa-eye-slash fa-fw"></i>Hide Password</span>
                     <input id="password" type="password"  name="password" placeholder="Give the tutor a password so they can login" required>
                 </label>
 
