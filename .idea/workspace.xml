@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/profile.php" afterPath="$PROJECT_DIR$/application/views/user/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/tutors.php" afterPath="$PROJECT_DIR$/application/views/admin/tutors.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user.php" afterPath="$PROJECT_DIR$/application/controllers/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/users_model.php" afterPath="$PROJECT_DIR$/application/models/users_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -81,28 +80,28 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.84" vertical-offset="835" max-vertical-offset="1729">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.76" vertical-offset="1424" max-vertical-offset="2299">
+              <caret line="97" column="85" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/users_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8262857" vertical-offset="664" max-vertical-offset="1672">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state vertical-scroll-proportion="-19.8" vertical-offset="1044" max-vertical-offset="1919">
+              <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/user/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.84" vertical-offset="0" max-vertical-offset="2280">
-              <caret line="34" column="169" selection-start-line="34" selection-start-column="169" selection-end-line="34" selection-end-column="169" />
+            <state vertical-scroll-proportion="-1.2582858" vertical-offset="1424" max-vertical-offset="2299">
+              <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -131,8 +130,8 @@
       <file leaf-file-name="tutors_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.52" vertical-offset="354" max-vertical-offset="1539">
-              <caret line="43" column="246" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="246" />
+            <state vertical-scroll-proportion="-5.2222223" vertical-offset="440" max-vertical-offset="1539">
+              <caret line="38" column="77" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -233,9 +232,9 @@
         <option value="$PROJECT_DIR$/application/views/incs/header.php" />
         <option value="$PROJECT_DIR$/application/views/user/incs/header.php" />
         <option value="$PROJECT_DIR$/application/views/user/changePassword.php" />
-        <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/views/admin/tutors.php" />
         <option value="$PROJECT_DIR$/application/views/user/profile.php" />
+        <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/models/users_model.php" />
       </list>
     </option>
@@ -557,12 +556,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00035" summary="Fixed error with feedback not displaying correct project title">
-      <created>1427222560000</created>
-      <option name="number" value="00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1427222560000</updated>
-    </task>
     <task id="LOCAL-00036" summary="Attempting to implement a undo feature. It doesn't work and I'm not sure how to do it">
       <created>1427232416789</created>
       <option name="number" value="00036" />
@@ -851,7 +844,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427994676550</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Implemented edit profile">
+      <created>1428004663749</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1428004663749</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -920,7 +919,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added delete confirmation to the projects view using foundations modal" />
     <MESSAGE value="Made small alterations to the admin header so it now validates" />
     <MESSAGE value="Implemented edit tutor and delete tutor" />
     <MESSAGE value="Modified flashdata so it doesnt echo a div twice" />
@@ -945,7 +943,8 @@
     <MESSAGE value="Incorporated Font Awesome into the project" />
     <MESSAGE value="Added time of day based message using PHPs date function. Depending at what time of day the user logs in, depends on the message they get" />
     <MESSAGE value="Implemented user profile page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented user profile page" />
+    <MESSAGE value="Implemented edit profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented edit profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1285,26 +1284,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-58.52" vertical-offset="0" max-vertical-offset="4313">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.56" vertical-offset="0" max-vertical-offset="1064">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.52" vertical-offset="354" max-vertical-offset="1539">
-          <caret line="43" column="246" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="246" />
           <folding />
         </state>
       </provider>
@@ -1317,26 +1300,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/profile.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.84" vertical-offset="0" max-vertical-offset="2280">
-          <caret line="34" column="169" selection-start-line="34" selection-start-column="169" selection-end-line="34" selection-end-column="169" />
+        <state vertical-scroll-proportion="-58.52" vertical-offset="0" max-vertical-offset="4313">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2222223" vertical-offset="440" max-vertical-offset="1539">
+          <caret line="38" column="77" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.84" vertical-offset="835" max-vertical-offset="1729">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state vertical-scroll-proportion="-16.76" vertical-offset="1424" max-vertical-offset="2299">
+          <caret line="97" column="85" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/users_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8262857" vertical-offset="664" max-vertical-offset="1672">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        <state vertical-scroll-proportion="-19.8" vertical-offset="1044" max-vertical-offset="1919">
+          <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2582858" vertical-offset="1424" max-vertical-offset="2299">
+          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
           <folding />
         </state>
       </provider>

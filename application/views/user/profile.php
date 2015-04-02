@@ -24,9 +24,10 @@ echo $userResult['email'];
 
             <?= validation_errors('<div data-alert class="alert-box alert radius">', '</div>'); ?>
             <?=$this->session->flashdata('notice');?>
+            <?=$this->session->flashdata('error');?>
 
             <div class="columns panel">
-                <!--TODO: get this to submit to the right location-->
+
                 <form data-abide action="<?=base_url('user/updateUser') ?>" method="post">
 
                     <div class="name-field">
@@ -65,11 +66,11 @@ echo $userResult['email'];
 
             <div class="columns panel">
                 <!--TODO: get this to submit to the right location-->
-                <form data-abide action="<?=base_url('user/addUser') ?>" method="post">
+                <form data-abide action="<?=base_url('user/changePassword') ?>" method="post">
 
                     <div class="password-field">
                         <label>Current Password <small>required </small>
-                            <input id="currentPassword" type="password"  name="currentPassword" required>
+                            <input id="currentPassword" type="password"  name="currentPassword" >
                         </label>
 
                         <small class="error">A current password is required</small>
@@ -77,7 +78,7 @@ echo $userResult['email'];
 
                     <div class="password-field">
                         <label>New Password <small>required </small><span class="viewPassword right"><i class="fa fa-eye fa-fw"></i>View Password</span><span class="hidePassword right hide"><i class="fa fa-eye-slash fa-fw"></i>Hide Password</span>
-                            <input id="password" type="password"  name="password" required>
+                            <input id="password" type="password"  name="password" >
                         </label>
 
                         <small class="error">A new password is required</small>
@@ -85,7 +86,7 @@ echo $userResult['email'];
 
                     <div class="password-confirmation-field">
                         <label>Confirm New Password <small>required</small>
-                            <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Make sure this matches the one above" required data-equalto="password">
+                            <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Make sure this matches the one above"  data-equalto="password">
                         </label>
                         <small class="error">The password did not match</small>
                     </div>

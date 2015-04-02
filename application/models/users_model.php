@@ -77,6 +77,19 @@ class Users_model extends CI_Model
 
     }
 
+    public function changePassword() {
+        $data = array(
+            'password' => hash('sha256', $this->input->post('password').SALT)
+        );
+
+        $user_id = $this->session->userdata('user_auth')['user_id'];
+
+        $this->db->where('user_id', $user_id);
+        $this->db->update('user', $data);
+
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">Successfully updated your password.<a href="#" class="close">&times;</a></div>');
+    }
+
 
 
 }

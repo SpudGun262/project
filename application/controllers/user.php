@@ -78,6 +78,36 @@ class User extends CI_Controller
 
         } else {
 
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Failed to updated your profile.<a href="#" class="close">&times;</a></div>');
+
+            redirect('user/profile');
+        }
+    }
+
+    public function changePassword() {
+
+        //The form validation rules are set.
+        $this->form_validation->set_rules('currentPassword', 'current password', 'required|max_length[200]|xss_clean');
+        $this->form_validation->set_rules('password', 'password', 'required|max_length[200]|xss_clean|matches[passwordConfirm]');
+        $this->form_validation->set_rules('passwordConfirm', 'confirm new password', 'required|max_length[200]|xss_clean');
+
+        $userResult = $this->users_model->get_user();
+
+        $data['userResult'] = $userResult->row_array();
+
+        $currentPassword = hash('sha256', $this->input->post('currentPassword').SALT);
+
+        //if the form passes validation then...
+        if($this->form_validation->run() && $currentPassword == $data['userResult']['password']){
+
+            $this->users_model->changePassword();
+
+            redirect('user/profile');
+
+        } else {
+
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Failed to updated your password. Current password was incorrect.<a href="#" class="close">&times;</a></div>');
+
             redirect('user/profile');
         }
     }
