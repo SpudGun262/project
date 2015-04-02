@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
+    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="Implemented update password">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/incs/header.php" afterPath="$PROJECT_DIR$/application/views/admin/incs/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/incs/header.php" afterPath="$PROJECT_DIR$/application/views/incs/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/profile.php" afterPath="$PROJECT_DIR$/application/views/user/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user.php" afterPath="$PROJECT_DIR$/application/controllers/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/users_model.php" afterPath="$PROJECT_DIR$/application/models/users_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -97,11 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/user/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2582858" vertical-offset="1424" max-vertical-offset="2299">
-              <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+            <state vertical-scroll-proportion="-11.4" vertical-offset="0" max-vertical-offset="2166">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/incs/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.26057142" vertical-offset="0" max-vertical-offset="875">
+              <caret line="12" column="108" selection-start-line="12" selection-start-column="108" selection-end-line="12" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -137,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/signup.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/incs/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.84" vertical-offset="684" max-vertical-offset="2945">
-              <caret line="70" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="6" />
+            <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="1330">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -224,18 +234,18 @@
         <option value="$PROJECT_DIR$/assets/css/blacktie.css" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/application/views/admin/addTutor.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/incs/header.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/application/controllers/home.php" />
         <option value="$PROJECT_DIR$/application/controllers/user/profile.php" />
         <option value="$PROJECT_DIR$/application/controllers/profile.php" />
-        <option value="$PROJECT_DIR$/application/views/incs/header.php" />
         <option value="$PROJECT_DIR$/application/views/user/incs/header.php" />
         <option value="$PROJECT_DIR$/application/views/user/changePassword.php" />
         <option value="$PROJECT_DIR$/application/views/admin/tutors.php" />
-        <option value="$PROJECT_DIR$/application/views/user/profile.php" />
         <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/models/users_model.php" />
+        <option value="$PROJECT_DIR$/application/views/incs/header.php" />
+        <option value="$PROJECT_DIR$/application/views/user/profile.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/incs/header.php" />
       </list>
     </option>
   </component>
@@ -422,6 +432,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="incs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -555,12 +591,6 @@
       <created>1421162113521</created>
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Attempting to implement a undo feature. It doesn't work and I'm not sure how to do it">
-      <created>1427232416789</created>
-      <option name="number" value="00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1427232416789</updated>
     </task>
     <task id="LOCAL-00037" summary="Removed completed TODO">
       <created>1427232820226</created>
@@ -850,7 +880,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428004663749</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Implemented update password">
+      <created>1428006437090</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1428006437090</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -919,7 +955,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Made small alterations to the admin header so it now validates" />
     <MESSAGE value="Implemented edit tutor and delete tutor" />
     <MESSAGE value="Modified flashdata so it doesnt echo a div twice" />
     <MESSAGE value="Test hash and salt encryption" />
@@ -944,7 +979,8 @@
     <MESSAGE value="Added time of day based message using PHPs date function. Depending at what time of day the user logs in, depends on the message they get" />
     <MESSAGE value="Implemented user profile page" />
     <MESSAGE value="Implemented edit profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented edit profile" />
+    <MESSAGE value="Implemented update password" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented update password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1180,14 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/incs/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23885715" vertical-offset="0" max-vertical-offset="875">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/proposals.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52114284" vertical-offset="0" max-vertical-offset="2850">
@@ -1240,14 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.84" vertical-offset="0" max-vertical-offset="380">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/incs/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3257143" vertical-offset="0" max-vertical-offset="1292">
-          <caret line="15" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1316,14 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.76" vertical-offset="1424" max-vertical-offset="2299">
-          <caret line="97" column="85" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/users_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.8" vertical-offset="1044" max-vertical-offset="1919">
@@ -1332,10 +1344,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.76" vertical-offset="1424" max-vertical-offset="2299">
+          <caret line="97" column="85" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2582858" vertical-offset="1424" max-vertical-offset="2299">
-          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+        <state vertical-scroll-proportion="-11.4" vertical-offset="0" max-vertical-offset="2166">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/incs/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="1330">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/incs/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26057142" vertical-offset="0" max-vertical-offset="875">
+          <caret line="12" column="108" selection-start-line="12" selection-start-column="108" selection-end-line="12" selection-end-column="108" />
           <folding />
         </state>
       </provider>

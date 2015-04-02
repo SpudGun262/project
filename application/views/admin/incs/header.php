@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/foundation.min.css'; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/normalize.css'; ?>" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--    TODO: Incorrporate this into foundation stylesheet. Edit the standard foundation.css and then minify it yourself becasue it looks like some styles are missing from the min version-->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.2.js"></script>
     <script src="<?php echo asset_url().'js/modernizr.js'; ?>"></script>

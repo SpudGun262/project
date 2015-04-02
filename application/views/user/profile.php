@@ -1,12 +1,5 @@
 <h1>User Profile</h1>
 
-<?php
-echo $userResult['user_id'];
-echo $userResult['first_name'];
-echo $userResult['last_name'];
-echo $userResult['password'];
-echo $userResult['email'];
-?>
 
 <div class="row">
 
@@ -33,7 +26,7 @@ echo $userResult['email'];
                     <div class="name-field">
                         <label>First Name <small>required</small>
                             <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
-                            <input id="firstName" type="text" name="first_name" value="<?=$userResult['first_name'];?>" placeholder="Add the tutors first name"  required pattern="[-\sa-zA-Z]+$">
+                            <input id="firstName" type="text" name="first_name" value="<?=$userResult['first_name'];?>" placeholder="Your first name"  required pattern="[-\sa-zA-Z]+$">
                         </label>
                         <small class="error">A first name is required and must not contain numbers or spaces.</small>
                     </div>
@@ -41,14 +34,14 @@ echo $userResult['email'];
                     <div class="name-field">
                         <label>Last Name <small>required</small>
                             <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
-                            <input id="lastName" type="text" name="last_name" value="<?=$userResult['last_name'];?>" placeholder="Add the tutors last name" required pattern="[-\sa-zA-Z]+$">
+                            <input id="lastName" type="text" name="last_name" value="<?=$userResult['last_name'];?>" placeholder="Your last name" required pattern="[-\sa-zA-Z]+$">
                         </label>
                         <small class="error">A last name is required and must not contain numbers.</small>
                     </div>
 
                     <div class="email-field">
                         <label>Email <small>required</small>
-                            <input id="email" type="email" name="email" placeholder="Add the email address of the tutor" value="<?=$userResult['email'];?>" required>
+                            <input id="email" type="email" name="email" placeholder="Your email address" value="<?=$userResult['email'];?>" required>
                         </label>
                         <small class="error">An email address is required.</small>
                     </div>
