@@ -12,16 +12,11 @@
     </thead>
 
     <?php
-    $maxLength = 100;
 
     foreach ($projects as $project) {
         echo '<tr>';
         echo '<td>' . $project['title'] . '</td>';
-        if (strlen($project['abstract']) > $maxLength) {
-            $stringCut = substr($project['abstract'], 0, $maxLength);
-            $project['abstract'] = substr($stringCut, 0, strrpos($stringCut, ' '));
-        }
-        echo '<td>' . $project['abstract'] . '...</td>';
+        echo '<td>' . maxLength($project['abstract']) . '...</td>';
         echo '<td>' . $project['course_name'] . '</td>';
         //reorder date to English standard (http://php.net/strtotime, http://php.net/manual/en/function.date.php)
         //uses HTML5 time tag (http://html5doctor.com/the-time-element/)
