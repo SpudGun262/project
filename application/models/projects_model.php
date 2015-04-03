@@ -14,7 +14,7 @@ class Projects_model extends CI_Model
     public function project_base() {
         //select all from the projects table and join the courses, files, and tutors associated with the project
         $this->db->select('project.project_id, project.title, project.abstract, project.date_added, project.tutor_id, project.course_id,
-            course.name,
+            course.course_name,
             file.file_name, file.location,
             tutor.first_name, tutor.last_name, tutor.email');
         $this->db->from('project');

@@ -13,7 +13,7 @@ class Proposals_model extends CI_Model
         //select all from the proposal table and join the courses, files, and tutors associated with the proposal
         $this->db->select('
         proposal.proposal_id, proposal.title, proposal.desc, proposal.date_added, proposal.tutor_id, proposal.course_id,
-        course.name,
+        course.course_name,
         tutor.first_name, tutor.last_name, tutor.email
         ');
         $this->db->from('proposal');
