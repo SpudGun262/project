@@ -35,7 +35,7 @@
                             echo ' selected="selected"';
                         }
 
-                        echo '>' . $course['name'] . '</option>';
+                        echo '>' . $course['course_name'] . '</option>';
                     }
                     ?>
                 </select>

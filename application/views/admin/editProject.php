@@ -41,7 +41,7 @@ if(!$file && $this->input->post()) {
                             echo ' selected="selected"';
                         }
 
-                        echo '>' . $course['name'] . '</option>';
+                        echo '>' . $course['course_name'] . '</option>';
                     }
                     ?>
                 </select>

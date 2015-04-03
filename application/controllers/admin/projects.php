@@ -30,7 +30,7 @@ class Projects extends CI_Controller
 
         //The form validation rules are set. The project title and abstract are required for the validation to pass. It must also be clear of any code
         $this->form_validation->set_rules('project_title', 'Title', 'required|max_length[200]|xss_clean');
-        $this->form_validation->set_rules('abstract', 'Abstract', 'required|max_length[200]|xss_clean');
+        $this->form_validation->set_rules('abstract', 'Abstract', 'required|xss_clean');
 
         //File upload conditions
         $config['upload_path'] = './uploads/';

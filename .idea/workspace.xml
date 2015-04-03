@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/project.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/projects.php" afterPath="$PROJECT_DIR$/application/controllers/projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/projects_model.php" afterPath="$PROJECT_DIR$/application/models/projects_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/proposals_model.php" afterPath="$PROJECT_DIR$/application/models/proposals_model.php" />
+    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="Created a my_functions class. It contains helper functions.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/nl2p_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/addProject.php" afterPath="$PROJECT_DIR$/application/views/admin/addProject.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/addProposal.php" afterPath="$PROJECT_DIR$/application/views/admin/addProposal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/editProject.php" afterPath="$PROJECT_DIR$/application/views/admin/editProject.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/editProposal.php" afterPath="$PROJECT_DIR$/application/views/admin/editProposal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/project.php" afterPath="$PROJECT_DIR$/application/views/project.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/projects.php" afterPath="$PROJECT_DIR$/application/controllers/admin/projects.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/projects.php" afterPath="$PROJECT_DIR$/application/views/projects.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/projects.php" afterPath="$PROJECT_DIR$/application/views/admin/projects.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -81,18 +87,8 @@
       <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.72" vertical-offset="0" max-vertical-offset="703">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/project.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39085713" vertical-offset="0" max-vertical-offset="875">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.56" vertical-offset="0" max-vertical-offset="703">
+              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -101,18 +97,28 @@
       <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.84" vertical-offset="0" max-vertical-offset="304">
-              <caret line="9" column="121" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="121" />
+            <state vertical-scroll-proportion="-17.48" vertical-offset="0" max-vertical-offset="722">
+              <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
+      <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.16" vertical-offset="0" max-vertical-offset="2223">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state vertical-scroll-proportion="-21.28" vertical-offset="0" max-vertical-offset="1311">
+              <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addProject.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/addProject.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-41.8" vertical-offset="0" max-vertical-offset="1292">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,28 +127,38 @@
       <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.92" vertical-offset="1254" max-vertical-offset="3439">
-              <caret line="83" column="61" selection-start-line="79" selection-start-column="8" selection-end-line="83" selection-end-column="61" />
+            <state vertical-scroll-proportion="-7.6" vertical-offset="0" max-vertical-offset="3439">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tutors_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
+      <file leaf-file-name="tutors.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.32" vertical-offset="664" max-vertical-offset="1539">
-              <caret line="38" column="77" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="77" />
+            <state vertical-scroll-proportion="-15.2" vertical-offset="0" max-vertical-offset="1064">
+              <caret line="20" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="20" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addTutor.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
+      <file leaf-file-name="project.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.32" vertical-offset="399" max-vertical-offset="4313">
-              <caret line="53" column="177" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="177" />
+            <state vertical-scroll-proportion="-16.72" vertical-offset="0" max-vertical-offset="665">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nl2p_helper.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/helpers/nl2p_helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17371428" vertical-offset="0" max-vertical-offset="875">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -166,18 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/admin/addProject.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/addProposal.php" />
-        <option value="$PROJECT_DIR$/assets/css/foundation-icons.css" />
-        <option value="$PROJECT_DIR$/assets/js/deleteModal.js" />
-        <option value="$PROJECT_DIR$/application/views/admin/projects.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/proposals.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/incs/footer.php" />
-        <option value="$PROJECT_DIR$/assets/css/foundation.css" />
-        <option value="$PROJECT_DIR$/assets/css/foundation.min.css" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/projects.php" />
-        <option value="$PROJECT_DIR$/application/libraries/user.php" />
-        <option value="$PROJECT_DIR$/application/views/user/login_form.php" />
         <option value="$PROJECT_DIR$/application/libraries/auth2.php" />
         <option value="$PROJECT_DIR$/application/libraries/userAuth.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/proposals.php" />
@@ -213,10 +217,22 @@
         <option value="$PROJECT_DIR$/application/views/user/profile.php" />
         <option value="$PROJECT_DIR$/application/views/admin/incs/header.php" />
         <option value="$PROJECT_DIR$/application/views/incs/header.php" />
-        <option value="$PROJECT_DIR$/application/controllers/projects.php" />
         <option value="$PROJECT_DIR$/application/models/proposals_model.php" />
         <option value="$PROJECT_DIR$/application/models/projects_model.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/projects.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/addProject.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/addProposal.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/editProject.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/editProposal.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/projects.php" />
+        <option value="$PROJECT_DIR$/application/views/projects.php" />
+        <option value="$PROJECT_DIR$/application/libraries/functions.php" />
+        <option value="$PROJECT_DIR$/application/libraries/myFunctions.php" />
+        <option value="$PROJECT_DIR$/application/libraries/my_functions.php" />
+        <option value="$PROJECT_DIR$/application/helpers/nl2p_helper.php" />
+        <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/views/project.php" />
+        <option value="$PROJECT_DIR$/application/controllers/projects.php" />
       </list>
     </option>
   </component>
@@ -318,7 +334,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,11 +352,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,47 +370,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,12 +464,6 @@
       <created>1421162113521</created>
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Removed completed TODO">
-      <created>1427232841385</created>
-      <option name="number" value="00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1427232841385</updated>
     </task>
     <task id="LOCAL-00039" summary="Changed header displayed on the login page so it no longer shows the admin navigation before logging in">
       <created>1427233503054</created>
@@ -787,7 +753,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428007411343</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Started to implement project view page">
+      <created>1428065678068</created>
+      <option name="number" value="00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1428065678070</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -817,21 +789,21 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47948164" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15031983" sideWeight="0.50054055" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15351813" sideWeight="0.49945945" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15031983" sideWeight="0.50054055" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -856,7 +828,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Modified flashdata so it doesnt echo a div twice" />
     <MESSAGE value="Test hash and salt encryption" />
     <MESSAGE value="Implemented hash and salt encryption for all tutors added to the database. Any tutor added now automatically gets added to the admin table so they can login" />
     <MESSAGE value="Rewrote add project and proposal forms to improve readability and added better form validation" />
@@ -881,69 +852,14 @@
     <MESSAGE value="Implemented edit profile" />
     <MESSAGE value="Implemented update password" />
     <MESSAGE value="Added Google Fonts to the headers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Google Fonts to the headers" />
+    <MESSAGE value="Started to implement project view page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to implement project view page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/foundation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="21617" max-vertical-offset="120498">
-          <caret line="1142" column="17" selection-start-line="1142" selection-start-column="0" selection-end-line="1142" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/foundation.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1154" max-vertical-offset="15276">
-          <caret line="0" column="14561" selection-start-line="0" selection-start-column="14561" selection-end-line="0" selection-end-column="14561" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/addProject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3013699" vertical-offset="0" max-vertical-offset="1292">
-          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/proposals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13013698" vertical-offset="0" max-vertical-offset="1007">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/proposals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="852">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/proposals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.065142855" vertical-offset="0" max-vertical-offset="875">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/proposals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54285717" vertical-offset="0" max-vertical-offset="875">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/addProposal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-44.84" vertical-offset="0" max-vertical-offset="1311">
-          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08685714" vertical-offset="0" max-vertical-offset="875">
@@ -976,13 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.04" vertical-offset="151" max-vertical-offset="1368">
           <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.456" vertical-offset="399" max-vertical-offset="2299">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1092,13 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/editTutor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21714285" vertical-offset="0" max-vertical-offset="875">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/signup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.84" vertical-offset="684" max-vertical-offset="2945">
@@ -1154,14 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1064">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36872146" vertical-offset="0" max-vertical-offset="876">
@@ -1194,14 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.16" vertical-offset="0" max-vertical-offset="2223">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/proposals_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="14.4" vertical-offset="645" max-vertical-offset="1520">
@@ -1218,34 +1104,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.84" vertical-offset="0" max-vertical-offset="304">
-          <caret line="9" column="121" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="121" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.72" vertical-offset="0" max-vertical-offset="703">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.32" vertical-offset="664" max-vertical-offset="1539">
           <caret line="38" column="77" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.92" vertical-offset="1254" max-vertical-offset="3439">
-          <caret line="83" column="61" selection-start-line="79" selection-start-column="8" selection-end-line="83" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1258,10 +1120,122 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.16" vertical-offset="0" max-vertical-offset="2223">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/editTutor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21714285" vertical-offset="0" max-vertical-offset="875">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/editProposal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8034286" vertical-offset="0" max-vertical-offset="1463">
+          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/editProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32685715" vertical-offset="531" max-vertical-offset="1406">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addProposal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71657145" vertical-offset="0" max-vertical-offset="1311">
+          <caret line="33" column="95" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-41.8" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.28" vertical-offset="0" max-vertical-offset="1311">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.2" vertical-offset="0" max-vertical-offset="1064">
+          <caret line="20" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6" vertical-offset="0" max-vertical-offset="3439">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/assets_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.36" vertical-offset="570" max-vertical-offset="2299">
+          <caret line="66" column="97" selection-start-line="66" selection-start-column="97" selection-end-line="66" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.48" vertical-offset="0" max-vertical-offset="722">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.56" vertical-offset="0" max-vertical-offset="703">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/project.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39085713" vertical-offset="0" max-vertical-offset="875">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="-16.72" vertical-offset="0" max-vertical-offset="665">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/nl2p_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17371428" vertical-offset="0" max-vertical-offset="875">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
           <folding />
         </state>
       </provider>

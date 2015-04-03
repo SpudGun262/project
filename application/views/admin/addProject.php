@@ -34,7 +34,7 @@
                     <option value="">Please select a course</option>
                     <?php
                         foreach ($courses as $course) {
-                            echo '<option value="' . $course['course_id'] . '">' . $course['name'] . '</option>';
+                            echo '<option value="' . $course['course_id'] . '">' . $course['course_name'] . '</option>';
                         }
                     ?>
                 </select>

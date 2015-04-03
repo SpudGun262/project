@@ -29,7 +29,7 @@ $this->session->flashdata('error', '<div class="error">', '</div>');?>
                 //Echo the title of the project
                 echo '<td>' . $project['title'] . '</td>';
                 //echo the name of the course the project is associated with
-                echo '<td>' . $project['name'] . '</td>';
+                echo '<td>' . $project['course_name'] . '</td>';
                 //if the project has a file associated with it then echo the name of the file
                 if ($project['file_name']){
                     echo '<td><a href="' . $project['location'] . '" target="_blank">' . $project['file_name'] . '</a></td>';
