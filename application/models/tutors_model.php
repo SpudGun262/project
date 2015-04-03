@@ -35,6 +35,7 @@ class Tutors_model extends CI_Model
         $insert_id = $this->db->insert_id();
 
         $data = array(
+            'admin_id' => $insert_id,
             'username' => $this->input->post('email') ,
             'password' => hash('sha256', $this->input->post('password').SALT)
         );
