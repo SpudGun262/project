@@ -31,12 +31,13 @@ class Projects_model extends CI_Model
 
     public function add_project() {
 
+        $admin_id = $this->session->userdata('auth')['admin_id'];
+
         //insert into the database using the post data
         $data = array(
             'title' => $this->input->post('project_title'),
             'abstract' => $this->input->post('abstract'),
-            //TODO: update tutor_id to insert current user
-            'tutor_id' => '1',
+            'tutor_id' => $admin_id,
             'course_id' => $this->input->post('course')
         );
         $this->db->insert('project', $data);
@@ -73,8 +74,6 @@ class Projects_model extends CI_Model
         $data = array(
             'title' => $this->input->post('project_title'),
             'abstract' => $this->input->post('abstract'),
-            //TODO: update tutor_id to insert current user
-            'tutor_id' => '1',
             'course_id' => $this->input->post('course')
         );
         $this->db->where('project.project_id', $project_id);

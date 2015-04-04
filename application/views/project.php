@@ -1,4 +1,6 @@
-<?php print_r($projectResult); ?>
+<?php echo '<pre>';
+    print_r($projectResult);
+echo '</pre>'; ?>
 
 <!--TODO: Finish this page. Add the rest of the detail and style. Add option to favourite-->
 <h1><?=$projectResult['title'];?>

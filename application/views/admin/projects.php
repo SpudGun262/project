@@ -1,5 +1,7 @@
 <h1>This is the admin projects page</h1>
 
+<?=$this->session->userdata('auth')['admin_id'];?>
+
 <?=
 //TODO: Style flash data
 $this->session->flashdata('error', '<div class="error">', '</div>');?>
