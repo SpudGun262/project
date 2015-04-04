@@ -1,31 +1,71 @@
-<?php echo '<pre>';
-    print_r($projectResult);
-echo '</pre>'; ?>
-
 <!--TODO: Finish this page. Add the rest of the detail and style. Add option to favourite-->
-<h1><?=$projectResult['title'];?>
-    <small>
-        <time datetime="<?=$projectResult['date_added'];?>">
-            <span>Date Added: </span>
-            <?=date('d/m/Y', strtotime($projectResult['date_added']));?>
-        </time>
-    </small>
-</h1>
+<?php
+/**
+ *
+ * [project_id]
+ * [title]
+ * [abstract]
+ * [date_added]
+ * [tutor_id]
+ * [course_id]
+ * [course_name]
+ * [file_name]
+ * [location]
+ * [first_name]
+ * [last_name]
+ * [email]
+ *
+ */
+?>
+<div class="row">
 
+    <article>
 
+        <header>
+            <h2><?=$projectResult['title'];?></h2>
 
+            <!-- TODO: Add link to tutor page to show tutors interests  -->
+            <p>Added by <?=$projectResult['first_name'] . ' ' . $projectResult['last_name'];?> on
+                <time datetime="<?=$projectResult['date_added'];?>">
+                    <?=date('l jS F Y', strtotime($projectResult['date_added']));?>
+                </time>
+            </p>
+            <p><?php
+//                strtotime('+2 years', $projectResult['date_added']);
+                $dateString = $projectResult['date_added'];
 
+                $dt = new DateTime($dateString);
+                $dt->modify('+3 years');
+                echo $dt->format('l jS F Y');
+            ?></p>
+        </header>
 
-<h3>Abstract:</h3>
-<p><?php
+        <?php
+            //If the project has a file associated with it then echo a link to it
+            if(isset($projectResult['location']))
+            {?>
 
-        //nl2p is a function that adds <p> elements around newlines. It is custom made and sits in libraries->functions
-//        echo $this->my_functions->nl2p($projectResult['abstract']);
+                <div class="panel" >
+                    <p> File associated with this project: <a href="<?=$projectResult['location'];?>" target="_blank" ><?=$projectResult['file_name'];?></a ></p >
+                </div>
 
-    echo nl2p($projectResult['abstract']);
+            <?php
+            }
+        ?>
+        <div>
 
-    ?>
-</p>
+            <p><?php
 
+                    //nl2p is a function that adds <p> elements around newlines. It is custom made and sits in libraries->functions
+            //        echo $this->my_functions->nl2p($projectResult['abstract']);
 
+                echo nl2p($projectResult['abstract']);
+
+                ?>
+            </p>
+
+        </div>
+
+    </article>
+</div>
 

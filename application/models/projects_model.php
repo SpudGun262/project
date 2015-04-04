@@ -33,12 +33,18 @@ class Projects_model extends CI_Model
 
         $admin_id = $this->session->userdata('auth')['admin_id'];
 
+        //Create an expiry date for a project
+        $dt = new DateTime();
+        $dt->modify('+3 years');
+        $date = $dt->format('Y-m-d H:i:s');
+
         //insert into the database using the post data
         $data = array(
             'title' => $this->input->post('project_title'),
             'abstract' => $this->input->post('abstract'),
             'tutor_id' => $admin_id,
-            'course_id' => $this->input->post('course')
+            'course_id' => $this->input->post('course'),
+            'expire' => $date
         );
         $this->db->insert('project', $data);
 
@@ -104,8 +110,15 @@ class Projects_model extends CI_Model
 //        delete_files(upload_url().)
     }
 
-    public function undoDeleteProject(){
+    public function checkExpiry(){
+        $dt = new DateTime();
+        $date = $dt->format('Y-m-d');
 
+        $this->db->select('*');
+        $this->db->from('project');
+        //Where 'expire' is equal to or less that current date
+        $this->db->where('expire <=', $date);
+        return $this->db->get();
     }
 
 }
