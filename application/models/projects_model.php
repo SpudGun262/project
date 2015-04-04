@@ -111,6 +111,8 @@ class Projects_model extends CI_Model
     }
 
     public function checkExpiry(){
+
+        //Establish current date
         $dt = new DateTime();
         $date = $dt->format('Y-m-d');
 

@@ -39,7 +39,7 @@
                 echo '<p>' . $tutor['first_name'] . ' ' . $tutor['last_name'] . '.</p>';
                 echo '<p class="lead">Are you sure?</p>';
                 echo '<a href="' . base_url('admin/tutors/deleteTutor') .'/' . $tutor['tutor_id'] . '" class="alert radius button small">Confirm delete</a>';
-                echo '<a class="close secondary radius button small" aria-label="Close">Cancel</a>';
+                echo '<a class="close secondary radius button small right" aria-label="Close">Cancel</a>';
                 echo '<a class="close-reveal-modal" aria-label="Close">&#215;</a>';
             echo '</div>';
             echo '</tr>';

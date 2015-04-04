@@ -173,4 +173,49 @@ class Projects extends CI_Controller
 //        $this->load->view('admin/projects', $data2);
 
     }
+
+    public function deleteExpiredProject($project_id) {
+
+        $projectResult = $this->projects_model->getProject($project_id);
+        if(!$projectResult){
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this project does not exist <a href="#" class="close">&times;</a></div>');
+            redirect('admin/projects');
+        }
+        $data['projectResult'] = $projectResult->row_array();
+
+        $this->projects_model->deleteProject($project_id);
+
+
+        $id = $data['projectResult']['project_id'];
+        $title = $data['projectResult']['title'];
+        $abstract = $data['projectResult']['abstract'];
+        $dateAdded = $data['projectResult']['date_added'];
+        $tutorId = $data['projectResult']['tutor_id'];
+        $courseId = $data['projectResult']['course_id'];
+
+//        $data2 = array(
+//            $id,
+//            $title,
+//            $abstract,
+//            $dateAdded,
+//            $tutorId,
+//            $courseId
+//        );
+
+        //TODO: Implement a undo
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted ' . $title . ' <a href="#" class="close">&times;</a></div>');
+
+        redirect('admin/dashboard');
+
+//        $print = print_r($undoData);
+//        $print2 = print_r($project_id);
+//
+//
+//        $data2 = array(
+//            $print
+//        );
+//
+//        $this->load->view('admin/projects', $data2);
+
+    }
 }

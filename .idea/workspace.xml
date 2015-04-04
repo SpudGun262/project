@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="Changed the projects model so when a project is added. the ID of the tutor who added it is also recorded and added to the database">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/index.html" />
+    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/admin/dashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/dashboard.php" afterPath="$PROJECT_DIR$/application/views/admin/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/project.php" afterPath="$PROJECT_DIR$/application/views/project.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/projects.php" afterPath="$PROJECT_DIR$/application/controllers/admin/projects.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/projects_model.php" afterPath="$PROJECT_DIR$/application/models/projects_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/tutors.php" afterPath="$PROJECT_DIR$/application/views/admin/tutors.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -82,8 +82,8 @@
       <file leaf-file-name="project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.56" vertical-offset="227" max-vertical-offset="1463">
-              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+            <state vertical-scroll-proportion="-12.96" vertical-offset="227" max-vertical-offset="1463">
+              <caret line="29" column="80" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="80" />
               <folding>
                 <element signature="e#99#286#0#PHP" expanded="true" />
                 <marker date="1428170009722" expanded="true" signature="566:616" placeholder="..." />
@@ -97,18 +97,18 @@
       <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.36" vertical-offset="171" max-vertical-offset="3439">
-              <caret line="20" column="83" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="83" />
+            <state vertical-scroll-proportion="-19.04" vertical-offset="3324" max-vertical-offset="4294">
+              <caret line="200" column="23" selection-start-line="200" selection-start-column="23" selection-end-line="200" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects_model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projects_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7828571" vertical-offset="1557" max-vertical-offset="2451">
-              <caret line="118" column="62" selection-start-line="118" selection-start-column="62" selection-end-line="118" selection-end-column="62" />
+            <state vertical-scroll-proportion="-24.36" vertical-offset="1557" max-vertical-offset="2489">
+              <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -117,18 +117,28 @@
       <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="551">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="551">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="247">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.04457143" vertical-offset="626" max-vertical-offset="1501">
+              <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tutors.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.6" vertical-offset="189" max-vertical-offset="1064">
+              <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -185,7 +195,6 @@
         <option value="$PROJECT_DIR$/application/controllers/profile.php" />
         <option value="$PROJECT_DIR$/application/views/user/incs/header.php" />
         <option value="$PROJECT_DIR$/application/views/user/changePassword.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/tutors.php" />
         <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/models/users_model.php" />
         <option value="$PROJECT_DIR$/application/views/user/profile.php" />
@@ -195,7 +204,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/addProposal.php" />
         <option value="$PROJECT_DIR$/application/views/admin/editProject.php" />
         <option value="$PROJECT_DIR$/application/views/admin/editProposal.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/projects.php" />
         <option value="$PROJECT_DIR$/application/libraries/functions.php" />
         <option value="$PROJECT_DIR$/application/libraries/myFunctions.php" />
         <option value="$PROJECT_DIR$/application/libraries/my_functions.php" />
@@ -210,9 +218,11 @@
         <option value="$PROJECT_DIR$/application/views/admin/projects.php" />
         <option value="$PROJECT_DIR$/uploads/index.php" />
         <option value="$PROJECT_DIR$/application/views/project.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/dashboard.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/dashboard.php" />
         <option value="$PROJECT_DIR$/application/models/projects_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/projects.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/tutors.php" />
       </list>
     </option>
   </component>
@@ -508,12 +518,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00044" summary="Fixed error in the proposals controller where the proposals model was not instantiated">
-      <created>1427235746017</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1427235746017</updated>
-    </task>
     <task id="LOCAL-00045" summary="Implemented get_proposals method. Got data to render to the view.">
       <created>1427300010849</created>
       <option name="number" value="00045" />
@@ -802,7 +806,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428166417658</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Beginning to implement admin dashboard features. Any project that is going to expire will be shown to the admin when they login">
+      <created>1428171709970</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1428171709970</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -871,7 +881,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added a help and advice section to the add tutor form" />
     <MESSAGE value="Minor improvement to help and advice section" />
     <MESSAGE value="Cleaned up jQuery code in the 'addTutor' view to make it more readable and less verbose" />
     <MESSAGE value="Added a 1 pixel border to all buttons" />
@@ -896,7 +905,8 @@
     <MESSAGE value="Implemented datatables. Used on the projects view" />
     <MESSAGE value="Change the add_tutor() method in the model to insert the same id in both the tutor and admin tables" />
     <MESSAGE value="Changed the projects model so when a project is added. the ID of the tutor who added it is also recorded and added to the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the projects model so when a project is added. the ID of the tutor who added it is also recorded and added to the database" />
+    <MESSAGE value="Beginning to implement admin dashboard features. Any project that is going to expire will be shown to the admin when they login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beginning to implement admin dashboard features. Any project that is going to expire will be shown to the admin when they login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1114,13 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21942857" vertical-offset="188" max-vertical-offset="1064">
-          <caret line="20" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/incs/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17371428" vertical-offset="0" max-vertical-offset="875">
@@ -1236,34 +1239,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.36" vertical-offset="171" max-vertical-offset="3439">
-          <caret line="20" column="83" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="551">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="247">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/project.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.56" vertical-offset="227" max-vertical-offset="1463">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state vertical-scroll-proportion="-12.96" vertical-offset="227" max-vertical-offset="1463">
+          <caret line="29" column="80" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="80" />
           <folding>
             <element signature="e#99#286#0#PHP" expanded="true" />
             <marker date="1428170009722" expanded="true" signature="566:616" placeholder="..." />
@@ -1273,10 +1252,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.04" vertical-offset="3324" max-vertical-offset="4294">
+          <caret line="200" column="23" selection-start-line="200" selection-start-column="23" selection-end-line="200" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/projects_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7828571" vertical-offset="1557" max-vertical-offset="2451">
-          <caret line="118" column="62" selection-start-line="118" selection-start-column="62" selection-end-line="118" selection-end-column="62" />
+        <state vertical-scroll-proportion="-24.36" vertical-offset="1557" max-vertical-offset="2489">
+          <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="551">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.6" vertical-offset="189" max-vertical-offset="1064">
+          <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04457143" vertical-offset="626" max-vertical-offset="1501">
+          <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
           <folding />
         </state>
       </provider>

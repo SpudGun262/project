@@ -15,7 +15,7 @@ class Dashboard extends CI_Controller
 
     public function index() {
 
-        $data['expire'] =  $this->projects_model->checkExpiry()->result_array();
+        $data['expires'] =  $this->projects_model->checkExpiry()->result_array();
 
         $this->load->view('admin/incs/header');
         $this->load->view('admin/dashboard', $data);
