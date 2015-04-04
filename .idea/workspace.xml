@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/admin/dashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/dashboard.php" afterPath="$PROJECT_DIR$/application/views/admin/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/projects.php" afterPath="$PROJECT_DIR$/application/controllers/admin/projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/projects_model.php" afterPath="$PROJECT_DIR$/application/models/projects_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/tutors.php" afterPath="$PROJECT_DIR$/application/views/admin/tutors.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -124,21 +121,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04457143" vertical-offset="626" max-vertical-offset="1501">
-              <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
+            <state vertical-scroll-proportion="-12.96" vertical-offset="626" max-vertical-offset="1501">
+              <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tutors.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tutors.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.6" vertical-offset="189" max-vertical-offset="1064">
-              <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.65257144" vertical-offset="189" max-vertical-offset="1064">
+              <caret line="40" column="136" selection-start-line="40" selection-start-column="136" selection-end-line="40" selection-end-column="136" />
               <folding />
             </state>
           </provider>
@@ -518,12 +515,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00045" summary="Implemented get_proposals method. Got data to render to the view.">
-      <created>1427300010849</created>
-      <option name="number" value="00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1427300010849</updated>
-    </task>
     <task id="LOCAL-00046" summary="Created addProposal view">
       <created>1427371082173</created>
       <option name="number" value="00046" />
@@ -812,7 +803,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428171709970</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Started to add an expiry table to the admin dashboard. This table shows if a project has expired and gives the admin the option to delete, extend or view the project">
+      <created>1428174721405</created>
+      <option name="number" value="00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1428174721405</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -881,7 +878,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Minor improvement to help and advice section" />
     <MESSAGE value="Cleaned up jQuery code in the 'addTutor' view to make it more readable and less verbose" />
     <MESSAGE value="Added a 1 pixel border to all buttons" />
     <MESSAGE value="Started to add a user authorisation" />
@@ -906,7 +902,8 @@
     <MESSAGE value="Change the add_tutor() method in the model to insert the same id in both the tutor and admin tables" />
     <MESSAGE value="Changed the projects model so when a project is added. the ID of the tutor who added it is also recorded and added to the database" />
     <MESSAGE value="Beginning to implement admin dashboard features. Any project that is going to expire will be shown to the admin when they login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beginning to implement admin dashboard features. Any project that is going to expire will be shown to the admin when they login" />
+    <MESSAGE value="Started to add an expiry table to the admin dashboard. This table shows if a project has expired and gives the admin the option to delete, extend or view the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to add an expiry table to the admin dashboard. This table shows if a project has expired and gives the admin the option to delete, extend or view the project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1276,18 +1273,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.6" vertical-offset="189" max-vertical-offset="1064">
-          <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
+        <state vertical-scroll-proportion="-12.96" vertical-offset="626" max-vertical-offset="1501">
+          <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/tutors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04457143" vertical-offset="626" max-vertical-offset="1501">
-          <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.65257144" vertical-offset="189" max-vertical-offset="1064">
+          <caret line="40" column="136" selection-start-line="40" selection-start-column="136" selection-end-line="40" selection-end-column="136" />
           <folding />
         </state>
       </provider>
