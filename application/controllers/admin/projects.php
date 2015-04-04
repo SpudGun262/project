@@ -148,29 +148,10 @@ class Projects extends CI_Controller
         $tutorId = $data['projectResult']['tutor_id'];
         $courseId = $data['projectResult']['course_id'];
 
-//        $data2 = array(
-//            $id,
-//            $title,
-//            $abstract,
-//            $dateAdded,
-//            $tutorId,
-//            $courseId
-//        );
-
         //TODO: Implement a undo
         $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted ' . $title . ' <a href="#" class="close">&times;</a></div>');
 
         redirect('admin/projects');
-
-//        $print = print_r($undoData);
-//        $print2 = print_r($project_id);
-//
-//
-//        $data2 = array(
-//            $print
-//        );
-//
-//        $this->load->view('admin/projects', $data2);
 
     }
 
@@ -179,7 +160,7 @@ class Projects extends CI_Controller
         $projectResult = $this->projects_model->getProject($project_id);
         if(!$projectResult){
             $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this project does not exist <a href="#" class="close">&times;</a></div>');
-            redirect('admin/projects');
+            redirect('admin/dashboard');
         }
         $data['projectResult'] = $projectResult->row_array();
 
@@ -193,29 +174,33 @@ class Projects extends CI_Controller
         $tutorId = $data['projectResult']['tutor_id'];
         $courseId = $data['projectResult']['course_id'];
 
-//        $data2 = array(
-//            $id,
-//            $title,
-//            $abstract,
-//            $dateAdded,
-//            $tutorId,
-//            $courseId
-//        );
-
-        //TODO: Implement a undo
-        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted ' . $title . ' <a href="#" class="close">&times;</a></div>');
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted <strong>' . $title . '</strong>. <a href="#" class="close">&times;</a></div>');
 
         redirect('admin/dashboard');
 
-//        $print = print_r($undoData);
-//        $print2 = print_r($project_id);
-//
-//
-//        $data2 = array(
-//            $print
-//        );
-//
-//        $this->load->view('admin/projects', $data2);
 
+    }
+
+    public function extendProject($project_id) {
+        $projectResult = $this->projects_model->getProject($project_id);
+
+        if(!$projectResult){
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this project does not exist <a href="#" class="close">&times;</a></div>');
+            redirect('admin/dashboard');
+        }
+        $data['projectResult'] = $projectResult->row_array();
+
+        $this->projects_model->extendProject($project_id);
+
+        $id = $data['projectResult']['project_id'];
+        $title = $data['projectResult']['title'];
+        $abstract = $data['projectResult']['abstract'];
+        $dateAdded = $data['projectResult']['date_added'];
+        $tutorId = $data['projectResult']['tutor_id'];
+        $courseId = $data['projectResult']['course_id'];
+
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius row">Successfully extended <strong>' . $title . '</strong> by 12 months. <a href="#" class="close">&times;</a></div>');
+
+        redirect('admin/dashboard');
     }
 }

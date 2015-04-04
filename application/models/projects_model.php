@@ -123,4 +123,19 @@ class Projects_model extends CI_Model
         return $this->db->get();
     }
 
+    public function extendProject($project_id) {
+
+        $dt = new DateTime();
+        $dt->modify('+1 year');
+        $date = $dt->format('Y-m-d');
+
+        $data = array(
+            'expire' => $date
+        );
+
+        $this->db->where('project.project_id', $project_id);
+        $this->db->update('project', $data);
+
+    }
+
 }
