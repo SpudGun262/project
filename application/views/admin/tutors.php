@@ -9,7 +9,7 @@
     <!--When clicked run the addtutor method in the tutors controller-->
     <a href="<?=base_url('admin/tutors/addTutor')?>" class="secondary button">&plus; Add New</a>
 
-    <table >
+    <table class="column">
         <thead>
         <tr>
             <th>First Name</th>
