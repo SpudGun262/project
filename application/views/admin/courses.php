@@ -8,7 +8,7 @@
     <!--When clicked run the addCourse method in the courses controller-->
     <a href="<?=base_url('admin/courses/addCourse')?>" class="secondary button">&plus; Add New</a>
 
-    <table class="column">
+    <table id="coursesTable" class="display column">
         <thead>
         <tr>
             <th>Course Name</th>
@@ -41,3 +41,9 @@
 </div>
 
 <script src="<?php echo asset_url().'js/deleteModal.js'; ?>"></script>
+<script type="text/javascript" class="init">
+    $(document).ready(function(){
+        $('#coursesTable').DataTable({
+        });
+    });
+</script>

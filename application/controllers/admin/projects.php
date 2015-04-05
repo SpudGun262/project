@@ -35,7 +35,7 @@ class Projects extends CI_Controller
         //File upload conditions
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|pdf';
-        $config['max_size']	= '100';
+        $config['max_size']	= '10000';
         $config['max_width']  = '0';
         $config['max_height']  = '0';
         $config['remove_spaces'] = TRUE;

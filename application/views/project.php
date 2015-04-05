@@ -30,14 +30,6 @@
                     <?=date('l jS F Y', strtotime($projectResult['date_added']));?>
                 </time>
             </p>
-            <p><?php
-//                strtotime('+2 years', $projectResult['date_added']);
-                $dateString = $projectResult['date_added'];
-
-                $dt = new DateTime($dateString);
-                $dt->modify('+3 years');
-                echo $dt->format('l jS F Y');
-            ?></p>
         </header>
 
         <?php

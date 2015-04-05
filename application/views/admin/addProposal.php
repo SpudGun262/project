@@ -103,7 +103,7 @@ echo validation_errors('<div data-alert class="alert-box alert radius">', '</div
                 '<div id="helpAndAdvice" class="panel callout">' +
                 '<h4 id="helpHeader">Description <small>Required</small></h4>' +
                 '<div id="helpText">' +
-                '<p>Here you should enter a description for your project proposal. Students will read this description to determin if they want to do this project or not. The more detail the better.</p>' +
+                '<p>Here you should enter a description for your project proposal. Students will read this description to determine if they want to do this project or not. The more detail the better.</p>' +
                 '</div>' +
                 '</div>'
             );

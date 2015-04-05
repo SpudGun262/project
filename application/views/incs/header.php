@@ -18,7 +18,6 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.2.js"></script>
     <script src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
     <script src="//cdn.datatables.net/plug-ins/1.10.6/integration/foundation/dataTables.foundation.js"></script>
-
     <script src="<?php echo asset_url().'js/modernizr.js'; ?>"></script>
 </head>
 <body>
