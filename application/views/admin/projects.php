@@ -1,29 +1,26 @@
 <h1>This is the admin projects page</h1>
 
-<?=$this->session->userdata('auth')['admin_id'];?>
+<?=$this->session->flashdata('error');?>
 
-<?=
-//TODO: Style flash data
-$this->session->flashdata('error', '<div class="error">', '</div>');?>
+<?=$this->session->flashdata('notice');?>
 
-<?=$this->session->flashdata('notice', '<div class="notice">', '</div>');?>
-
-<div class="adminProjectsTable column">
+<div class="adminProjectsTable row">
 
     <!--When clicked run the addProject method in the projects controller-->
     <a href="<?=base_url('admin/projects/addProject')?>" class="secondary button">&plus; Add New</a>
-
-    <table >
+    <!-- TODO: add datatables functionality to this table -->
+    <table class="column">
         <thead>
             <tr>
                 <th>Project Title</th>
                 <th>Course</th>
                 <th>File Name</th>
                 <th>Data Added</th>
-                <th>Edit Project</th>
-                <th>Delete Project</th>
+                <th><i class="fa fa-pencil fa-fw"></i>Edit Project</th>
+                <th><i class="fa fa-trash-o fa-fw"></i>Delete Project</th>
             </tr>
         </thead>
+        <tbody>
         <?php
         //for each of the projects, echo them as a single project inside a HTML table
         foreach ($projects as $project) {
@@ -46,19 +43,26 @@ $this->session->flashdata('error', '<div class="error">', '</div>');?>
                 echo '<td><a href="' . base_url('admin/projects/editProject') .'/' . $project['project_id'] . '" class="radius button small">Edit</a></td>';
                 echo '<td><a href="' . base_url('admin/projects/deleteProject') .'/' . $project['project_id'] . '" data-reveal-id="myModal'.$project['project_id'].'" class="alert radius button small">Delete</a></td>';
             //TODO: This is semantically incorrect. You can not start a div inside a table. Find a way to get this outside of the foreach loop while passing the necessary data over to it. This model is currently produced for every single db item as well which is generating a lot of excess code
-                echo '<div id="myModal'.$project['project_id'].'" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">';
-                    echo '<h2>Caution</h2>';
-                    echo '<p class="lead">You\'re about to delete a project with the title:</p>';
-                    echo '<p>' . $project['title'] . '.</p>';
-                    echo '<p class="lead">Are you sure?</p>';
-                    echo '<a href="' . base_url('admin/projects/deleteProject') .'/' . $project['project_id'] . '" class="alert radius button small">Confirm delete</a>';
-                    echo '<a class="close secondary radius button small" aria-label="Close">Cancel</a>';
-                    echo '<a class="close-reveal-modal" aria-label="Close">&#215;</a>';
-                echo '</div>';
+
             echo '</tr>';
         }
+
+        echo '</tbody>';
+        echo '</table>';
+
+        foreach ($projects as $project) {
+            echo '<div id="myModal'.$project['project_id'].'" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">';
+            echo '<h2>Caution</h2>';
+            echo '<p class="lead">You\'re about to delete a project with the title:</p>';
+            echo '<p>' . $project['title'] . '.</p>';
+            echo '<p class="lead">Are you sure?</p>';
+            echo '<a href="' . base_url('admin/projects/deleteProject') .'/' . $project['project_id'] . '" class="alert radius button small right">Confirm delete</a>';
+            echo '<a class="close secondary radius button small" aria-label="Close">Cancel</a>';
+            echo '<a class="close-reveal-modal" aria-label="Close">&#215;</a>';
+            echo '</div>';
+        }
         ?>
-    </table>
+
 </div>
 
 <script src="<?php echo asset_url().'js/deleteModal.js'; ?>"></script>

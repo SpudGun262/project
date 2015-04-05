@@ -20,9 +20,10 @@
 <p>Header</p>
 
 <ul>
-    <li><?='<a href="' . base_url('admin/dashboard') . '">Dashboard</a>'?></li>
-    <li><?='<a href="' . base_url('admin/projects') . '">Projects</a>'?></li>
-    <li><?='<a href="' . base_url('admin/proposals') . '">Proposals</a>'?></li>
-    <li><?='<a href="' . base_url('admin/tutors') . '">Tutors</a>'?></li>
-    <li><?='<a href="' . base_url('admin/login/logout') . '" id="logout">Logout</a>'?></li>
+    <li><a href="<?=base_url('admin/dashboard');?>">Dashboard</a></li>
+    <li><a href="<?=base_url('admin/projects');?>">Projects</a></li>
+    <li><a href="<?=base_url('admin/proposals');?>">Proposals</a></li>
+    <li><a href="<?=base_url('admin/tutors');?>">Tutors</a></li>
+    <li><a href="<?=base_url('admin/courses');?>">Courses</a></li>
+    <li><a href="<?=base_url('admin/login/logout');?>" id="logout">Logout</a></li>
 </ul>
