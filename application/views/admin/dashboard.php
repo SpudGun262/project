@@ -123,7 +123,7 @@
 
         {
 
-            echo '<p data-alert class="alert-box secondary radius">No students have shown interest in any of project proposals yet.</p>';
+            echo '<p data-alert class="alert-box secondary radius">No students are interested in any project you have posted. <a href="'.base_url('admin/proposals').'">Try posting another or edit an existing one</a></p>';
 
         }
         ?>
