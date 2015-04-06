@@ -41,4 +41,19 @@ class Proposals extends CI_Controller {
         $this->load->view('user/proposal', $data);
         $this->load->view('incs/footer');
     }
+
+    public function doProposal($proposal_id){
+
+        $proposalResult = $this->proposals_model->getProposal($proposal_id);
+        if(!$proposalResult){
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this proposal does not exist</div>');
+            redirect('proposals');
+        }
+
+        $this->proposals_model->doProposal($proposal_id);
+
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box success radius">Your request has been sent.</div>');
+
+        redirect('proposals');
+    }
 }

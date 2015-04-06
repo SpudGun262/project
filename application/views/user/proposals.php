@@ -2,6 +2,9 @@
 
     <h1>Proposal page</h1>
 
+    <?= $this->session->flashdata('notice'); ?>
+    <?= $this->session->flashdata('error'); ?>
+
     <?php
 
     /**

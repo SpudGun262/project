@@ -72,4 +72,35 @@ class Proposals_model extends CI_Model
         $this->db->delete('proposal');
 
     }
+
+    /**
+     * @param $proposal_id
+     */
+    public function doProposal($proposal_id) {
+
+        //First query the database to see if the user has already applied for the project
+        $this->db->select('*');
+        $this->db->from('interest');
+        $this->db->where(array(
+            'proposal_id' => $proposal_id,
+            'user_id' => $this->session->userdata('user_auth')['user_id']
+        ));
+        $query = $this->db->get();
+
+        //If the number of rows returned is 0, this means the student has not applied. Therefore, insert the data into the database
+        if($query->num_rows() == 0) {
+
+            $data = array(
+                'proposal_id' => $proposal_id,
+                'user_id' => $this->session->userdata('user_auth')['user_id']
+            );
+            $this->db->insert('interest', $data);
+
+        } else {
+
+            //If they have applied, redirect them and set an error message
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box secondary radius">You have already applied for this project. If you have not heard from the tutor 72 hours afters applying, try emailing them.</div>');
+            redirect('proposals');
+        }
+    }
 }
