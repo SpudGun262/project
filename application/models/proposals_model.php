@@ -10,7 +10,7 @@ class Proposals_model extends CI_Model
     }
 
     public function proposal_base() {
-        //select all from the proposal table and join the courses, files, and tutors associated with the proposal
+        //select all from the proposal table and join the courses and tutors associated with the proposal
         $this->db->select('
         proposal.proposal_id, proposal.title, proposal.desc, proposal.date_added, proposal.tutor_id, proposal.course_id,
         course.course_name,
@@ -90,9 +90,13 @@ class Proposals_model extends CI_Model
         //If the number of rows returned is 0, this means the student has not applied. Therefore, insert the data into the database
         if($query->num_rows() == 0) {
 
+            //Get the tutor ID for this particular proposal
+            $result = $this->getProposal($proposal_id)->row_array();
+
             $data = array(
                 'proposal_id' => $proposal_id,
-                'user_id' => $this->session->userdata('user_auth')['user_id']
+                'user_id' => $this->session->userdata('user_auth')['user_id'],
+                'tutor_id' => $result['tutor_id']
             );
             $this->db->insert('interest', $data);
 
@@ -102,5 +106,27 @@ class Proposals_model extends CI_Model
             $this->session->set_flashdata('error', '<div data-alert class="alert-box secondary radius">You have already applied for this project. If you have not heard from the tutor 72 hours afters applying, try emailing them.</div>');
             redirect('proposals');
         }
+    }
+
+    public function checkInterest() {
+        $this->db->select('
+            interest.proposal_id, interest.user_id, interest.tutor_id,
+            proposal.title,
+            user.first_name, user.last_name, user.email
+        ');
+        $this->db->from('interest');
+        $this->db->join('proposal', 'proposal.proposal_id = interest.proposal_id', 'left');
+        $this->db->join('user', 'user.user_id = interest.user_id', 'left');
+        $this->db->where('interest.tutor_id', $this->session->userdata('auth')['admin_id']);
+        return $this->db->get();
+    }
+
+    public function deleteInterest($proposal_id, $user_id) {
+        $this->db->where(array(
+            'interest.proposal_id' => $proposal_id,
+            'interest.user_id' => $user_id,
+            'interest.tutor_id' => $this->session->userdata('auth')['admin_id']
+        ));
+        $this->db->delete('interest');
     }
 }

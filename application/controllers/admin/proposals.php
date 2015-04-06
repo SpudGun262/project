@@ -141,5 +141,14 @@ class Proposals extends CI_Controller
 
     }
 
+    public function deleteInterest($proposal_id, $user_id) {
+
+        $this->proposals_model->deleteInterest($proposal_id, $user_id);
+
+        redirect('admin/dashboard');
+
+
+    }
+
 
 }
