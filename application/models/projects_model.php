@@ -137,5 +137,35 @@ class Projects_model extends CI_Model
         $this->db->update('project', $data);
 
     }
+    
+    public function favourite($project_id) {
 
+        //First query the database to see if the user has already clicked favourite on the project
+        $this->db->select('*');
+        $this->db->from('favourite');
+        $this->db->where(array(
+            'project_id' => $project_id,
+            'user_id' => $this->session->userdata('user_auth')['user_id']
+        ));
+        $query = $this->db->get();
+
+        //If the number of rows returned is 0, this means the user has not clicked favourite. Therefore, insert the data into the database
+        if($query->num_rows() == 0) {
+
+            $data = array(
+                'project_id' => $project_id,
+                'user_id' => $this->session->userdata('user_auth')['user_id'],
+            );
+            $this->db->insert('favourite', $data);
+
+        } else {
+
+            //If they have clicked favourite, redirect them and set an error message
+            $this->session->set_flashdata('error', '<div data-alert class="alert-box secondary radius">This project has already been added to your favourites. View them in your <a href="' . base_url('user/profile') . '">profile page.</a></div>');
+
+            $redirect = 'projects/viewProject/' . $project_id;
+            redirect($redirect);
+        }
+    }
+    
 }
