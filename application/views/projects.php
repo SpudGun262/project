@@ -1,8 +1,13 @@
 
+<div class="header">
+    <div class="row">
+
+        <h1>Project Page</h1>
+
+    </div>
+</div>
 
 <div class="row">
-
-    <h1>Project Page</h1>
 
     <div class="column">
         <table id="projectsTable" class="display">
