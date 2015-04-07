@@ -33,7 +33,7 @@
                     //uses HTML5 time tag (http://html5doctor.com/the-time-element/)
                     echo '<time datetime="' . $proposal['date_added'] . '">' . date('l jS F Y', strtotime($proposal['date_added'])) . '</time>';
                 echo '</small></p>';
-                echo '<p>' . maxLength($proposal['desc']) . '...';
+                echo '<p>' . maxLengthLong($proposal['desc']) . '...';
                 echo '<p><a href="' . base_url('proposals/viewProposal/') . '/' . $proposal['proposal_id'] . '" class="button radius">View More</a></p>';
             echo '</div>';
             echo '<hr/>';

@@ -37,10 +37,10 @@
                 <h2><?=$projectResult['title'];?></h2>
 
                 <!-- TODO: Add link to tutor page to show tutors interests  -->
-                <p>Added by <?=$projectResult['first_name'] . ' ' . $projectResult['last_name'];?> on
-                    <time datetime="<?=$projectResult['date_added'];?>">
+                <p>Added by <strong><?=$projectResult['first_name'] . ' ' . $projectResult['last_name'];?></strong> on
+                    <strong><time datetime="<?=$projectResult['date_added'];?>">
                         <?=date('l jS F Y', strtotime($projectResult['date_added']));?>
-                    </time>
+                    </time></strong>
                 </p>
             </header>
 
