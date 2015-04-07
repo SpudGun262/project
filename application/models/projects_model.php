@@ -167,5 +167,28 @@ class Projects_model extends CI_Model
             redirect($redirect);
         }
     }
+
+    public function getFavourites() {
+        $this->db->select('
+            favourite.project_id, favourite.user_id,
+            project.title,
+            user.first_name, user.last_name, user.email
+        ');
+        $this->db->from('favourite');
+        $this->db->join('project', 'project.project_id = favourite.project_id', 'left');
+        $this->db->join('user', 'user.user_id = favourite.user_id', 'left');
+        $this->db->where('favourite.user_id', $this->session->userdata('user_auth')['user_id']);
+        return $this->db->get();
+    }
+
+    public function deleteFavourite($project_id){
+        $this->db->where(array(
+            'favourite.project_id' => $project_id,
+            'favourite.user_id' => $this->session->userdata('user_auth')['user_id']
+        ));
+        $this->db->delete('favourite');
+
+
+    }
     
 }

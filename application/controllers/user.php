@@ -7,6 +7,7 @@ class User extends CI_Controller
     {
         parent::__construct();
         $this->load->model('users_model');
+        $this->load->model('projects_model');
     }
 
     public function index() {
@@ -56,6 +57,7 @@ class User extends CI_Controller
             redirect('home');
         }
         $data['userResult'] = $userResult->row_array();
+        $data['favourites'] = $this->projects_model->getFavourites()->result_array();
 
         $this->load->view('incs/header');
         $this->load->view('user/profile', $data);
@@ -111,6 +113,10 @@ class User extends CI_Controller
             redirect('user/profile');
         }
     }
+
+//    public function getFavourites(){
+//        $data['favourites'] = $this->projects_model->getFavourite()->result_array();
+//    }
 
 
 }

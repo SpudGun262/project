@@ -46,5 +46,14 @@ class Projects extends CI_Controller {
         redirect($redirect);
     }
 
+    public function deleteFavourite($project_id){
+
+        $this->projects_model->deleteFavourite($project_id);
+
+        $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">Successfully removed a project from your favourites. <a href="#" class="close">&times;</a></div>');
+
+        redirect('user/profile');
+    }
+
 
 }
