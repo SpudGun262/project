@@ -60,9 +60,7 @@
 
                 <p><?php
 
-                        //nl2p is a function that adds <p> elements around newlines. It is custom made and sits in libraries->functions
-                //        echo $this->my_functions->nl2p($projectResult['abstract']);
-
+                    //nl2p is a function that adds <p> elements around newlines. It is custom made and sits in libraries->functions
                     echo nl2p($projectResult['abstract']);
 
                     ?>
