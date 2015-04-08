@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/incs/header.php" afterPath="$PROJECT_DIR$/application/views/incs/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/maxLength_helper.php" afterPath="$PROJECT_DIR$/application/helpers/maxLength_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/maxlength_helper.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\project\application\helpers\maxLength_helper.php" afterPath="$PROJECT_DIR$/application/helpers/maxLength_helper1.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maxLength_helper.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/helpers/maxLength_helper.php">
+      <file leaf-file-name="maxlength_helper.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/helpers/maxlength_helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5399645" vertical-offset="0" max-vertical-offset="950">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.37122557" vertical-offset="0" max-vertical-offset="950">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -526,12 +525,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00061" summary="Modified flashdata so it doesnt echo a div twice">
-      <created>1427569849657</created>
-      <option name="number" value="00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1427569849657</updated>
-    </task>
     <task id="LOCAL-00062" summary="Test hash and salt encryption">
       <created>1427640103163</created>
       <option name="number" value="00062" />
@@ -820,7 +813,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428486497739</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Changed the length of the text displayed in the proposal short description">
+      <created>1428486597994</created>
+      <option name="number" value="00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1428486597994</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1276,10 +1275,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/maxLength_helper.php">
+    <entry file="file://$PROJECT_DIR$/application/helpers/maxlength_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5399645" vertical-offset="0" max-vertical-offset="950">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.37122557" vertical-offset="0" max-vertical-offset="950">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding />
         </state>
       </provider>
