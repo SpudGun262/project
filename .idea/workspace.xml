@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/maxlength_helper.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\project\application\helpers\maxLength_helper.php" afterPath="$PROJECT_DIR$/application/helpers/maxLength_helper1.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\project\application\helpers\maxLength_helper.php" afterPath="$PROJECT_DIR$/application/helpers/maxlength_helper.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -525,12 +524,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00062" summary="Test hash and salt encryption">
-      <created>1427640103163</created>
-      <option name="number" value="00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1427640103189</updated>
-    </task>
     <task id="LOCAL-00063" summary="Implemented hash and salt encryption for all tutors added to the database. Any tutor added now automatically gets added to the admin table so they can login">
       <created>1427641351721</created>
       <option name="number" value="00063" />
@@ -819,7 +812,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428486597994</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Changed the length of the text displayed in the proposal short description">
+      <created>1428486667431</created>
+      <option name="number" value="00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1428486667431</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
