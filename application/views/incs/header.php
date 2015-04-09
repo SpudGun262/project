@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/foundation.css'; ?>" />
     <link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.6/integration/foundation/dataTables.foundation.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/normalize.css'; ?>" />
+<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo asset_url().'css/normalize.css'; ?><!--" />-->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!--    TODO: Edit the standard foundation.css and then minify it yourself becasue it looks like some styles are missing from the min version-->
 
@@ -42,7 +42,7 @@
                 $CI =& get_instance();
                 if (!$CI->session->userdata('user_auth')) {
 
-                    echo '<li class="has-form"><a href="' . base_url('login') . '" class="button"><i class="fa fa-sign-in fa-fw"></i>&nbsp;Login</a></li>';
+                    echo '<li class="has-form"><a href="' . base_url('login') . '" class="button secondary"><i class="fa fa-sign-in fa-fw"></i>&nbsp;Login</a></li>';
                     echo '<li class="has-form"><a href="' . base_url('user') . '" class="button success"><i class="fa fa-plus-square fa-fw"></i>&nbsp;Create An Account</a></li>';
 
                 } else {
@@ -81,4 +81,15 @@
             </ul>
         </section>
     </nav>
+</div>
+
+<div id="mobileHeader" class="show-for-small-only">
+    <div class="column">
+        <img src="<?php echo asset_url().'images/logo.png'; ?>" alt="Project Bazaar"/>
+    </div>
+
+</div>
+
+<div id="mobileNav" class="show-for-medium-down">
+    <p>This is the mobile nav</p>
 </div>

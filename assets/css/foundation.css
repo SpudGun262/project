@@ -10,11 +10,70 @@ input {
     text-transform: uppercase;
 }
 
+#mainContent {
+    margin: 44px 0 22px;
+    padding-bottom: 22px;
+}
+
+#infoSection {
+    padding: 30px 0 5px;
+}
+
+#infoSection img {
+    padding-top: 20px;
+}
+
+.edgeHill {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+}
+
+.footer {
+    background: #008CBA;
+    padding: 25px 0 10px;
+    color: #ffffff;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.footer ul {
+    text-align: center;
+}
+
+.footer ul li {
+    display: inline;
+    padding: 0 25px;
+}
+
+.footer ul.off-canvas-list li a {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+#mobileHeader {
+    padding-top:20px;
+}
+
+#mobileNav {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    background: #008CBA;
+}
+
 
 /*End Custom Styles*/
 
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*@font-face {*/
+    /*font-family: 'Montserrat';*/
+    /*src: url(../fonts/Montserrat-Regular.ttf);*/
+/*}*/
 
 meta.foundation-version {
   font-family: "/5.5.1/"; }
@@ -2021,7 +2080,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width: 40.063em) {
   .top-bar {
-    background: #333333;
+    background: #008CBA;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
       content: " ";
@@ -2047,7 +2106,7 @@ meta.foundation-mq-topbar {
       height: 1.75rem;
       top: 0.53125rem; }
     .top-bar.expanded {
-      background: #333333; }
+      background: #008CBA; }
 
   .contain-to-grid .top-bar {
     max-width: 62.5rem;
@@ -2072,9 +2131,10 @@ meta.foundation-mq-topbar {
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 0.9375rem;
       line-height: 2.8125rem;
-      background: #333333; }
+      background: #008CBA; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
-        background-color: #555555;
+        background-color: #ffffff;
+          color: #008CBA;
        ; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 0.9375rem;
@@ -2160,7 +2220,7 @@ meta.foundation-mq-topbar {
       height: 2.8125rem;
       width: 0; }
     .top-bar-section .has-form {
-      background: #333333;
+      background: #008CBA;
       padding: 0 0.9375rem;
       height: 2.8125rem; }
     .top-bar-section .right li .dropdown {
@@ -3654,7 +3714,8 @@ p {
   font-size: 1rem;
   line-height: 2;
   margin-bottom: 1.25rem;
-  text-rendering: optimizeLegibility; }
+  /*text-rendering: optimizeLegibility;*/
+}
   p.lead {
     font-size: 1.21875rem;
     line-height: 1.6; }
@@ -3668,7 +3729,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-style: normal;
   color: #222222;
-  text-rendering: optimizeLegibility;
+  /*text-rendering: optimizeLegibility;*/
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   line-height: 1.4; }
@@ -4404,7 +4465,7 @@ blockquote p {
   z-index: 101;
   top: 0;
   left: 2.5%;
-  font-family: inherit;
+  font-family: 'Monsterrat', sans-serif;
   font-weight: normal;
   width: 95%; }
 
