@@ -32,7 +32,7 @@ class Users_model extends CI_Model
         //The id of the last insert
         $insert_id = $this->db->insert_id();
 
-       $this->session->set_flashdata('welcome', '<div data-alert class="alert-box secondary radius">Welcome ' . $this->input->post('first_name') . ' ' . $this->input->post('last_name') . ' your account has been successfully created. You can now <a href="' . base_url('login') . '">login</a>.<a href="#" class="close">&times;</a></div>');
+       $this->session->set_flashdata('welcome', 'Welcome ' . $this->input->post('first_name') . ' ' . $this->input->post('last_name') . ' your account has been successfully created. You can now <a href="' . base_url('login') . '">login</a>.');
     }
 
     public function get_user() {

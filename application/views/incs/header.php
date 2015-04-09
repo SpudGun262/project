@@ -21,48 +21,64 @@
 </head>
 <body>
 
-<p>Header</p>
 
-<ul>
-    <li><a href="<?=base_url('home')?>"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
-    <li><a href="<?=base_url('about')?>"><i class="fa fa-info-circle fa-fw"></i>&nbsp; About</a></li>
-    <li><a href="<?=base_url('projects')?>"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Projects</a></li>
-    <li><a href="<?=base_url('proposals')?>"><i class="fa fa-key fa-fw"></i>&nbsp; Proposals</a></li>
-</ul>
+<div id="mainHeader" class="fixed">
+    <nav class="top-bar hidden-for-medium-down" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1 class="logo"><a href="<?=base_url();?>">Project Bazaar</a></h1>
+            </li>
+        </ul>
 
-<?php
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li><a href="<?=base_url('home')?>"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
+                <li><a href="<?=base_url('about')?>"><i class="fa fa-info-circle fa-fw"></i>&nbsp; About</a></li>
+                <li><a href="<?=base_url('projects')?>"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Projects</a></li>
+                <li><a href="<?=base_url('proposals')?>"><i class="fa fa-key fa-fw"></i>&nbsp; Proposals</a></li>
+                <?php
 
-    $CI =& get_instance();
-    if (!$CI->session->userdata('user_auth')) {
+                $CI =& get_instance();
+                if (!$CI->session->userdata('user_auth')) {
 
-        echo '<p><a href="' . base_url('login') . '">Login</a></p>';
-        echo '<p><a href="' . base_url('user') . '" id="sign-up">Create An Account</a></p>';
+                    echo '<li class="has-form"><a href="' . base_url('login') . '" class="button"><i class="fa fa-sign-in fa-fw"></i>&nbsp;Login</a></li>';
+                    echo '<li class="has-form"><a href="' . base_url('user') . '" class="button success"><i class="fa fa-plus-square fa-fw"></i>&nbsp;Create An Account</a></li>';
 
-    } else {
+                } else {
 
-        $time = date('H:i:s');
+                    echo '<li class="has-form"><a href="' . base_url('user/profile') . '" class="button"><i class="fa fa-user fa-fw"></i>&nbsp;Profile</a></li>';
+                    echo '<li class="has-form"><a href="' . base_url('login/logout') . '" class="button secondary" ><i class="fa fa-sign-out fa-fw"></i>&nbsp;Logout</a></li>';
 
-        if ($time >= '06:00:00' && $time <= '11:59:59') {
-            echo '<p>Morning ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
+                }
+                ?>
+            </ul>
+            <ul class="left">
+                <?php
 
-        } elseif ($time > '12:00:00' && $time <= '17:59:59') {
+                if ($CI->session->userdata('user_auth')) {
 
-            echo '<p>Afternoon ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
+                    $time = date('H:i:s');
 
-        } elseif ($time > '18:00:00' && $time <= '23:59:59') {
+                    if ($time >= '06:00:00' && $time <= '11:59:59') {
+                        echo '<li><a>Morning ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
 
-            echo '<p>Evening ' . $this->session->userdata('user_auth')['first_name'] . '</p>';
+                    } elseif ($time > '12:00:00' && $time <= '17:59:59') {
 
-        } elseif ($time > '00:00:00' && $time <= '05:59:59') {
+                        echo '<li><a>Afternoon ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
 
-            echo '<p>Wow you\'re up late! Or is this early for you ' . $this->session->userdata('user_auth')['first_name'] . '?</p>';
+                    } elseif ($time > '18:00:00' && $time <= '23:59:59') {
 
-        }
+                        echo '<li><a>Evening ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
 
-        echo '<p><a href="' . base_url('user/profile') . '" id="profile"><i class="fa fa-user fa-fw"></i>&nbsp;Profile</a></p>';
-        echo '<p><a href="' . base_url('login/logout') . '" id="logout"><i class="fa fa-sign-out fa-fw"></i>&nbsp;Logout</a></p>';
+                    } elseif ($time > '00:00:00' && $time <= '05:59:59') {
 
-    }
+                        echo '<li><a>Wow you\'re up late! Or is this early for you ' . $this->session->userdata('user_auth')['first_name'] . '?</a></li>';
 
-?>
-
+                    }
+                }
+                ?>
+            </ul>
+        </section>
+    </nav>
+</div>

@@ -44,7 +44,7 @@
 <script type="text/javascript" class="init">
     $(document).ready(function(){
         $('#projectsTable').DataTable({
-            "bFilter": false
+//            "bFilter": false
         });
     });
 </script>

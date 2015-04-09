@@ -1,6 +1,18 @@
 /*
-TODO: change max row width so that its is 80rem
+Custom Styles
 */
+input {
+    -webkit-appearance: none !important;
+    border-radius: 0;
+}
+
+.logo {
+    text-transform: uppercase;
+}
+
+
+/*End Custom Styles*/
+
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
@@ -129,7 +141,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem; }
+  max-width: 80rem; }
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -1834,7 +1846,6 @@ meta.foundation-mq-topbar {
       color: #FFFFFF;
       padding: 12px 0 12px 0;
       padding-left: 0.9375rem;
-      font-family: "Monsterrat", sans-serif;
       font-size: 0.8125rem;
       font-weight: normal;
       text-transform: none; }
@@ -2064,7 +2075,7 @@ meta.foundation-mq-topbar {
       background: #333333; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
         background-color: #555555;
-        background: #333333; }
+       ; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 0.9375rem;
       line-height: 2.8125rem;
@@ -2691,7 +2702,7 @@ meta.foundation-mq-topbar {
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p, .panel li, .panel dl {
     color: #333333; }
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
-    line-height: 1;
+    line-height: 1.4;
     margin-bottom: 0.625rem; }
     .panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
       line-height: 1.4; }
@@ -3660,7 +3671,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
-  line-height: 1.4 !important; }
+  line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
     color: #6f6f6f;
