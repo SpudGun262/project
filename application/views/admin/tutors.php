@@ -1,5 +1,8 @@
+<div id="adminHeader">
+    <h1 class="row">Tutors <small>Add new Tutors and edit or delete existing ones</small></h1>
+</div>
 <div class="adminTutorsTable row">
-    <h1>This is the admin tutors page</h1>
+
     <?= $this->session->flashdata('error'); ?>
 
     <?= $this->session->flashdata('notice', '<div class="notice">', '</div>'); ?>

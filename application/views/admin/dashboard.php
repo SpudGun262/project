@@ -1,12 +1,17 @@
-<h1>This is the dashboard</h1>
-<div>
+<div id="adminHeader">
+    <h1 class="row">Dashboard <small>View notifications and respond to them</small></h1>
+</div>
+<div class="row">
+    <p>Here you can see any project proposals of yours that students are interested in as well as any exemplar projects you have posted that are due to expire.</p>
+    <p>It's a good idea to stay on top of the notifications you received here. By responding to them, you improve the system and create a better experience for all students who use it.</p>
+</div>
+<div class="row">
 
     <?= $this->session->flashdata('error'); ?>
 
     <?= $this->session->flashdata('notice'); ?>
 
-    <div class="row">
-        <div class="columns large-6">
+    <div class="columns large-6">
         <h3>Projects Due To Expire</h3>
         <?php
         if (!empty($expires)) {
@@ -23,7 +28,7 @@
                     <tbody>';
 
             foreach ($expires as $expire) {
-                    echo '<tr>
+                echo '<tr>
                             <td>' . $expire['title'] . '</td>
                             <td>' . date('l jS F Y', strtotime($expire['date_added'])) . '</td>
                             <td><a href="' . base_url('projects/viewProject') . '/' . $expire['project_id'] . '"  target="_blank" class="radius button info small">View</a></td>
@@ -61,11 +66,7 @@
                     </div>
                     ';
             }
-        }
-
-        else
-
-        {
+        } else {
 
             echo '<p data-alert class="alert-box success radius">Woohoo! Nothing is due to expire</p>';
 
@@ -76,17 +77,17 @@
     <div class="columns large-6">
         <h3>Student Interest</h3>
 
-            <?php
-            /**
-             * [proposal_id]
-             * [user_id]
-             * [tutor_id]
-             * [title]
-             * [first_name]
-             * [last_name]
-             * [email]
-             */
-            ?>
+        <?php
+        /**
+         * [proposal_id]
+         * [user_id]
+         * [tutor_id]
+         * [title]
+         * [first_name]
+         * [last_name]
+         * [email]
+         */
+        ?>
 
 
 
@@ -108,15 +109,16 @@
                             <td>' . $proposal['title'] . '</td>
                             <td>' . $proposal['first_name'] . ' ' . $proposal['last_name'] . '</td>
                             <td><a href="mailto:' . $proposal['email'] . '"  class="radius button small">Email</a></td>
-                            <td><a  class="alert radius button small" data-reveal-id="myModal' . str_replace(' ', '', $proposal['title']) . '">Delete</a></td>
+                            <td><a  class="alert radius button small" data-reveal-id="myModal' . str_replace(' ', '',
+                        $proposal['title']) . '">Delete</a></td>
                         </tr>';
             }
 
             echo '</tbody>
                 </table>';
 
-            foreach ($proposals as $proposal){
-               echo '<div id="myModal' . str_replace(' ', '', $proposal['title']) . '" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            foreach ($proposals as $proposal) {
+                echo '<div id="myModal' . str_replace(' ', '', $proposal['title']) . '" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
                         <h2>Caution</h2>
                         <p class="lead">You\'re about to delete interest.</p>
                         <p>About: ' . $proposal['title'] . '</p>
@@ -127,13 +129,9 @@
                         <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                     </div>';
             }
-        }
+        } else {
 
-        else
-
-        {
-
-            echo '<p data-alert class="alert-box secondary radius">No students are interested in any project you have posted. <a href="'.base_url('admin/proposals').'">Try posting another or edit an existing one</a></p>';
+            echo '<p data-alert class="alert-box secondary radius">No students are interested in any project you have posted. <a href="' . base_url('admin/proposals') . '">Try posting another or edit an existing one</a></p>';
 
         }
         ?>

@@ -57,6 +57,22 @@ input {
     border-bottom: 1px solid #ffffff;
 }
 
+
+#adminHeader {
+    background: #074e68;
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+
+#adminHeader h1 {
+    color: #ffffff;
+}
+
+#adminHeader small {
+    color: #ffffff;
+    font-size: 40%;
+}
+
 /*Custom mobile styles*/
 
 #mobileHeader {

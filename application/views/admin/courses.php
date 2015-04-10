@@ -1,5 +1,7 @@
+<div id="adminHeader">
+    <h1 class="row">Courses <small>Add new Courses and edit or delete existing ones</small></h1>
+</div>
 <div class="row">
-    <h1>Courses Admin Page</h1>
 
     <?=$this->session->flashdata('error');?>
 

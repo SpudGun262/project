@@ -19,13 +19,23 @@
 </head>
 <body>
 
-<p>Header</p>
-
-<ul>
-    <li><a href="<?=base_url('admin/dashboard');?>">Dashboard</a></li>
-    <li><a href="<?=base_url('admin/projects');?>">Projects</a></li>
-    <li><a href="<?=base_url('admin/proposals');?>">Proposals</a></li>
-    <li><a href="<?=base_url('admin/tutors');?>">Tutors</a></li>
-    <li><a href="<?=base_url('admin/courses');?>">Courses</a></li>
-    <li><a href="<?=base_url('admin/login/logout');?>" id="logout">Logout</a></li>
-</ul>
+<div id="mainHeader">
+    <nav class="top-bar show-for-medium-up" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1 class="logo"><a href="<?=base_url();?>">Project Bazaar</a></h1>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li><a href="<?=base_url('admin/dashboard');?>">Dashboard</a></li>
+                <li><a href="<?=base_url('admin/projects');?>">Projects</a></li>
+                <li><a href="<?=base_url('admin/proposals');?>">Proposals</a></li>
+                <li><a href="<?=base_url('admin/tutors');?>">Tutors</a></li>
+                <li><a href="<?=base_url('admin/courses');?>">Courses</a></li>
+                <li><a href="<?=base_url('admin/login/logout');?>" id="logout">Logout</a></li>
+            </ul>
+        </section>
+    </nav>
+</div>

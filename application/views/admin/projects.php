@@ -1,5 +1,8 @@
+<div id="adminHeader">
+    <h1 class="row">Projects <small>Add new Projects and edit or delete existing ones</small></h1>
+</div>
+
 <div class="row">
-    <h1>This is the admin projects page</h1>
 
     <?= $this->session->flashdata('error'); ?>
 

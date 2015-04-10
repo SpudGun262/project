@@ -116,11 +116,25 @@ class Projects_model extends CI_Model
         $dt = new DateTime();
         $date = $dt->format('Y-m-d');
 
-        $this->db->select('*');
-        $this->db->from('project');
-        //Where 'expire' is equal to or less that current date
-        $this->db->where('expire <=', $date);
-        return $this->db->get();
+        if($this->session->userdata('auth')['admin_id'] == '9999') {
+
+            $this->db->select('*');
+            $this->db->from('project');
+            //Where 'expire' is equal to or less that current date
+            $this->db->where('expire <=', $date);
+            return $this->db->get();
+        }
+        else
+        {
+            $this->db->select('*');
+            $this->db->from('project');
+            //Where 'expire' is equal to or less that current date
+            $this->db->where('expire <=', $date);
+            $this->db->where('tutor_id', $this->session->userdata('auth')['admin_id']);
+
+            return $this->db->get();
+        }
+
     }
 
     public function extendProject($project_id) {
