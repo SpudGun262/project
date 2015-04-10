@@ -2,7 +2,8 @@
 <div class="header">
     <div class="row">
 
-        <h1>Project Page</h1>
+        <h1>Projects</h1>
+        <h4 class="subheader">Explore projects from past students and learn what it is needed to undertake a computing project here.</h4>
 
     </div>
 </div>

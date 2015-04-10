@@ -73,6 +73,14 @@ input {
     font-size: 40%;
 }
 
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin-bottom: 0;
+}
+
 /*Custom mobile styles*/
 
 #mobileHeader {
@@ -123,6 +131,7 @@ input {
 
 .mobileTransition{
     -webkit-filter: brightness(0.7);
+    -ms-filter: brightness(0.7);
     filter: brightness(0.7);
 }
 
@@ -232,9 +241,6 @@ meta.foundation-mq-small {
 meta.foundation-mq-small-only {
   font-family: "/only screen and (max-width: 40em)/";
   width: 0;
-.footer {
-    margin-bottom: 70px;
-}
 }
 
 meta.foundation-mq-medium {
