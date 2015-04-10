@@ -1,3 +1,6 @@
+<div id="adminHeader">
+    <h1 class="row">Edit Project <small>Amend the details of an existing Project</small></h1>
+</div>
 <div class="row">
 
     <?php

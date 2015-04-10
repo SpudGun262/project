@@ -51,6 +51,7 @@ if (!$file && $this->input->post()) {
             </div>
 
             <div>
+                <a id="fileHelp" class="right"><i class="fa fa-question-circle fa-fw"></i></a>
                 <label>Upload a file
                     <?php
                     $input = array(
@@ -77,7 +78,7 @@ if (!$file && $this->input->post()) {
         <div id="helpAndAdvice" class="panel callout">
             <h4 id="helpHeader">Need some help?</h4>
             <div id="helpText">
-                <p>When you click one of the input boxes on the left, more information will appear here that should help you complete all the details needed. Pretty cool huh?</p>
+                <p>When you click one of the input boxes on the left, more information will appear here that should help you complete all the details needed. Pretty cool huh? You can click the <i class="fa fa-question-circle fa-fw"></i> too.</p>
             </div>
         </div>
 
@@ -107,7 +108,7 @@ if (!$file && $this->input->post()) {
             );
         });
 
-        //Display help for 'Description' field
+        //Display help for 'Abstract' field
         $("#abstract").focus(function() {
             $("#helpAndAdvice").replaceWith(
                 '<div id="helpAndAdvice" class="panel callout">' +
@@ -131,8 +132,8 @@ if (!$file && $this->input->post()) {
             );
         });
 
-        //Display help for 'Tutor' field
-        $("#userfile").focus(function() {
+        //Display help for 'File' field
+        $("#fileHelp").click(function() {
             $("#helpAndAdvice").replaceWith(
                 '<div id="helpAndAdvice" class="panel callout">' +
                 '<h4 id="helpHeader">File</h4>' +

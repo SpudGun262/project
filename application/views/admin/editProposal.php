@@ -1,10 +1,12 @@
-<?php
-    //echo the validation errors if there is any
-    echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
-?>
+<div id="adminHeader">
+    <h1 class="row">Edit Proposal <small>Amend the details of an existing Proposal</small></h1>
+</div>
 
 <div class="row">
-
+    <?php
+    //echo the validation errors if there is any
+    echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
+    ?>
     <div class="large-6 medium-5 columns panel">
 
         <form data-abide method="post">
