@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/foundation.css'; ?>" />
     <link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.6/integration/foundation/dataTables.foundation.css"/>
-<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo asset_url().'css/normalize.css'; ?><!--" />-->
+    <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/normalize.css'; ?>" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!--    TODO: Edit the standard foundation.css and then minify it yourself becasue it looks like some styles are missing from the min version-->
 
@@ -39,6 +39,7 @@
                     <li><a href="<?=base_url('about')?>"><i class="fa fa-info-circle fa-fw"></i>&nbsp; About</a></li>
                     <li><a href="<?=base_url('projects')?>"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Projects</a></li>
                     <li><a href="<?=base_url('proposals')?>"><i class="fa fa-key fa-fw"></i>&nbsp; Proposals</a></li>
+                    <li><a href="<?=base_url('research')?>"><i class="fa fa-desktop fa-fw"></i>&nbsp; Research</a></li>
                     <?php
 
                     $CI =& get_instance();
@@ -87,13 +88,6 @@
 
             </section>
         </nav>
-    </div>
-
-    <div id="mobileHeader" class="show-for-small-only">
-        <div class="column">
-            <img src="<?php echo asset_url().'images/logo.png'; ?>" alt="Project Bazaar"/>
-        </div>
-
     </div>
 
 

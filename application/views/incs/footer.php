@@ -7,6 +7,7 @@
                     <li><a href="<?=base_url('about')?>"><i class="fa fa-info-circle fa-fw"></i>&nbsp; About</a></li>
                     <li><a href="<?=base_url('projects')?>"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Projects</a></li>
                     <li><a href="<?=base_url('proposals')?>"><i class="fa fa-key fa-fw"></i>&nbsp; Proposals</a></li>
+                    <li><a href="<?=base_url('research')?>"><i class="fa fa-desktop fa-fw"></i>&nbsp; Research</a></li>
                 </ul>
 
                 <ul class="off-canvas-list show-for-small-only">
@@ -14,6 +15,7 @@
                     <li><a href="<?=base_url('about')?>"><i class="fa fa-info-circle fa-fw"></i>&nbsp; About</a></li>
                     <li><a href="<?=base_url('projects')?>"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Projects</a></li>
                     <li><a href="<?=base_url('proposals')?>"><i class="fa fa-key fa-fw"></i>&nbsp; Proposals</a></li>
+                    <li><a href="<?=base_url('research')?>"><i class="fa fa-desktop fa-fw"></i>&nbsp; Research</a></li>
                 </ul>
 
             </nav>

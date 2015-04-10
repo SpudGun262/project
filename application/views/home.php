@@ -1,5 +1,12 @@
 <script src="<?php echo asset_url().'js/parallax.js'; ?>"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url().'css/heroBanner.css'; ?>" />
+
+<div id="mobileHeader" class="show-for-small-only">
+    <div class="column">
+        <img src="<?php echo asset_url().'images/logo.png'; ?>" alt="Project Bazaar"/>
+    </div>
+</div>
+
 <div class="row">
     <?php
 

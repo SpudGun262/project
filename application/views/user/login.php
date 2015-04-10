@@ -18,7 +18,7 @@ echo $this->session->flashdata('error');
 
     ?>
 
-    <form data-abide method="post">
+    <form data-abide method="post" class="column">
 
         <div class="email-field">
             <label>Email <small>required</small>
@@ -38,7 +38,6 @@ echo $this->session->flashdata('error');
 
     </form>
 
-<a href="<?=base_url()?>">Back to home page</a>
 
 </div>
 
