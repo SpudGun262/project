@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="Implemented the ability to add a tutors">
+    <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
       <change type="MOVED" beforePath="C:\wamp\www\project\application\helpers\maxLength_helper.php" afterPath="$PROJECT_DIR$/application/helpers/maxlength_helper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/addTutor.php" afterPath="$PROJECT_DIR$/application/views/admin/addTutor.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/editTutor.php" afterPath="$PROJECT_DIR$/application/views/admin/editTutor.php" />
@@ -89,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addTutor.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addTutor.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.96" vertical-offset="171" max-vertical-offset="3458">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="36" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.91314286" vertical-offset="2868" max-vertical-offset="3857">
+              <caret line="191" column="7" selection-start-line="191" selection-start-column="7" selection-end-line="191" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -102,8 +102,8 @@
       <file leaf-file-name="tutors.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/tutors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.64" vertical-offset="399" max-vertical-offset="2489">
-              <caret line="35" column="85" selection-start-line="35" selection-start-column="85" selection-end-line="35" selection-end-column="85" />
+            <state vertical-scroll-proportion="-6.08" vertical-offset="513" max-vertical-offset="2508">
+              <caret line="35" column="97" selection-start-line="35" selection-start-column="97" selection-end-line="35" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -112,18 +112,18 @@
       <file leaf-file-name="tutors_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="1577">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state vertical-scroll-proportion="-20.56" vertical-offset="702" max-vertical-offset="1596">
+              <caret line="64" column="72" selection-start-line="64" selection-start-column="72" selection-end-line="64" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editTutor.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editTutor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/editTutor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5862857" vertical-offset="114" max-vertical-offset="2907">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="-21.32" vertical-offset="1994" max-vertical-offset="2964">
+              <caret line="133" column="3" selection-start-line="133" selection-start-column="3" selection-end-line="148" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -204,10 +204,10 @@
         <option value="$PROJECT_DIR$/application/views/admin/addProposal.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addProject.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addCourse.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/addTutor.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/tutors.php" />
         <option value="$PROJECT_DIR$/application/models/tutors_model.php" />
         <option value="$PROJECT_DIR$/application/views/admin/editTutor.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/addTutor.php" />
       </list>
     </option>
   </component>
@@ -629,12 +629,6 @@
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
     </task>
-    <task id="LOCAL-00074" summary="Added login for standard user. If the user is not logged in, a login button will appear. If they are logged in, a log out button will display instead">
-      <created>1427819022629</created>
-      <option name="number" value="00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1427819022629</updated>
-    </task>
     <task id="LOCAL-00075" summary="Improved user feedback for login. Also added a simple function which turns off error reporting in production environments">
       <created>1427834522805</created>
       <option name="number" value="00075" />
@@ -923,7 +917,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428681914098</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Implemented the ability to add a tutors research interests">
+      <created>1428683003912</created>
+      <option name="number" value="00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1428683003912</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -992,7 +992,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Beginning to implement admin dashboard features. Any project that is going to expire will be shown to the admin when they login" />
     <MESSAGE value="Started to add an expiry table to the admin dashboard. This table shows if a project has expired and gives the admin the option to delete, extend or view the project" />
     <MESSAGE value="Changed button placement to avoid accidental clicks" />
     <MESSAGE value="Implemented the ability to extend a project by 12 months and delete it if it has expired" />
@@ -1017,7 +1016,8 @@
     <MESSAGE value="Implemented admin header across all admin pages" />
     <MESSAGE value="Implemented admin header across all admin edit pages" />
     <MESSAGE value="Implemented admin header across all admin add pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented admin header across all admin add pages" />
+    <MESSAGE value="Implemented the ability to add a tutors research interests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the ability to add a tutors research interests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1391,34 +1391,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="1577">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/tutors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.64" vertical-offset="399" max-vertical-offset="2489">
-          <caret line="35" column="85" selection-start-line="35" selection-start-column="85" selection-end-line="35" selection-end-column="85" />
+        <state vertical-scroll-proportion="-6.08" vertical-offset="513" max-vertical-offset="2508">
+          <caret line="35" column="97" selection-start-line="35" selection-start-column="97" selection-end-line="35" selection-end-column="97" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
+    <entry file="file://$PROJECT_DIR$/application/models/tutors_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.96" vertical-offset="171" max-vertical-offset="3458">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="36" selection-end-column="18" />
+        <state vertical-scroll-proportion="-20.56" vertical-offset="702" max-vertical-offset="1596">
+          <caret line="64" column="72" selection-start-line="64" selection-start-column="72" selection-end-line="64" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/editTutor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5862857" vertical-offset="114" max-vertical-offset="2907">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="-21.32" vertical-offset="1994" max-vertical-offset="2964">
+          <caret line="133" column="3" selection-start-line="133" selection-start-column="3" selection-end-line="148" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addTutor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91314286" vertical-offset="2868" max-vertical-offset="3857">
+          <caret line="191" column="7" selection-start-line="191" selection-start-column="7" selection-end-line="191" selection-end-column="7" />
           <folding />
         </state>
       </provider>

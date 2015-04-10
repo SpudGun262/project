@@ -33,11 +33,9 @@
             </div>
 
             <div class="name-field">
-                <label>Research Interest
-                    <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
-                    <input id="researchInterest" type="text" name="research_interest" value="<?=$tutorResult['research_interest'] ?>" placeholder="Add the research interest of the tutor" pattern="[-\sa-zA-Z]+$">
+                <label>Research Interest <small id="characterLimit" class="right">100 Characters Left</small>
+                    <input id="researchInterest" type="text" name="research_interest" value="<?=$tutorResult['research_interest'] ?>" placeholder="Add the research interest of the tutor">
                 </label>
-                <small class="error">Research Interests can only contain lowercase letter, capital letters, spaces and hyphens.</small>
             </div>
 
             <div class="email-field">
@@ -103,6 +101,18 @@
             );
         });
 
+        //Display help for 'Research Interest' field
+        $("#researchInterest").focus(function() {
+            $("#helpAndAdvice").replaceWith(
+                '<div id="helpAndAdvice" class="panel callout">' +
+                '<h4 id="helpHeader">Research Interest</h4>' +
+                '<div id="helpText">' +
+                '<p>Here you should enter the research interest of the tutor. Separate each interest with a comma. Don\'t worry if you don\'t know it, this field is not required. A tutor can always login to the admin dashboard and edit this detail in the \'Edit Tutor\' section.</p>' +
+                '</div>' +
+                '</div>'
+            );
+        });
+
         //Display help for 'Email' field
         $("#email").focus(function() {
             $("#helpAndAdvice").replaceWith(
@@ -116,33 +126,25 @@
             );
         });
 
-        //Display help for 'Password' field
-        $("#password").focus(function() {
-            $("#helpAndAdvice").replaceWith(
-                '<div id="helpAndAdvice" class="panel callout">' +
-                '<h4 id="helpHeader">Password <small>Required</small></h4>' +
-                '<div id="helpText">' +
-                '<p>A tutor will use this password to login and upload projects and proposals.</p>' +
-                '<p><em><strong>Project Bazaar will not inform them what their password. Instead, it is your responsibility to inform them of it.</strong></em></p>' +
-                '<p>Once they have the password and can login, they can change it any time they like. Make sure it is secure and not easy to guess.</p>' +
-                '<p>Oh and if you forget what you wrote, just click <strong>\'View Password\'</strong>. Just remember to click it again if you don\'t want people around you to see!</p>' +
-                '</div>' +
-                '</div>'
-            );
-        });
-
-        //Display help for 'Confirm Password' field
-        $("#passwordConfirm").focus(function() {
-            $("#helpAndAdvice").replaceWith(
-                '<div id="helpAndAdvice" class="panel callout">' +
-                '<h4 id="helpHeader">Confirm Password <small>Required</small></h4>' +
-                '<div id="helpText">' +
-                '<p>This password should match the one above and is here to help prevent mistakes.</p>' +
-                '</div>' +
-                '</div>'
-            );
-        });
-
     });
 
+</script>
+
+<script>
+    /**
+     * Character Counter Function
+     *
+     * This function checks the amount of characters have been typed in the input field and displays it to the user.
+     * It informs them how many characters they have left. CodeIgniter has been set to reject any input over 100 characters long
+     */
+    $('#researchInterest').keyup(function () {
+        var max = 100;
+        var newLength = $(this).val().length;
+        if (newLength  >= max) {
+            $('#characterLimit').text('-' + (newLength  - max) +  ' You have reached the limit');
+        } else {
+            var char = max - newLength;
+            $('#characterLimit').text(char + ' Characters left');
+        }
+    });
 </script>
