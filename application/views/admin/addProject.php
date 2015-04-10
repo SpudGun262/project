@@ -1,15 +1,15 @@
-<h1>This is the add project page</h1>
-
-<?php
-//echo the validation errorsadditional is any
-echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
-if (!$file && $this->input->post()) {
-    echo $this->upload->display_errors('<div data-alert class="alert-box alert radius">', '</div>');
-}
-?>
+<div id="adminHeader">
+    <h1 class="row">Add Project <small>Create a new Project</small></h1>
+</div>
 
 <div class="row">
-
+    <?php
+    //echo the validation errorsadditional is any
+    echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
+    if (!$file && $this->input->post()) {
+        echo $this->upload->display_errors('<div data-alert class="alert-box alert radius">', '</div>');
+    }
+    ?>
     <div class="large-6 medium-5 columns panel">
 
         <form data-abide action="<?php base_url('admin/tutors/addProject') ?>" method="post"

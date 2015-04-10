@@ -1,12 +1,12 @@
-<h1>This is the add proposal page</h1>
-
-<?php
-//echo the validation errors if there is any
-echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
-?>
+<div id="adminHeader">
+    <h1 class="row">Add Proposal <small>Create a new Proposal</small></h1>
+</div>
 
 <div class="row">
-
+    <?php
+    //echo the validation errors if there is any
+    echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
+    ?>
     <div class="large-6 medium-5 columns panel">
 
         <form data-abide action="<?php base_url('admin/tutors/addProposal') ?>" method="post">

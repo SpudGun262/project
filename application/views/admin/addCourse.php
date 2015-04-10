@@ -1,13 +1,13 @@
-<h1>This is the add course page</h1>
-
-<?php
-//echo the validation errors if there is any
-echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
-
-?>
+<div id="adminHeader">
+    <h1 class="row">Add Course <small>Create a new Course</small></h1>
+</div>
 
 <div class="row">
+    <?php
+    //echo the validation errors if there is any
+    echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
 
+    ?>
     <div class="large-6 medium-5 columns panel">
 
         <form data-abide action="<?=base_url('admin/courses/addCourse') ?>" method="post">
