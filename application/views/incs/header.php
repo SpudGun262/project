@@ -21,75 +21,79 @@
 </head>
 <body>
 
+<div id="main">
 
-<div id="mainHeader" class="fixed">
-    <nav class="top-bar hidden-for-medium-down" data-topbar role="navigation">
-        <ul class="title-area">
-            <li class="name">
-                <h1 class="logo"><a href="<?=base_url();?>">Project Bazaar</a></h1>
-            </li>
-        </ul>
 
-        <section class="top-bar-section">
-            <!-- Right Nav Section -->
-            <ul class="right">
-                <li><a href="<?=base_url('home')?>"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
-                <li><a href="<?=base_url('about')?>"><i class="fa fa-info-circle fa-fw"></i>&nbsp; About</a></li>
-                <li><a href="<?=base_url('projects')?>"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Projects</a></li>
-                <li><a href="<?=base_url('proposals')?>"><i class="fa fa-key fa-fw"></i>&nbsp; Proposals</a></li>
-                <?php
-
-                $CI =& get_instance();
-                if (!$CI->session->userdata('user_auth')) {
-
-                    echo '<li class="has-form"><a href="' . base_url('login') . '" class="button secondary"><i class="fa fa-sign-in fa-fw"></i>&nbsp;Login</a></li>';
-                    echo '<li class="has-form"><a href="' . base_url('user') . '" class="button success"><i class="fa fa-plus-square fa-fw"></i>&nbsp;Create An Account</a></li>';
-
-                } else {
-
-                    echo '<li class="has-form"><a href="' . base_url('user/profile') . '" class="button"><i class="fa fa-user fa-fw"></i>&nbsp;Profile</a></li>';
-                    echo '<li class="has-form"><a href="' . base_url('login/logout') . '" class="button secondary" ><i class="fa fa-sign-out fa-fw"></i>&nbsp;Logout</a></li>';
-
-                }
-                ?>
+    <div id="mainHeader" class="fixed">
+        <nav class="top-bar show-for-medium-up" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1 class="logo"><a href="<?=base_url();?>">Project Bazaar</a></h1>
+                </li>
             </ul>
-            <ul class="left">
-                <?php
 
-                if ($CI->session->userdata('user_auth')) {
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                    <li><a href="<?=base_url('home')?>"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
+                    <li><a href="<?=base_url('about')?>"><i class="fa fa-info-circle fa-fw"></i>&nbsp; About</a></li>
+                    <li><a href="<?=base_url('projects')?>"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp; Projects</a></li>
+                    <li><a href="<?=base_url('proposals')?>"><i class="fa fa-key fa-fw"></i>&nbsp; Proposals</a></li>
+                    <?php
 
-                    $time = date('H:i:s');
+                    $CI =& get_instance();
+                    if (!$CI->session->userdata('user_auth')) {
 
-                    if ($time >= '06:00:00' && $time <= '11:59:59') {
-                        echo '<li><a>Morning ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
+                        echo '<li class="has-form"><a href="' . base_url('login') . '" class="button secondary"><i class="fa fa-sign-in fa-fw"></i>&nbsp;Login</a></li>';
+                        echo '<li class="has-form"><a href="' . base_url('user') . '" class="button success"><i class="fa fa-plus-square fa-fw"></i>&nbsp;Create An Account</a></li>';
 
-                    } elseif ($time > '12:00:00' && $time <= '17:59:59') {
+                    } else {
 
-                        echo '<li><a>Afternoon ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
-
-                    } elseif ($time > '18:00:00' && $time <= '23:59:59') {
-
-                        echo '<li><a>Evening ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
-
-                    } elseif ($time > '00:00:00' && $time <= '05:59:59') {
-
-                        echo '<li><a>Wow you\'re up late! Or is this early for you ' . $this->session->userdata('user_auth')['first_name'] . '?</a></li>';
+                        echo '<li class="has-form"><a href="' . base_url('user/profile') . '" class="button"><i class="fa fa-user fa-fw"></i>&nbsp;Profile</a></li>';
+                        echo '<li class="has-form"><a href="' . base_url('login/logout') . '" class="button secondary" ><i class="fa fa-sign-out fa-fw"></i>&nbsp;Logout</a></li>';
 
                     }
-                }
-                ?>
-            </ul>
-        </section>
-    </nav>
-</div>
+                    ?>
+                </ul>
 
-<div id="mobileHeader" class="show-for-small-only">
-    <div class="column">
-        <img src="<?php echo asset_url().'images/logo.png'; ?>" alt="Project Bazaar"/>
+                    <?php
+
+                    if ($CI->session->userdata('user_auth')) {
+
+                        $time = date('H:i:s');
+
+                        echo '<ul class="left">';
+
+                        if ($time >= '06:00:00' && $time <= '11:59:59') {
+                            echo '<li><a>Morning ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
+
+                        } elseif ($time > '12:00:00' && $time <= '17:59:59') {
+
+                            echo '<li><a>Afternoon ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
+
+                        } elseif ($time > '18:00:00' && $time <= '23:59:59') {
+
+                            echo '<li><a>Evening ' . $this->session->userdata('user_auth')['first_name'] . '</a></li>';
+
+                        } elseif ($time > '00:00:00' && $time <= '05:59:59') {
+
+                            echo '<li><a>Wow you\'re up late! Or is this early for you ' . $this->session->userdata('user_auth')['first_name'] . '?</a></li>';
+
+                        }
+
+                        echo '</ul>';
+                    }
+                    ?>
+
+            </section>
+        </nav>
     </div>
 
-</div>
+    <div id="mobileHeader" class="show-for-small-only">
+        <div class="column">
+            <img src="<?php echo asset_url().'images/logo.png'; ?>" alt="Project Bazaar"/>
+        </div>
 
-<div id="mobileNav" class="show-for-medium-down">
-    <p>This is the mobile nav</p>
-</div>
+    </div>
+
+
