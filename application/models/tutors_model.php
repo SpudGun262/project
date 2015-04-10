@@ -27,6 +27,7 @@ class Tutors_model extends CI_Model
         $data = array(
             'first_name' => $this->input->post('first_name'),
             'last_name' => $this->input->post('last_name'),
+            'research_interest' => $this->input->post('research_interest'),
             'email' => $this->input->post('email')
         );
         $this->db->insert('tutor', $data);

@@ -32,6 +32,14 @@
                 <small class="error">A last name is required and must not contain numbers.</small>
             </div>
 
+            <div class="name-field">
+                <label>Research Interest
+                    <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
+                    <input id="researchInterest" type="text" name="research_interest" value="<?=$tutorResult['research_interest'] ?>" placeholder="Add the research interest of the tutor" pattern="[-\sa-zA-Z]+$">
+                </label>
+                <small class="error">Research Interests can only contain lowercase letter, capital letters, spaces and hyphens.</small>
+            </div>
+
             <div class="email-field">
                 <label>Email
                     <small>required</small>

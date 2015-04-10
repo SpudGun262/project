@@ -28,6 +28,14 @@
                 <small class="error">A last name is required and must not contain numbers.</small>
             </div>
 
+            <div class="name-field">
+                <label>Research Interest
+                    <!-- Regular expression allows for lowercase letter, capital letters, spaces and hyphens -->
+                    <input id="researchInterest" type="text" name="research_interest" value="<?=set_value('research_interest');?>" placeholder="Add the research interest of the tutor" pattern="[-\sa-zA-Z]+$">
+                </label>
+                <small class="error">Research Interests can only contain lowercase letter, capital letters, spaces and hyphens.</small>
+            </div>
+
             <div class="email-field">
                 <label>Email <small>required</small>
                     <input id="email" type="email" name="email" placeholder="Add the email address of the tutor" value="<?=set_value('email');?>" required>
@@ -106,6 +114,18 @@
                     '<div id="helpText">' +
                         '<p>Here you should enter the tutors last name. Unlike first name, a tutors last name can contain spaces and hyphens. Although, it still can\'t have any numbers in it.</p>' +
                     '</div>' +
+                '</div>'
+            );
+        });
+
+        //Display help for 'Research Interest' field
+        $("#researchInterest").focus(function() {
+            $("#helpAndAdvice").replaceWith(
+                '<div id="helpAndAdvice" class="panel callout">' +
+                '<h4 id="helpHeader">Research Interest</h4>' +
+                '<div id="helpText">' +
+                '<p>Here you should enter the research interest of the tutor. Don\'t worry if you don\'t know it, this field is not required. A tutor can always login to the admin dashboard and edit this detail in the \'Edit Tutor\' section.</p>' +
+                '</div>' +
                 '</div>'
             );
         });
