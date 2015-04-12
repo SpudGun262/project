@@ -19,7 +19,7 @@
                 <h2><?= $projectResult['title']; ?></h2>
 
                 <!-- TODO: Add link to tutor page to show tutors interests  -->
-                <p>Added by <strong><?= $projectResult['first_name'] . ' ' . $projectResult['last_name']; ?></strong> on
+                <p>Added by <strong><a href="<?=base_url('research');?>"><?= $projectResult['first_name'] . ' ' . $projectResult['last_name']; ?></a></strong> on
                     <strong>
                         <time datetime="<?= $projectResult['date_added']; ?>">
                             <?= date('l jS F Y', strtotime($projectResult['date_added'])); ?>
@@ -34,8 +34,7 @@
                 ?>
 
                 <div class="panel">
-                    <p> File associated with this project: <a href="<?= $projectResult['location']; ?>"
-                                                              target="_blank"><?= $projectResult['file_name']; ?></a>
+                    <p> File associated with this project: <a href="<?= $projectResult['location']; ?>" target="_blank"><?= $projectResult['file_name']; ?></a>
                     </p>
                 </div>
 

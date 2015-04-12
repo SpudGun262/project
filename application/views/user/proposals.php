@@ -35,7 +35,7 @@
         foreach ($proposals as $proposal) {
             echo '<div class="">';
                 echo '<h3>' . $proposal['title'] . '</h3>';
-                echo '<p><small>Added by ' . $proposal['first_name'] . ' ' . $proposal['last_name'] . ' on ';
+                echo '<p><small>Added by <a href="'.base_url('research').'"> ' . $proposal['first_name'] . ' ' . $proposal['last_name'] . '</a> on ';
                     //reorder date to English standard (http://php.net/strtotime, http://php.net/manual/en/function.date.php)
                     //uses HTML5 time tag (http://html5doctor.com/the-time-element/)
                     echo '<time datetime="' . $proposal['date_added'] . '">' . date('l jS F Y', strtotime($proposal['date_added'])) . '</time>';

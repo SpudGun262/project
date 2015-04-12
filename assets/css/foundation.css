@@ -1,3 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*@font-face {*/
+/*font-family: 'Montserrat';*/
+/*src: url(../fonts/Montserrat-Regular.ttf);*/
+/*}*/
+
 /*
 Custom Styles
 */
@@ -16,8 +23,7 @@ input {
 }
 
 #mainContent {
-    margin: 44px 0 22px;
-    padding-bottom: 22px;
+    padding: 44px 0 22px;
 }
 
 #infoSection {
@@ -81,6 +87,7 @@ input {
     margin-bottom: 0;
 }
 
+
 /*Custom mobile styles*/
 
 #mobileHeader {
@@ -103,6 +110,7 @@ input {
     vertical-align: middle;
     padding: 5px 0;
     height: 70px;
+    float: left;
 }
 
 #mobileLogo {
@@ -114,6 +122,9 @@ input {
 
 #mobileLogo a {
     color: #ffffff;
+    width: 100%;
+    padding-top: 10px;
+    float: left;
 }
 #mobileMenuButton {
     border-left:1px solid #ffffff;
@@ -202,6 +213,11 @@ input {
     color: #ffffff;
 }
 
+#mobileNavMain li a i {
+    width:100%;
+    float:left;
+}
+
 .navActive {
     background: #ffffff;
 }
@@ -222,14 +238,6 @@ input {
 
 
 /*End Custom Styles*/
-
-
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-/*@font-face {*/
-    /*font-family: 'Montserrat';*/
-    /*src: url(../fonts/Montserrat-Regular.ttf);*/
-/*}*/
 
 meta.foundation-version {
   font-family: "/5.5.1/"; }

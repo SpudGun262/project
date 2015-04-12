@@ -1,14 +1,12 @@
-<h1>Login</h1>
-
-<?php
-echo $this->session->flashdata('notice');
-?>
-<?php
-echo $this->session->flashdata('error');
-?>
-
 <div class="row">
+    <h1>Login</h1>
 
+    <?php
+    echo $this->session->flashdata('notice');
+    ?>
+    <?php
+    echo $this->session->flashdata('error');
+    ?>
     <?php
     echo validation_errors('<div data-alert class="alert-box alert radius">', '</div>');
 
