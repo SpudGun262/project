@@ -23,7 +23,7 @@
 
 
     <div id="mainHeader" class="fixed">
-        <nav class="top-bar show-for-medium-up" data-topbar role="navigation">
+        <nav class="top-bar show-for-large-up" data-topbar role="navigation">
             <ul class="title-area">
                 <li class="name">
                     <h1 class="logo"><a href="<?=base_url();?>">Project Bazaar</a></h1>

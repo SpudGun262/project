@@ -33,7 +33,7 @@
 
 </div><!-- End Main -->
 
-    <div id="mobileFooter" class="show-for-small-only">
+    <div id="mobileFooter" class="show-for-medium-down">
         <div id="mobileLogo">
             <a class="logo" href="<?=base_url();?>">Project Bazaar</a>
         </div>

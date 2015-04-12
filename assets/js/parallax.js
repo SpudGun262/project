@@ -19,7 +19,7 @@ $(window).scroll(function(){
   });
 
   $('.foreground').css({
-    'transform' : 'translate(0px, -'+ wScroll /40 +'%)'
+    'transform' : 'translate(0px, -'+ wScroll /45 +'%)'
   });
 
 });

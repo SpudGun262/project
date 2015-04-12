@@ -1,10 +1,22 @@
 <?php
 
+/**
+ * Tutors
+ *
+ * @package    CI
+ * @subpackage Controller
+ * @author     Tom Walker
+ *
+ */
 class Tutors extends CI_Controller
 {
 
 
-    //constructor
+    /**
+     * Constructor
+     *
+     * Loads in all the models, helpers and other things necessary for this class to work
+     */
     function __construct()
     {
         parent::__construct();
@@ -17,6 +29,13 @@ class Tutors extends CI_Controller
         $this->load->helper('form', 'url');
     }
 
+    /**
+     * Index Function
+     *
+     * Gets data from the tutors model and passes it over to the view using $data['tutors']
+     * Loads the admin header, admin tutors page and admin footer
+     *
+     */
     public function index()
     {
         //run the get_tutors method in the tutors_model and assign the results to the $data['tutors'] variable
@@ -27,10 +46,18 @@ class Tutors extends CI_Controller
         $this->load->view('admin/tutors', $data);
         $this->load->view('admin/incs/footer');
     }
-    
-    
+
+
+    /**
+     * Add Tutor
+     *
+     * Adds a tutor to the database if the validation is met
+     * Else the user is returned to the add addTutor view
+     */
     public function addTutor() {
-        //The form validation rules are set. The tutor first name, last name and email are required for the validation to pass. It must also be clear of any code. A check is also performed which checks if a password has been set and if the 'password' and 'passwordConfirm' fields match.
+
+        //The form validation rules are set. The tutor first name, last name and email are required for the validation to pass.
+        //It must also be clear of any code. A check is also performed which checks if a password has been set and if the 'password' and 'passwordConfirm' fields match.
         $this->form_validation->set_rules('first_name', 'First Name', 'required|max_length[200]|xss_clean');
         $this->form_validation->set_rules('last_name', 'Last Name', 'required|max_length[200]|xss_clean');
         $this->form_validation->set_rules('research_interest', 'Research Interest', 'max_length[100]|xss_clean');
@@ -61,13 +88,26 @@ class Tutors extends CI_Controller
         }
     }
 
+    /**
+     * Edit Tutor
+     *
+     * When a particular tutor is selected it is loaded from the database and data sent to the view
+     * When a form is submitted it is sent to the model for update
+     *
+     * @param $tutor_id
+     */
     public function editTutor($tutor_id) {
 
+        //Gets a certain proposal from from the tutors model
         $tutorResult = $this->tutors_model->getTutor($tutor_id);
+
+        //If a result is not returned set an error message and redirect back to the tutors page
         if(!$tutorResult){
            $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this tutor does not exist <a href="#" class="close">&times;</a></div>');
             redirect('admin/tutors');
         }
+
+        //Stored the returned data in the $data variable as an array
         $data['tutorResult'] = $tutorResult->row_array();
 
         //The form validation rules are set. The tutors first name, last name and email address are required for the validation to pass. It must also be clear of any code
@@ -98,27 +138,40 @@ class Tutors extends CI_Controller
         }
     }
 
+    /**
+     * Delete Tutor
+     *
+     * Deletes a tutor from the database by passing its ID over to the tutors model
+     *
+     * @param $tutor_id
+     */
     public function deleteTutor($tutor_id) {
 
+        //Gets a certain proposal from from the tutors model
         $tutorResult = $this->tutors_model->getTutor($tutor_id);
+
+        //If a result is not returned set an error message and redirect back to the tutors page
         if(!$tutorResult){
             $this->session->set_flashdata('error', '<div data-alert class="alert-box alert radius">Sorry this tutor does not exist <a href="#" class="close">&times;</a></div>');
             redirect('admin/tutors');
         }
+
+        //Stored the returned data in the $data variable as an array
         $data['tutorResult'] = $tutorResult->row_array();
 
+        //Delete the tutor with the returned ID using the deleteTutor method in the tutors model
         $this->tutors_model->deleteTutor($tutor_id);
 
-
+        //Set the returned data in variables so it can be accessed easily
         $id = $data['tutorResult']['tutor_id'];
         $firstName = $data['tutorResult']['first_name'];
         $lastName = $data['tutorResult']['last_name'];
         $email = $data['tutorResult']['email'];
 
-
-        //TODO: Implement a undo
+        //Set a flashdata message to inform the user of which item they have deleted
         $this->session->set_flashdata('notice', '<div data-alert class="alert-box secondary radius">You just deleted ' . $firstName . ' ' . $lastName . ' <a href="#" class="close">&times;</a></div>');
 
+        //Redirect to the tutors page
         redirect('admin/tutors');
 
     }
