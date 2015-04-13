@@ -12,7 +12,6 @@
 
         <!--When clicked run the addProject method in the projects controller-->
         <a href="<?= base_url('admin/projects/addProject') ?>" class="secondary button">&plus; Add New</a>
-        <!-- TODO: add datatables functionality to this table -->
         <table id="projectsTable" class="display column">
             <thead>
             <tr>
@@ -47,8 +46,6 @@
                 //echo an edit button
                 echo '<td><a href="' . base_url('admin/projects/editProject') . '/' . $project['project_id'] . '" class="radius button small">Edit</a></td>';
                 echo '<td><a href="' . base_url('admin/projects/deleteProject') . '/' . $project['project_id'] . '" data-reveal-id="myModal' . $project['project_id'] . '" class="alert radius button small">Delete</a></td>';
-                //TODO: This is semantically incorrect. You can not start a div inside a table. Find a way to get this outside of the foreach loop while passing the necessary data over to it. This model is currently produced for every single db item as well which is generating a lot of excess code
-
                 echo '</tr>';
             }
 

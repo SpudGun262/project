@@ -58,7 +58,6 @@
             <?= validation_errors('<div data-alert class="alert-box alert radius">', '</div>'); ?>
 
             <div class="columns panel">
-                <!--TODO: get this to submit to the right location-->
                 <form data-abide action="<?=base_url('user/changePassword') ?>" method="post">
 
                     <div class="password-field">

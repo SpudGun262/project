@@ -20,7 +20,6 @@
                 <header class="column">
                     <h2><?= $proposalResult['title']; ?></h2>
 
-                    <!-- TODO: Add link to tutor page to show tutors interests  -->
                     <p>Added by <strong><a href="<?=base_url('research');?>"><?= $proposalResult['first_name'] . ' ' . $proposalResult['last_name']; ?></a></strong> on
                         <strong><time datetime="<?= $proposalResult['date_added']; ?>">
                             <?= date('l jS F Y', strtotime($proposalResult['date_added'])); ?>
