@@ -3526,7 +3526,9 @@ meta.foundation-mq-topbar {
     position: relative;
     margin-bottom: 0 !important;
     list-style: none;
-    float: left; }
+    float: left;
+      padding: 5px;
+  }
     .tabs dd > a, .tabs .tab-title > a {
       display: block;
       background-color: #EFEFEF;
