@@ -25,8 +25,8 @@ class Login extends CI_Controller {
     /**
      * Index Function
      *
-     * Gets data from the courses model and passes it over to the view using $data['courses']
-     * Loads the admin header, admin courses page and admin footer
+     * Sets up form validation and if it validates logs in the user
+     * Loads the header, admin login page and admin footer
      *
      */
     function index() {
