@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1b9e986d-4f4d-48f4-a751-8c8f5242443c" name="Default" comment="">
       <change type="MOVED" beforePath="C:\wamp\www\project\application\helpers\maxLength_helper.php" afterPath="$PROJECT_DIR$/application/helpers/maxlength_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/assets_helper.php" afterPath="$PROJECT_DIR$/application/helpers/assets_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/upload_helper.php" afterPath="$PROJECT_DIR$/application/helpers/upload_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/auth.php" afterPath="$PROJECT_DIR$/application/libraries/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/user_auth.php" afterPath="$PROJECT_DIR$/application/libraries/user_auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -77,51 +77,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="assets_helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/helpers/assets_helper.php">
+      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/libraries/auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8" vertical-offset="0" max-vertical-offset="380">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="51" />
+            <state vertical-scroll-proportion="-25.12" vertical-offset="911" max-vertical-offset="1786">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maxlength_helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/helpers/maxlength_helper.php">
+      <file leaf-file-name="user_auth.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/libraries/user_auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="950">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.824" vertical-offset="0" max-vertical-offset="1767">
+              <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nl2p_helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/helpers/nl2p_helper.php">
+      <file leaf-file-name="research.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/research.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="494">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload_helper.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/helpers/upload_helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13028571" vertical-offset="0" max-vertical-offset="875">
-              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/incs/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.08" vertical-offset="0" max-vertical-offset="1843">
-              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="93" />
+            <state vertical-scroll-proportion="-1.52" vertical-offset="0" max-vertical-offset="874">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -145,8 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/css/heroBanner.css" />
-        <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/application/views/admin/login.php" />
         <option value="$PROJECT_DIR$/application/views/admin/incs/footer.php" />
         <option value="$PROJECT_DIR$/application/models/projects_model.php" />
@@ -196,6 +174,8 @@
         <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/helpers/assets_helper.php" />
         <option value="$PROJECT_DIR$/application/helpers/upload_helper.php" />
+        <option value="$PROJECT_DIR$/application/libraries/auth.php" />
+        <option value="$PROJECT_DIR$/application/libraries/user_auth.php" />
       </list>
     </option>
   </component>
@@ -422,7 +402,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,12 +514,6 @@
       <created>1421162113521</created>
       <option name="number" value="Default" />
       <updated>1421162113521</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Moved the location of welcome messages">
-      <created>1427915255753</created>
-      <option name="number" value="00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1427915255753</updated>
     </task>
     <task id="LOCAL-00081" summary="Incorporated Font Awesome into the project">
       <created>1427985233400</created>
@@ -811,7 +803,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428931642846</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Fully commented all helper files">
+      <created>1428932449714</created>
+      <option name="number" value="00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1428932449714</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -846,7 +844,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15031983" sideWeight="0.50054055" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32540542" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -880,7 +878,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added datatables and foundation functionality to all aspects of the admin area" />
     <MESSAGE value="Created individual proposal page" />
     <MESSAGE value="Implemented the ability for user to show interest in a project proposal" />
     <MESSAGE value="Implemented the ability for a tutor to see when a student is interested in a project proposal and for that tutor to either email the student or delete the interest notification" />
@@ -905,27 +902,14 @@
     <MESSAGE value="Fixed any style errors throughout the site" />
     <MESSAGE value="Fully commented all admin controllers" />
     <MESSAGE value="Fully commented all user controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fully commented all user controllers" />
+    <MESSAGE value="Fully commented all helper files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fully commented all helper files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/admin/proposals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.76" vertical-offset="0" max-vertical-offset="1463">
-          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.76" vertical-offset="0" max-vertical-offset="1653">
-          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.76" vertical-offset="0" max-vertical-offset="2812">
@@ -1210,14 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/research.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.24" vertical-offset="0" max-vertical-offset="874">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="29" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/projects.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56392694" vertical-offset="399" max-vertical-offset="5738">
@@ -1252,7 +1228,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/incs/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.08" vertical-offset="0" max-vertical-offset="1843">
+        <state vertical-scroll-proportion="0.17371428" vertical-offset="0" max-vertical-offset="1843">
           <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="93" />
           <folding />
         </state>
@@ -1286,6 +1262,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13028571" vertical-offset="0" max-vertical-offset="875">
           <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/research.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.52" vertical-offset="0" max-vertical-offset="874">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.12" vertical-offset="911" max-vertical-offset="1786">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/user_auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.824" vertical-offset="0" max-vertical-offset="1767">
+          <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
           <folding />
         </state>
       </provider>

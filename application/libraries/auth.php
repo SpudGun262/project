@@ -1,46 +1,89 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
-class Auth {
+/**
+ * Auth Library
+ *
+ * @author     Tom Walker
+ *
+ */
+class Auth
+{
 
-    function checkLogin() {
-        // load codeigniter core
+    /**
+     * Check Login
+     *
+     * Checks if the user is authenticated and redirects to the login page if not
+     */
+    function checkLogin()
+    {
+        //Load codeigniter core
         $CI =& get_instance();
-        if(!$CI->session->userdata('auth')) {
-            // redirect to login page
-            redirect(base_url('admin/login'), 'location');
+        if (!$CI->session->userdata('auth')) {
+            //Redirect to login page
+            redirect('admin/login');
         }
     }
 
-    function login($username = NULL, $password = NULL) {
+    /**
+     * Login
+     *
+     * Logs the user into the system by checking if the user exists within the admin table of the database.
+     * If not, it will return false, sending the user back to the login form
+     *
+     * @param null $username
+     * @param null $password
+     * @return bool
+     */
+    function login($username = null, $password = null)
+    {
 
         // load codeigniter core
         $CI =& get_instance();
         // load database
         $CI->load->database();
         //Check the admin table and compare the password with the hash and salt that has been created
-        $result = $CI->db->get_where('admin', array('username' => $username, 'password' => hash('sha256', $password.SALT)));
+        $result = $CI->db->get_where('admin',
+            array('username' => $username, 'password' => hash('sha256', $password . SALT)));
 
-        if($result->num_rows() == 1) {
+        //If a single result is returned from the database then...
+        if ($result->num_rows() == 1) {
 
+            //Record the data in an array
             $auth = $result->row_array();
 
+            //Remove the users password from the data
             unset($auth['password']);
 
+            //Now store the created data, with the password removed, in the session data so it can be accessed throughout the system
             $CI->session->set_userdata(array('auth' => $auth));
+
             // redirect to dashboard
             redirect('admin/dashboard');
+
+        //If no result is returned then return false
         } else {
             return false;
         }
 
     }
 
-    function logout() {
-        // load codeigniter core
+    /**
+     * Logout
+     *
+     * Logs the user out of the system and unset's the session data
+     */
+    function logout()
+    {
+        //Load codeigniter core
         $CI =& get_instance();
+
+        //Unset the session data
         $CI->session->unset_userdata('auth');
-        //amended the redirect back to the homepage of the site to improve navigation
-        redirect(base_url(''), 'location');
+
+        //Redirect back to the homepage of the site to improve navigation
+        redirect('home');
     }
 
 }
